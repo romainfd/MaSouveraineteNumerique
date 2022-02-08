@@ -19,98 +19,40 @@
           v-model="step"
           vertical
         >
-          <v-stepper-step
-            :complete="step > 1"
-            step="1"
+          <div
+            v-for="(question, rank) in questions"
+            :key="question.id"
           >
-            Select an app
-            <small>Summarize if needed</small>
-          </v-stepper-step>
-
-          <v-stepper-content step="1">
-            <v-card
-              color="grey lighten-1"
-              class="mb-12"
-              height="200px"
-            ></v-card>
-            <v-btn
-              color="primary"
-              @click="step = 2"
+            <v-stepper-step
+              :complete="step > rank + 1"
+              :step="rank + 1"
             >
-              Continue
-            </v-btn>
-            <v-btn text>
-              Cancel
-            </v-btn>
-          </v-stepper-content>
+              {{ question.name }}
+              <small v-if="question.details">{{ question.details }}</small>
+            </v-stepper-step>
 
-          <v-stepper-step
-            :complete="step > 2"
-            step="2"
-          >
-            Configure analytics for this app
-          </v-stepper-step>
+            <v-stepper-content :step="rank + 1">
+              <v-card
+                color="grey lighten-1"
+                class="mb-12"
+                height="200px"
+              ></v-card>
 
-          <v-stepper-content step="2">
-            <v-card
-              color="grey lighten-1"
-              class="mb-12"
-              height="200px"
-            ></v-card>
-            <v-btn
-              color="primary"
-              @click="step = 3"
-            >
-              Continue
-            </v-btn>
-            <v-btn text>
-              Cancel
-            </v-btn>
-          </v-stepper-content>
 
-          <v-stepper-step
-            :complete="step > 3"
-            step="3"
-          >
-            Select an ad format and name ad unit
-          </v-stepper-step>
-
-          <v-stepper-content step="3">
-            <v-card
-              color="grey lighten-1"
-              class="mb-12"
-              height="200px"
-            ></v-card>
-            <v-btn
-              color="primary"
-              @click="step = 4"
-            >
-              Continue
-            </v-btn>
-            <v-btn text>
-              Cancel
-            </v-btn>
-          </v-stepper-content>
-
-          <v-stepper-step step="4">
-            View setup instructions
-          </v-stepper-step>
-          <v-stepper-content step="4">
-            <v-card
-              color="grey lighten-1"
-              class="mb-12"
-              height="200px"
-            ></v-card>
-            <v-btn
-              color="primary"
-              @click="step = 1"
-            >
-              Continue
-            </v-btn>
-            <v-btn text>
-              Cancel
-            </v-btn>
-          </v-stepper-content>
+              <v-btn
+                color="primary"
+                @click="step = rank + 2"
+              >
+                Valider
+              </v-btn>
+              <v-btn
+                text
+                @click="step = rank"
+              >
+                Retour
+              </v-btn>
+            </v-stepper-content>
+          </div>
         </v-stepper>
       </v-card>
     </v-col>
@@ -118,14 +60,19 @@
 </template>
 
 <script>
+import questions from '~/assets/questions'
+
+console.log(questions)
+
 export default {
   name: 'IndexPage',
   head: {
-    title: 'Questionnaire entreprise'
+    title: 'Questionnaire entreprise',
   },
   data () {
     return {
-      step: 1
+      step: 1,
+      questions
     }
   }
 }
