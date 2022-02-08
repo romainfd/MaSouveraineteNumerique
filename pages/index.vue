@@ -1,76 +1,117 @@
 <template>
   <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <v-card class="logo py-4 d-flex justify-center">
-        <NuxtLogo />
-        <VuetifyLogo />
+    <v-col cols="12" sm="8">
+      <v-card class="pa-4 my-4">
+        <p class="text-h4 mb-1">Votre entreprise est-elle souveraine ?</p>
+        <p class="text-overline text--secondary">
+          Questionnaire issu d'un travail commun INSP - corps des Mines
+          <a href="https://google.fr" target="_blank" class="text-decoration-none">
+            <v-icon small class="mb-1">
+              mdi-information-outline
+            </v-icon>
+          </a>
+        </p>
+        <p>Curieux d'estimer la résilience, l'autonomie et la souveraineté de votre entreprise ?
+          Ce questionnaire vous permet d'obtenir des indicateurs clairs pour suivre votre souveraineté selon plusieurs dimensions et à travers le temps.</p>
       </v-card>
       <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>
-            For more information on Vuetify, check out the <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation
-            </a>.
-          </p>
-          <p>
-            If you have questions, please join the official <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord
-            </a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
+        <v-stepper
+          v-model="step"
+          vertical
+        >
+          <v-stepper-step
+            :complete="step > 1"
+            step="1"
           >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
+            Select an app
+            <small>Summarize if needed</small>
+          </v-stepper-step>
+
+          <v-stepper-content step="1">
+            <v-card
+              color="grey lighten-1"
+              class="mb-12"
+              height="200px"
+            ></v-card>
+            <v-btn
+              color="primary"
+              @click="step = 2"
+            >
+              Continue
+            </v-btn>
+            <v-btn text>
+              Cancel
+            </v-btn>
+          </v-stepper-content>
+
+          <v-stepper-step
+            :complete="step > 2"
+            step="2"
           >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            nuxt
-            to="/inspire"
+            Configure analytics for this app
+          </v-stepper-step>
+
+          <v-stepper-content step="2">
+            <v-card
+              color="grey lighten-1"
+              class="mb-12"
+              height="200px"
+            ></v-card>
+            <v-btn
+              color="primary"
+              @click="step = 3"
+            >
+              Continue
+            </v-btn>
+            <v-btn text>
+              Cancel
+            </v-btn>
+          </v-stepper-content>
+
+          <v-stepper-step
+            :complete="step > 3"
+            step="3"
           >
-            Continue
-          </v-btn>
-        </v-card-actions>
+            Select an ad format and name ad unit
+          </v-stepper-step>
+
+          <v-stepper-content step="3">
+            <v-card
+              color="grey lighten-1"
+              class="mb-12"
+              height="200px"
+            ></v-card>
+            <v-btn
+              color="primary"
+              @click="step = 4"
+            >
+              Continue
+            </v-btn>
+            <v-btn text>
+              Cancel
+            </v-btn>
+          </v-stepper-content>
+
+          <v-stepper-step step="4">
+            View setup instructions
+          </v-stepper-step>
+          <v-stepper-content step="4">
+            <v-card
+              color="grey lighten-1"
+              class="mb-12"
+              height="200px"
+            ></v-card>
+            <v-btn
+              color="primary"
+              @click="step = 1"
+            >
+              Continue
+            </v-btn>
+            <v-btn text>
+              Cancel
+            </v-btn>
+          </v-stepper-content>
+        </v-stepper>
       </v-card>
     </v-col>
   </v-row>
@@ -78,6 +119,14 @@
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  head: {
+    title: 'Questionnaire entreprise'
+  },
+  data () {
+    return {
+      step: 1
+    }
+  }
 }
 </script>
