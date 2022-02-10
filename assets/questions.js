@@ -57,7 +57,6 @@ const questions = [
       'OnlyOffice' : [0, 1, 2, 3],
       'Collabora Online' : [0, 1, 2, 3],
     },
-    default: [0, 0, 0, 0]
   },
   {
     name: 'Solution Cloud utilisée',
@@ -73,7 +72,6 @@ const questions = [
       'Scaleway': [0, 1, 3, 2],
       'Rapid.space': [0, 1, 3, 2],
     },
-    default: [0, 0, 0, 0]
   },
   {
     name: "Système d'exploitation de vos ordinateurs",
@@ -85,7 +83,6 @@ const questions = [
       'MacOS': [0, 1, 1, 1],
       'Windows': [0, 1, 1, 1],
     },
-    default: [0, 0, 0, 0]
   },
   {
     name: 'Moteur de recherche utilisé',
@@ -99,7 +96,6 @@ const questions = [
       'Bing': [0, 3, 2, 1],
       'Yahoo': [0, 3, 2, 1],
     },
-    default: [0, 0, 0, 0]
   },
   {
     name: 'Messagerie utilisée',
@@ -114,13 +110,13 @@ const questions = [
       'Telegram': [0, 1, 1, 1],
       'Messenger': [0, 1, 1, 1],
     },
-    default: [0, 0, 0, 0]
   },
   {
     name: 'Solutions métiers utilisées',
     id: 6,
     details: "N'hésitez pas à en taper autant que nécessaire",
     type: 'combobox',
+    average: true,
     options: {
       'SAP': [0, 1, 1, 2],
       'Informatica': [0, 1, 1, 2],
@@ -134,7 +130,7 @@ const questions = [
       'Zscaler': [0, 1, 1, 2],
       'Libre': [0, 1, 1, 2],
     },
-    default: [0, 0, 0, 0]
+    default: [1, 1, 1, 1]
   },
   {
     name: "Système d'exploitation de votre flotte de téléphones",
@@ -147,7 +143,6 @@ const questions = [
       '/e/': [0, -2, 1, 2],
       'PinePhone': [0, -2, 1, 2],
     },
-    default: [0, 0, 0, 0]
   },
   {
     name: 'Navigateur web utilisé',
@@ -161,7 +156,6 @@ const questions = [
       'Mozilla Firefox': [0, 1, 0, 1],
       'Opera': [0, 1, 0, 1],
     },
-    default: [0, 0, 0, 0]
   },
   {
     name: 'Quelle part de vos dépenses dans des services & projets numériques ?',
@@ -288,7 +282,9 @@ const questions = [
     id: 18,
     type: 'switch',
     label: 'Oui',
-    weight: [null, null, 2, null]
+    weight(v) {
+      return [null, null, 2 * v, null]
+    }
   }
 ]
 

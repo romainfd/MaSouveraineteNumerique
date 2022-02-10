@@ -132,8 +132,10 @@
 
 <script>
 import questions from '~/assets/questions'
+const scorerMixin = require('~/mixins/scorer')
 
 export default {
+  mixins: [scorerMixin],
   name: 'IndexPage',
   head: {
     title: 'Questionnaire entreprise',
@@ -153,12 +155,10 @@ export default {
     processAnswer(questionId, answer, rank) {
       // Store last question results on server
       console.log({ questionId, answer })
+      // console.log(await this.$axios.get('/categories.php'))
       // Move to next question
       this.step = rank + 2
     }
   },
-  async mounted() {
-    // console.log(await this.$axios.get('/categories.php'))
-  }
 }
 </script>
