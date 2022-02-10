@@ -36,23 +36,44 @@
             <v-stepper-content :step="rank + 1">
               <v-combobox
                 v-if="question.type === 'combobox'"
-                v-model="question.answers"
+                v-model="question.answer"
                 :items="Object.keys(question.options)"
                 label="Sélectionnez ou tapez si besoin"
-                multiple
-                chips
+                :multiple="question.average"
+                :chips="question.average"
+                clearable
               ></v-combobox>
               <v-slider
-                v-else-if="question.type === 'percentage'"
-                v-model="question.answers"
+                v-else-if="question.type === 'slider'"
+                v-model="question.answer"
                 class="pt-7"
                 thumb-label
                 thumb-size="24"
-                min="0"
-                max="100"
-                label="Pourcentage"
+                :min="question.min"
+                :max="question.max"
+                :label="question.label"
                 color="green lighten-1"
               ></v-slider>
+              <v-switch
+                v-else-if="question.type === 'switch'"
+                v-model="question.answer"
+                :label="question.answer ? 'Oui' : 'Non'"
+                class="mt-2 ml-3"
+                inset
+              ></v-switch>
+              <v-rating
+                v-else-if="question.type === 'score'"
+                v-model="question.answer"
+                color="primary"
+                empty-icon="mdi-star-outline"
+                full-icon="mdi-star"
+                half-icon="mdi-star-half-full"
+                half-increments
+                hover
+                length="5"
+                class=""
+                :size="$device.isMobile ? 36 : 64"
+              ></v-rating>
               <div v-else>
                 Type de question inconnu
               </div>
