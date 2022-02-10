@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
+    "php": "php -S localhost:9000",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
