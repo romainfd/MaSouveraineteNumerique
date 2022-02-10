@@ -25,6 +25,8 @@
           >
             <v-stepper-step
               :complete="step > rank + 1"
+              :editable="step > rank + 1"
+              edit-icon="$complete"
               :step="rank + 1"
             >
               {{ question.name }}
@@ -32,11 +34,28 @@
             </v-stepper-step>
 
             <v-stepper-content :step="rank + 1">
-              <v-card
-                color="grey lighten-1"
-                class="mb-12"
-                height="200px"
-              ></v-card>
+              <v-combobox
+                v-if="question.type === 'combobox'"
+                v-model="question.answers"
+                :items="Object.keys(question.options)"
+                label="Sélectionnez ou tapez si besoin"
+                multiple
+                chips
+              ></v-combobox>
+              <v-slider
+                v-else-if="question.type === 'percentage'"
+                v-model="question.answers"
+                class="pt-7"
+                thumb-label
+                thumb-size="24"
+                min="0"
+                max="100"
+                label="Pourcentage"
+                color="green lighten-1"
+              ></v-slider>
+              <div v-else>
+                Type de question inconnu
+              </div>
 
 
               <v-btn
@@ -46,6 +65,7 @@
                 Valider
               </v-btn>
               <v-btn
+                v-if="rank > 0"
                 text
                 @click="step = rank"
               >
@@ -61,8 +81,6 @@
 
 <script>
 import questions from '~/assets/questions'
-
-console.log(questions)
 
 export default {
   name: 'IndexPage',
