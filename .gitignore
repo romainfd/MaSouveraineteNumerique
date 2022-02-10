@@ -90,5 +90,5 @@ sw.*
 *.swp
 
 # Custom scripts
-deployer.sh
-database.class.php
+/deployer.sh
+/database.class.php
