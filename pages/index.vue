@@ -15,86 +15,116 @@
           Ce questionnaire vous permet d'obtenir des indicateurs clairs pour suivre votre souveraineté selon plusieurs dimensions et à travers le temps.</p>
       </v-card>
       <v-card>
-        <v-stepper
-          v-model="step"
-          vertical
+        <v-fade-transition
+          v-if="!finished"
         >
-          <div
-            v-for="(question, rank) in questions"
-            :key="question.id"
+          <v-stepper
+            v-model="step"
+            vertical
           >
-            <v-stepper-step
-              :complete="step > rank + 1"
-              :editable="step > rank + 1"
-              edit-icon="$complete"
-              :step="rank + 1"
+            <p class="text-h4 pl-4 pt-4">
+              Questions
+            </p>
+            <div
+              v-for="(question, rank) in questions"
+              :key="question.id"
             >
-              {{ question.name }}
-              <small v-if="question.details">{{ question.details }}</small>
-            </v-stepper-step>
-
-            <v-stepper-content :step="rank + 1">
-              <v-combobox
-                v-if="question.type === 'combobox'"
-                v-model="question.answer"
-                :items="Object.keys(question.options)"
-                label="Sélectionnez ou tapez si besoin"
-                :multiple="question.average"
-                :chips="question.average"
-                clearable
-              ></v-combobox>
-              <v-slider
-                v-else-if="question.type === 'slider'"
-                v-model="question.answer"
-                class="pt-7"
-                thumb-label
-                thumb-size="24"
-                :min="question.min"
-                :max="question.max"
-                :label="question.label"
-                color="green lighten-1"
-              ></v-slider>
-              <v-switch
-                v-else-if="question.type === 'switch'"
-                v-model="question.answer"
-                :label="question.answer ? 'Oui' : 'Non'"
-                class="mt-2 ml-3"
-                inset
-              ></v-switch>
-              <v-rating
-                v-else-if="question.type === 'score'"
-                v-model="question.answer"
-                color="primary"
-                empty-icon="mdi-star-outline"
-                full-icon="mdi-star"
-                half-icon="mdi-star-half-full"
-                half-increments
-                hover
-                length="5"
-                class=""
-                :size="$device.isMobile ? 36 : 64"
-              ></v-rating>
-              <div v-else>
-                Type de question inconnu
-              </div>
-
-
-              <v-btn
-                color="primary"
-                @click="step = rank + 2"
+              <v-stepper-step
+                :complete="step > rank + 1"
+                :editable="step > rank + 1"
+                edit-icon="$complete"
+                :step="rank + 1"
               >
-                Valider
-              </v-btn>
-              <v-btn
-                v-if="rank > 0"
-                text
-                @click="step = rank"
-              >
-                Retour
-              </v-btn>
-            </v-stepper-content>
-          </div>
-        </v-stepper>
+                {{ question.name }}
+                <small v-if="question.details">{{ question.details }}</small>
+              </v-stepper-step>
+
+              <v-stepper-content :step="rank + 1">
+                <v-combobox
+                  v-if="question.type === 'combobox'"
+                  v-model="question.answer"
+                  :items="Object.keys(question.options)"
+                  label="Sélectionnez ou tapez si besoin"
+                  :multiple="question.average"
+                  :chips="question.average"
+                  clearable
+                ></v-combobox>
+                <v-slider
+                  v-else-if="question.type === 'slider'"
+                  v-model="question.answer"
+                  class="pt-7"
+                  thumb-label
+                  thumb-size="24"
+                  :min="question.min"
+                  :max="question.max"
+                  :label="question.label"
+                  color="green lighten-1"
+                ></v-slider>
+                <v-switch
+                  v-else-if="question.type === 'switch'"
+                  v-model="question.answer"
+                  :label="question.answer ? 'Oui' : 'Non'"
+                  class="mt-2 ml-3"
+                  inset
+                ></v-switch>
+                <v-rating
+                  v-else-if="question.type === 'score'"
+                  v-model="question.answer"
+                  color="primary"
+                  empty-icon="mdi-star-outline"
+                  full-icon="mdi-star"
+                  half-icon="mdi-star-half-full"
+                  half-increments
+                  hover
+                  length="5"
+                  class=""
+                  :size="$device.isMobile ? 36 : 64"
+                ></v-rating>
+                <v-otp-input
+                  v-else-if="question.type === 'postcode'"
+                  v-model="question.answer"
+                  style="max-width: 400px;"
+                  length="5"
+                ></v-otp-input>
+                <v-text-field
+                  v-else-if="question.type === 'number'"
+                  v-model="question.answer"
+                  min="0"
+                  single-line
+                  type="number"
+                />
+                <v-text-field
+                  v-else-if="question.type === 'text'"
+                  v-model="question.answer"
+                  single-line
+                />
+                <div v-else>
+                  Type de question inconnu
+                </div>
+
+
+                <v-btn
+                  color="primary"
+                  @click="processAnswer(question.id, question.answer, rank)"
+                >
+                  {{ step === questions.length ? 'Terminer' : 'Valider' }}
+                </v-btn>
+                <v-btn
+                  v-if="rank > 0"
+                  text
+                  @click="step = rank"
+                >
+                  Retour
+                </v-btn>
+              </v-stepper-content>
+            </div>
+          </v-stepper>
+        </v-fade-transition>
+        <div v-else>
+          <p class="text-h4 pt-4 pl-4">
+            Résultats
+          </p>
+        </div>
       </v-card>
     </v-col>
   </v-row>
@@ -113,6 +143,22 @@ export default {
       step: 1,
       questions
     }
+  },
+  computed: {
+    finished () {
+      return this.step > this.questions.length
+    }
+  },
+  methods: {
+    processAnswer(questionId, answer, rank) {
+      // Store last question results on server
+      console.log({ questionId, answer })
+      // Move to next question
+      this.step = rank + 2
+    }
+  },
+  async mounted() {
+    // console.log(await this.$axios.get('/categories.php'))
   }
 }
 </script>

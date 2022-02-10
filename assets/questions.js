@@ -1,4 +1,47 @@
 const questions = [
+  // QUESTIONS DÉMOGRAPHIQUES
+  {
+    name: 'Estimation de votre score de souveraineté',
+    id: -1,
+    type: 'slider',
+    label: 'Pourcentage',
+    min: 0,
+    max: 100,
+  }, {
+    name: 'Code postal de votre entité',
+    id: -2,
+    type: 'postcode',
+  }, {
+    name: 'Effectif de votre entité',
+    id: -3,
+    details: "Nombre d'employés",
+    type: 'number',
+  }, {
+    name: "Nom de votre entité",
+    id: -4,
+    type: 'text'
+  }, {
+    name: "Email de contact",
+    id: -5,
+    details: "Pour partager un suivi du score amélioré et les retours du travail réalisé",
+    type: 'text',
+  }, {
+    name: "Catégorie de votre entité",
+    id: -6,
+    type: 'combobox',
+    options: {
+      'Administration' : null,
+      'Start-up' : null,
+      'PME' : null,
+      'Grand groupe' : null,
+    }
+  }, {
+    name: "Chiffre d'affaire",
+    id: -7,
+    details: "Si applicable, en €",
+    type: 'number',
+  },
+  // QUESTIONS À PROPOS DE LA SOUVERAINETÉ
   {
     name: 'Solution beautique utilisée',
     id: 1,
@@ -242,7 +285,7 @@ const questions = [
   },
   {
     name: "Bénéficiez-vous de crédits gratuits ou d'accès gratuits à des services ?",
-    id: 17,
+    id: 18,
     type: 'switch',
     label: 'Oui',
     weight: [null, null, 2, null]
