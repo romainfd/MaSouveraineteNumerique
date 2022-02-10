@@ -128,7 +128,6 @@ const questions = [
       'Slack': [0, 1, 1, 2],
       'Firewalls': [0, 1, 1, 2],
       'Zscaler': [0, 1, 1, 2],
-      'Libre': [0, 1, 1, 2],
     },
     default: [1, 1, 1, 1]
   },

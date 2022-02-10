@@ -1,8 +1,16 @@
-const sum = (array1, array2) => array1.map(function (num, idx) {
+const arrSum = (array1, array2) => array1.map(function (num, idx) {
   return num + array2[idx];
 })
 
-const divide = (array, divider) => array.map(function (num) {
+const arrDivide = (array1, array2) => array1.map(function (num, idx) {
+  return num / array2[idx];
+})
+
+const arrMax = (array1, array2) => array1.map(function (num, idx) {
+  return Math.max(num, array2[idx]);
+})
+
+const arrDivideNb = (array, divider) => array.map(function (num) {
   return num / divider;
 })
 
@@ -16,8 +24,19 @@ const getScore = (options, key, defaultScore=[0, 0, 0, 0]) => {
 }
 
 const scorerMixin = {
+  data() {
+    return {
+      scorerDimensions: ['Indépendance culturelle', 'Indépendance économique', 'Indépendance géostratégique', 'Efficience']
+    }
+  },
   methods: {
     score(questions) {
+      return arrDivideNb(
+        arrDivide(this.absoluteScore(questions), this.maxScore(questions)),
+        1 / 100
+      ).map(Math.round)
+    },
+    absoluteScore(questions) {
       let score = [0, 0, 0, 0]
       for (let question of questions) {
         const { id, answer, type } = question
@@ -31,12 +50,12 @@ const scorerMixin = {
                   let toAverageLoopScore = [0, 0, 0, 0]
                   if (answer.length > 0) {
                     for (let item of answer) {
-                      toAverageLoopScore = sum(
+                      toAverageLoopScore = arrSum(
                         toAverageLoopScore,
                         getScore(question.options, item, question.default)
                       )
                     }
-                    loopScore = divide(toAverageLoopScore, answer.length)
+                    loopScore = arrDivideNb(toAverageLoopScore, answer.length)
                   } else {
                     loopScore = [0, 0, 0, 0]
                   }
@@ -53,7 +72,54 @@ const scorerMixin = {
                 console.error(`Le type de question '${type}' n'est pas reconnu.`);
                 return score
             }
-            score = sum(score, loopScore)
+            score = arrSum(score, loopScore)
+          }
+        }
+      }
+      return score
+    },
+    maxScore(questions) {
+      let score = [0, 0, 0, 0]
+      for (let question of questions) {
+        const { id, type } = question
+        if (type !== 'slider') {
+          if (id > 0) {
+            // Question de souveraineté & réponse fournie
+            let loopScore = [0, 0, 0, 0]
+            switch (type) {
+              case 'combobox':
+                // take the maximum of all scores
+                for (let item in question.options) {
+                  loopScore = arrMax(
+                    loopScore,
+                    getScore(question.options, item)
+                  )
+                }
+                if (question.average) {
+                  loopScore = arrMax(loopScore, question.default)
+                }
+                break;
+              case 'slider':
+              case 'score':
+              case 'switch':
+                // They are all use linear weight between min and max
+                let { min, max, weight } = question
+                switch (type) {
+                  case 'score':
+                    min = 0;
+                    max = 5
+                    break;
+                  case 'switch':
+                    min = 0
+                    max = 1
+                }
+                loopScore = arrMax(weight(min), weight(max))
+                break;
+              default:
+                console.error(`Le type de question '${type}' n'est pas reconnu.`);
+                return score
+            }
+            score = arrSum(score, loopScore)
           }
         }
       }
