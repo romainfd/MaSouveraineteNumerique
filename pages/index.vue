@@ -4,7 +4,7 @@
       <v-card class="pa-4 my-4">
         <p class="text-h4 mb-1">Votre entreprise est-elle souveraine ?</p>
         <p class="text-overline text--secondary">
-          Questionnaire issu d'un travail commun INSP - corps des Mines
+          Questionnaire issu d'un travail commun d'élèves INSP - Corps des mines
           <a href="https://google.fr" target="_blank" class="text-decoration-none">
             <v-icon small class="mb-1">
               mdi-information-outline
@@ -26,6 +26,11 @@
             <p class="text-h4 pt-4">
               Questions
             </p>
+            <div class="text-justify">
+              <p class="mb-0"><b><i>Aucune réponse n'est obligatoire.</i></b></p>
+              <p class="mb-0">Lorsqu'un seul choix est possible, veuillez indiquer le choix majoritaire pour votre entité.</p>
+              <p>Pour toutes les réponses sous forme de texte, il vous est possible d'écrire une option supplémentaire si besoin.</p>
+            </div>
             <div
               v-for="(question, rank) in questions"
               :key="question.id"
@@ -178,7 +183,7 @@ export default {
   },
   data () {
     return {
-      step: 13,
+      step: 1,
       questions,
     }
   },

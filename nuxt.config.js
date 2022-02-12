@@ -48,7 +48,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: process.env.NODE_ENV === 'production' ? '/souv_num/php/' : 'http://localhost:9000/',
+    baseURL: process.env.NODE_ENV === 'production' ? '/souv_num/' : 'http://localhost:9000/',
     // credentials: true
   },
 
