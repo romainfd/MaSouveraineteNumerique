@@ -6,6 +6,10 @@ const arrDivide = (array1, array2) => array1.map(function (num, idx) {
   return num / array2[idx];
 })
 
+const arrMultiply = (array1, array2) => array1.map(function (num, idx) {
+  return num * array2[idx];
+})
+
 const arrMax = (array1, array2) => array1.map(function (num, idx) {
   return Math.max(num, array2[idx]);
 })
@@ -26,11 +30,27 @@ const getScore = (options, key, defaultScore=[0, 0, 0, 0]) => {
 const scorerMixin = {
   data() {
     return {
-      scorerDimensions: ['Indépendance culturelle', 'Indépendance économique', 'Indépendance géostratégique', 'Efficience']
+      scorerDimensions: ['Indépendance culturelle', 'Indépendance économique', 'Indépendance géostratégique', 'Efficience'],
+      dimensionsDetails: [
+        'Indépendance culturelle : details....',
+        'Indépendance économique : details....',
+        'Indépendance géostratégique : details....',
+        'Efficience: details....'
+      ]
     }
   },
   methods: {
     score(questions) {
+      const maxScores = this.maxScore(questions)
+      const weightedScores = arrMultiply(this.scores(questions), maxScores)
+      const maxScoreTotal = maxScores.reduce((a, b) => a + b, 0)
+      console.log({maxScores,
+        scores: this.scores(questions),
+        weightedScores,
+        maxScoreTotal})
+      return Math.round(weightedScores.reduce((a, b) => a + b, 0) / maxScoreTotal)
+    },
+    scores(questions) {
       return arrDivideNb(
         arrDivide(this.absoluteScore(questions), this.maxScore(questions)),
         1 / 100
@@ -78,8 +98,8 @@ const scorerMixin = {
       }
       return score
     },
-    maxScore(questions) {
-      let score = [0, 0, 0, 0]
+    maxScores(questions) {
+      let maxScores = []
       for (let question of questions) {
         const { id, type } = question
         if (type !== 'slider') {
@@ -117,14 +137,23 @@ const scorerMixin = {
                 break;
               default:
                 console.error(`Le type de question '${type}' n'est pas reconnu.`);
-                return score
+                return maxScores
             }
-            score = arrSum(score, loopScore)
+            maxScores.push(loopScore)
           }
         }
       }
-      return score
+      return maxScores
+    },
+    maxScore(questions) {
+      const maxScores = this.maxScores(questions)
+      return maxScores.reduce(arrSum, [0, 0, 0, 0])
+    },
+    getColor (value){
+      // Ref.: https://stackoverflow.com/a/17268489
+      const hue = (value / 100 * 120).toString(10);
+      return ["hsl(", hue, ",100%,50%)"].join("");
     }
-  }
+  },
 }
 module.exports = scorerMixin

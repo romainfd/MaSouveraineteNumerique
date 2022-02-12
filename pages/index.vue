@@ -14,15 +14,16 @@
         <p>Curieux d'estimer la résilience, l'autonomie et la souveraineté de votre entreprise ?
           Ce questionnaire vous permet d'obtenir des indicateurs clairs pour suivre votre souveraineté selon plusieurs dimensions et à travers le temps.</p>
       </v-card>
-      <v-card>
-        <v-fade-transition
+      <v-card class="pa-4 my-4">
+        <v-expand-transition
           v-if="!finished"
         >
           <v-stepper
             v-model="step"
             vertical
+            elevation="0"
           >
-            <p class="text-h4 pl-4 pt-4">
+            <p class="text-h4 pt-4">
               Questions
             </p>
             <div
@@ -52,7 +53,7 @@
                 <v-slider
                   v-else-if="question.type === 'slider'"
                   v-model="question.answer"
-                  class="pt-7"
+                  class="pt-7 pr-5"
                   thumb-label
                   thumb-size="24"
                   :min="question.min"
@@ -102,16 +103,20 @@
                   Type de question inconnu
                 </div>
 
-
                 <v-btn
+                  class="mb-1"
                   color="primary"
                   @click="processAnswer(question.id, question.answer, rank)"
                 >
+                  <v-icon left>
+                    mdi-check
+                  </v-icon>
                   {{ step === questions.length ? 'Terminer' : 'Valider' }}
                 </v-btn>
                 <v-btn
-                  v-if="rank > 0"
+                  class="mb-1 ml-1"
                   text
+                  v-if="rank > 0"
                   @click="step = rank"
                 >
                   Retour
@@ -119,12 +124,42 @@
               </v-stepper-content>
             </div>
           </v-stepper>
-        </v-fade-transition>
-        <div v-else>
-          <p class="text-h4 pt-4 pl-4">
-            Résultats
-          </p>
-        </div>
+        </v-expand-transition>
+        <v-expand-transition v-else>
+          <div>
+            <p class="text-h4 pt-4">
+              Résultats
+            </p>
+            <p>Merci pour votre participation.</p>
+            <p>Vous avez obtenu un score global de souveraineté de <span class="text-h4" :style="'color: ' + this.getColor(this.score(this.questions))">{{ score(questions) }}%</span> !</p>
+            <p>Vous trouverez ci-dessous plus de détails sur vos résultats, des ressources pour découvrir les enjeux de la souveraineté numérique et des suggestions d'actions pour améliorer votre score dans le temps.</p>
+            <ChartRadar
+              :data="radarData"
+              :labels="scorerDimensions"
+              title="Résultats"
+            />
+            <div v-for="(score, i) in this.scores(questions)" class="ma-3">
+              <v-divider></v-divider>
+              <v-row class="my-3 align-end">
+                <span class="overline">{{ scorerDimensions[i] }}</span>
+                <v-spacer class="mb-3 mx-1" style="border-bottom: 1px dashed grey"></v-spacer>
+                <span
+                  class="text-h3 mb-1"
+                  :style="'color: ' + getColor(score)"
+                >{{ score }}%</span>
+              </v-row>
+              <p>{{ dimensionsDetails[i] }}</p>
+            </div>
+            <v-btn
+              @click="step = questions.length"
+            >
+              <v-icon left>
+                mdi-arrow-left
+              </v-icon>
+              Retour aux questions
+            </v-btn>
+          </div>
+        </v-expand-transition>
       </v-card>
     </v-col>
   </v-row>
@@ -133,6 +168,7 @@
 <script>
 import questions from '~/assets/questions'
 const scorerMixin = require('~/mixins/scorer')
+import colors from 'vuetify/es5/util/colors'
 
 export default {
   mixins: [scorerMixin],
@@ -149,6 +185,18 @@ export default {
   computed: {
     finished () {
       return this.step > this.questions.length
+    },
+    radarData () {
+      return {
+        labels: this.scorerDimensions,
+        datasets: [{
+            label: 'Score',
+            data: this.scores(this.questions),
+            borderColor: colors.amber.darken1,
+            backgroundColor: colors.amber.darken4 + '50', // adding transparency
+          }
+        ]
+      }
     }
   },
   methods: {
