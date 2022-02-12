@@ -29,6 +29,7 @@
                 mdi-github
               </v-icon>
               GitHub</a>.
+            Le modèle de score est subjectif et basé sur nos expériences et impressions personnelles.
             Les retours et améliorations du système de score sont les bienvenus.</p>
         </div>
       </v-card>
