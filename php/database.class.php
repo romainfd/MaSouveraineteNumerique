@@ -13,7 +13,7 @@ class Database
     public static function connect()
     {
         // données de la base de données A CHANGER !!
-        $dbName = 'time';
+        $dbName = 'souv_num';
         $dbServer = 'localhost';
         $dbUser = 'root';
         $dbPasswd = '';

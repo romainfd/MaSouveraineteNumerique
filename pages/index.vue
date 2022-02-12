@@ -178,8 +178,8 @@ export default {
   },
   data () {
     return {
-      step: 1,
-      questions
+      step: 13,
+      questions,
     }
   },
   computed: {
@@ -199,13 +199,21 @@ export default {
       }
     }
   },
+  async mounted () {
+    // Collect session ID to identify session
+    this.session_id = (await this.$axios.$get('/php/session.php')).session_id
+  },
   methods: {
-    processAnswer(questionId, answer, rank) {
-      // Store last question results on server
-      console.log({ questionId, answer })
-      // console.log(await this.$axios.get('/categories.php'))
+    async processAnswer(questionId, answer, rank) {
       // Move to next question
       this.step = rank + 2
+      // Store last question results on server
+      console.log(await this.$axios.$post('/php/answer.php?sess=' + this.session_id, { questionId, answer },{
+        headers : {
+          // Preflight blocked by CORS locally otherwise | Ref.: https://stackoverflow.com/a/30554385
+          'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+        }
+      }))
     }
   },
 }
