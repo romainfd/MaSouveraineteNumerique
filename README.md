@@ -9,7 +9,7 @@ Il est développé avec les technologies open-source [Vue.js](https://en.wikiped
 
 ## Score
 
-Les détails des questions et du système de notation sont disponibles dans [`~/assets/questions.js`](~/assets/questions.js).
+Les détails des questions et du système de notation sont disponibles dans [`~/assets/questions.js`](assets/questions.js).
 
 Toutes les contributions et retours sont les bienvenus.
 
