@@ -8,6 +8,7 @@
     <v-footer
       :absolute="!fixed"
       app
+      class="justify-center"
     >
       <span>Souveraineté numérique &copy; {{ new Date().getFullYear() }}</span>
     </v-footer>

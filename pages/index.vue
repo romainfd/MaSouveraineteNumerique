@@ -11,8 +11,26 @@
             </v-icon>
           </a>
         </p>
-        <p>Curieux d'estimer la résilience, l'autonomie et la souveraineté de votre entreprise ?
-          Ce questionnaire vous permet d'obtenir des indicateurs clairs pour suivre votre souveraineté selon plusieurs dimensions et à travers le temps.</p>
+        <div class="text-justify">
+          <p>Curieux d'estimer la résilience, l'autonomie et la souveraineté de votre entreprise ?
+            Ce questionnaire vous permet d'obtenir des indicateurs clairs pour suivre votre souveraineté selon plusieurs dimensions et à travers le temps.</p>
+          <p class="font-italic text--secondary">Ce site est développée dans une approche collaborative et de partage de bonnes pratiques.
+            Tout le code est donc disponible sur
+            <a
+              href="https://github.com/romainfd/MaSouveraineteNumerique"
+              target="_blank"
+              class="text-decoration-none"
+            >
+              <v-icon
+                color="blue"
+                small
+                class="pb-1"
+              >
+                mdi-github
+              </v-icon>
+              GitHub</a>.
+            Les retours et améliorations du système de score sont les bienvenus.</p>
+        </div>
       </v-card>
       <v-card class="pa-4 my-4">
         <v-expand-transition
