@@ -32,10 +32,7 @@ const scorerMixin = {
     return {
       scorerDimensions: ['Indépendance culturelle', 'Indépendance économique', 'Indépendance géostratégique', 'Efficience'],
       dimensionsDetails: [
-        'Indépendance culturelle : details....',
-        'Indépendance économique : details....',
-        'Indépendance géostratégique : details....',
-        'Efficience: details....'
+        "Indépendance culturelle : dans quelle mesure votre organisation échappe aux biais et aux manipulations d'information potentiellement relayés par les outils numériques (essentiellement américains) les plus utilisés ?", "Indépendance économique : dans quelles proportions votre organisation s'est extraite d'une logique de dépendance économique vis-à-vis d'un ou plusieurs fournisseurs de services numériques ?", "Indépendance géostratégique : jusqu'à quel point votre organisation s'appuie sur une infrastructure numérique résiliente face aux risques de désactivation ou d'exfiltration de vos données sensibles ou stratégiques ?", "Efficience: dans quelle mesure votre organisation est-elle parvenue à déployer des outils numériques souverains sans pour autant pénaliser la productivité de ses membres ?"
       ]
     }
   },
