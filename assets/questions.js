@@ -151,7 +151,7 @@ const questions = [
     options: {
       'Internet Explorer': [0, 0, 0, 0],
       'Edge': [0, 0, 0, 1],
-      'Google': [0, 0, 0, 2],
+      'Google Chrome': [0, 0, 0, 2],
       'Mozilla Firefox': [2, 0, 2, 1],
       'Opera': [1, 0, 1, 0],
     },
