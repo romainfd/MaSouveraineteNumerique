@@ -211,7 +211,7 @@ export default {
   },
   data () {
     return {
-      step: 25,
+      step: 1,
       questions,
     }
   },
