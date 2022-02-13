@@ -232,12 +232,16 @@ export default {
       // Move to next question
       this.step = rank + 2
       // Store last question results on server
-      console.log(await this.$axios.$post('/php/answer.php?sess=' + this.session_id, { questionId, answer },{
-        headers : {
-          // Preflight blocked by CORS locally otherwise | Ref.: https://stackoverflow.com/a/30554385
-          'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+      console.log(await this.$axios.$post('/php/answer.php?sess=' + this.session_id, { questionId, answer }))
+      // Store scores once quizz is done
+      if (this.finished) {
+        const namedScores = {
+          Global: this.score(this.questions)
         }
-      }))
+        const scores = this.scores(this.questions)
+        this.scorerDimensions.forEach((key, i) => namedScores[key] = scores[i]);
+        console.log(await this.$axios.$post('/php/score.php?sess=' + this.session_id, { namedScores }))
+      }
     }
   },
 }

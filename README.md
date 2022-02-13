@@ -14,7 +14,13 @@ Les détails des questions et du système de notation sont disponibles dans [`~/
 Toutes les contributions et retours sont les bienvenus.
 
 ## Build Setup
+### Back-end
+```bash
+# Launch php server locally on the porrt 9000
+npm run php
+```
 
+### Front-end
 ```bash
 # install dependencies
 $ npm install

@@ -48,7 +48,14 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: process.env.NODE_ENV === 'production' ? '/souv_num/' : 'http://localhost:9000/',
+    baseURL: process.env.NODE_ENV === 'production' ? '/' : 'http://localhost:9000/',
+    progress: false,
+    headers: {
+      common: {
+        // Preflight blocked by CORS locally otherwise | Ref.: https://stackoverflow.com/a/30554385
+        'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+      }
+    },
     // credentials: true
   },
 
@@ -70,11 +77,6 @@ export default {
         }
       }
     }
-  },
-
-  router: {
-    // from to / to souv_num
-    base: process.env.NODE_ENV === 'production' ? '/souv_num' : ''
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
