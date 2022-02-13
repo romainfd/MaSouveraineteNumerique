@@ -5,7 +5,11 @@
         <p class="text-h4 mb-1">Votre entreprise est-elle souveraine ?</p>
         <p class="text-overline text--secondary">
           Questionnaire issu d'un travail commun d'élèves INSP - Corps des mines
-          <a href="https://google.fr" target="_blank" class="text-decoration-none">
+          <a
+            href="https://www.amalthea.fr/institutionnel/mines-paris/ena-corps-des-mines/" `
+            target="_blank"
+            class="text-decoration-none"
+          >
             <v-icon small class="mb-1">
               mdi-information-outline
             </v-icon>
