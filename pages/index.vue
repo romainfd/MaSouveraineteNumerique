@@ -166,11 +166,16 @@
               <v-divider></v-divider>
               <v-row class="my-3 align-end">
                 <span class="overline">{{ scorerDimensions[i] }}</span>
-                <v-spacer class="mb-3 mx-1" style="border-bottom: 1px dashed grey"></v-spacer>
-                <span
-                  class="text-h3 mb-1"
+                <v-spacer
+                  v-if="!$device.isMobile"
+                  class="mb-3 mx-1" style="border-bottom: 1px dashed grey"
+                ></v-spacer>
+                <v-col
+                  cols="12"
+                  sm="auto"
+                  class="text-h3 mb-1 pa-0"
                   :style="'color: ' + getColor(score)"
-                >{{ score }}%</span>
+                >{{ score }}%</v-col>
               </v-row>
               <p>{{ dimensionsDetails[i] }}</p>
             </div>
@@ -202,7 +207,7 @@ export default {
   },
   data () {
     return {
-      step: 1,
+      step: 25,
       questions,
     }
   },
