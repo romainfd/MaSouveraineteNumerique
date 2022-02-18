@@ -49,8 +49,16 @@
             <p class="text-h4 pt-4">
               Questions
             </p>
+            <v-alert
+              dense
+              outlined
+              text
+              type="info"
+              width="320"
+            >
+              Aucune réponse n'est obligatoire.
+            </v-alert>
             <div class="text-justify">
-              <p class="mb-0"><b><i>Aucune réponse n'est obligatoire.</i></b></p>
               <p class="mb-0">Lorsqu'un seul choix est possible, veuillez indiquer le choix majoritaire pour votre entité.</p>
               <p>Pour toutes les réponses sous forme de texte, il vous est possible d'écrire une option supplémentaire si besoin.</p>
             </div>

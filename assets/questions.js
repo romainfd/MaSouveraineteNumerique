@@ -8,26 +8,19 @@ const questions = [
     min: 0,
     max: 100,
   }, {
-    name: 'Code postal de votre entité',
-    id: -2,
-    type: 'postcode',
-  }, {
-    name: 'Effectif de votre entité',
-    id: -3,
-    details: "Nombre d'employés",
-    type: 'number',
-  }, {
     name: "Nom de votre entité",
     id: -4,
+    details: "Comme pour toutes les questions, aucun réponse n'est obligatoire",
     type: 'text'
   }, {
     name: "Email de contact",
     id: -5,
-    details: "Pour partager un suivi du score amélioré et les retours du travail réalisé",
+    details: "Optionnel, pour partager un suivi du score amélioré et les retours du travail réalisé",
     type: 'text',
   }, {
     name: "Catégorie de votre entité",
     id: -6,
+    details: "Comme pour toutes les questions, aucun réponse n'est obligatoire",
     type: 'combobox',
     options: {
       'Administration' : null,
@@ -36,9 +29,19 @@ const questions = [
       'Grand groupe' : null,
     }
   }, {
+    name: 'Effectif de votre entité',
+    id: -3,
+    details: "Nombre d'employés",
+    type: 'number',
+  }, {
+    name: 'Code postal de votre entité',
+    id: -2,
+    details: "Comme pour toutes les questions, aucun réponse n'est obligatoire",
+    type: 'postcode',
+  }, {
     name: "Chiffre d'affaires",
     id: -7,
-    details: "Si applicable, en €",
+    details: "Comme pour toutes les questions, aucun réponse n'est obligatoire. Si applicable, en €",
     type: 'number',
   },
   // QUESTIONS À PROPOS DE LA SOUVERAINETÉ
