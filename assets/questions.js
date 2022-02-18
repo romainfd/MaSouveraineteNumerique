@@ -181,7 +181,7 @@ const questions = [
     }
   },
   {
-    name: 'Montant de vos contrats avec des start-ups ? ',
+    name: 'Quel est le montant de vos contrats avec des start-ups ?',
     id: 11,
     details: "En pourcentage de votre chiffre d'affaire",
     type: 'slider',
@@ -199,7 +199,7 @@ const questions = [
     }
   },
   {
-    name: 'Quelle taille a la plus petite entitée avec laquelle vous collaborez ?',
+    name: 'Quelle taille a la plus petite entité avec laquelle vous collaborez ?',
     id: 12,
     type: 'slider',
     min: 0,
@@ -215,7 +215,7 @@ const questions = [
     }
   },
   {
-    name: "Part d'employés avec un profil numérique ?",
+    name: "Quelle part de vos employés dispose d'un profil numérique ?",
     id: 13,
     type: 'slider',
     min: 0,
@@ -227,7 +227,7 @@ const questions = [
     }
   },
   {
-    name: "R&D consacrée au numérique",
+    name: "Quelle part de R&D consacrez-vous au numérique ?",
     id: 14,
     details: "Pourcentage de votre chiffre d'affaire",
     type: 'slider',
