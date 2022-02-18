@@ -36,14 +36,14 @@ const questions = [
       'Grand groupe' : null,
     }
   }, {
-    name: "Chiffre d'affaire",
+    name: "Chiffre d'affaires",
     id: -7,
     details: "Si applicable, en €",
     type: 'number',
   },
   // QUESTIONS À PROPOS DE LA SOUVERAINETÉ
   {
-    name: 'Solution beautique utilisée',
+    name: 'Solution bureautique utilisée',
     id: 1,
     details: 'Veuillez sélectionner la réponse majoritaire',
     type: 'combobox',
@@ -157,7 +157,7 @@ const questions = [
     },
   },
   {
-    name: 'Quelle part de vos dépenses dans des services & projets numériques ?',
+    name: 'Quelle est la part de vos dépenses dans des services & projets numériques ?',
     id: 9,
     type: 'slider',
     min: 0,
@@ -199,7 +199,7 @@ const questions = [
     }
   },
   {
-    name: 'Quelle taille a la plus petite entitée avec laquelle vous collaborer ?',
+    name: 'Quelle taille a la plus petite entitée avec laquelle vous collaborez ?',
     id: 12,
     type: 'slider',
     min: 0,
@@ -227,7 +227,7 @@ const questions = [
     }
   },
   {
-    name: "R&D numérique",
+    name: "R&D consacrée au numérique",
     id: 14,
     details: "Pourcentage de votre chiffre d'affaire",
     type: 'slider',
@@ -265,7 +265,7 @@ const questions = [
     }
   },
   {
-    name: "Quel est la maturité de votre système de sauvegarde ?",
+    name: "Quelle est la maturité de votre système de sauvegarde ?",
     id: 17,
     type: 'score',
     min: 0,
