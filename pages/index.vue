@@ -18,7 +18,7 @@
         <div class="text-justify">
           <p>Curieux d'estimer la résilience, l'autonomie et la souveraineté de votre entreprise ?
             Ce questionnaire vous permet d'obtenir des indicateurs clairs pour suivre votre souveraineté selon plusieurs dimensions et à travers le temps.</p>
-          <p class="font-italic text--secondary">Ce site est développée dans une approche collaborative et de partage de bonnes pratiques.
+          <p class="font-italic text--secondary">Ce site est développé dans une approche collaborative et de partage de bonnes pratiques.
             Tout le code est donc disponible sur
             <a
               href="https://github.com/romainfd/MaSouveraineteNumerique"
