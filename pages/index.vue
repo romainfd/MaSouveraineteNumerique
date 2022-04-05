@@ -1,300 +1,107 @@
 <template>
-  <div>
-    <h1 id="title" class="display-2 my-8 text-center">
-      <img src="/logo.png" alt="Logo Ma Souveraineté Numérique" class="mr-n2 mr-md-0">
-      Ma Souveraineté Numérique
-    </h1>
-    <h2 class="headline my-4 pl-4">
-      L'initiative pour des actions numériques informées
-    </h2>
-    <section>
-      Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
-      Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500,
-      quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
-      Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique,
-      sans que son contenu n'en soit modifié.
-      Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum,
-      et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+  <div class="text-justify">
+    <section id="intro">
+      <h2 class="headline my-4 pl-4">
+        L'initiative pour des actions numériques informées
+      </h2>
+      <p>
+        Ce site est né du constat que le mot de souveraineté numérique était de plus en plus présent dans le monde numérique mais qu'il cache des définitions, des réalités et des actions différentes.
+        L'objectif de ce site est de centraliser des ressources pertinentes et chiffrées pour permettre de mieux appréhender, comprendre et réagir aux enjeux de la souveraineté numérique.
+        Loin de se vouloir alarmiste et protectionniste, ces informations doivent permettre de poser le débat sur un socle commun et sourcé afin de pouvoir co-construire des réponses efficaces
+        sur le plan de l'autonomie stratégique de la France et de ces acteurs (entreprises et citoyens) tout en maintenant une efficience nécessaire pour évoluer dans le monde numérique.
+      </p>
+      <ColabParagraph />
     </section>
-    <v-row justify="center" align="center" class="my-6">
-      <v-btn :href="tribuneUrl" target="_blank">
-        <v-icon left>
-          mdi-bullhorn-outline
-        </v-icon>
-        Lire notre tribune
-      </v-btn>
-    </v-row>
+
     <v-divider class="py-2" />
-    <h2 class="headline my-4 pl-4">
-      Nos notes
+    <h2 id="programs" class="headline my-4 pl-4">
+      Analyse des programmes des candidats
     </h2>
     <p>
-      Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire.
-      Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C.,
-      le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie,
-      s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum,
-      et en étudiant tous les usages de ce mot dans la littérature classique,
-      découvrit la source incontestable du Lorem Ipsum.
+      Les élections présidentielles sont un temps fort de la vie politique et permettent de débattre de nombreux sujets.
+      La souveraineté numérique n'échappe pas à cela et, renforcée par le contexte de la guerre en Ukraine, occupe une place importante dans les différents programmes.
+      Pour permettre des échanges plus clairs et construits, nous avons décidé de regrouper en une page l'ensemble des programmes afin de donner une vision plus claire du débat politique sur le sujet.
     </p>
     <v-row justify="center" align="center" class="my-6">
-      <v-spacer />
-      <v-col cols="12" md="8" class="px-6">
-        <v-row>
-          <v-btn block :href="noteChapeauUrl" target="_blank">
-            Note chapeau
-          </v-btn>
-        </v-row>
-        <v-row>
-          <v-col
-            v-for="section in sections"
-            :key="section.name"
-            class="px-1 px-md-4"
-            cols="4"
-          >
-            <v-btn block :href="'#' + section.id">
-              {{ section.name }}
-            </v-btn>
-          </v-col>
-        </v-row>
-      </v-col>
-      <v-spacer />
+      <v-btn to="/programs">
+        <v-icon left>
+          mdi-newspaper-variant-multiple-outline
+        </v-icon>
+        Comparer les programmes
+      </v-btn>
     </v-row>
-    <div v-for="(section, index) in sections" :id="section.id" :key="section.name">
-      <v-divider class="py-2" />
-      <v-row
-        class="ma-2"
-        align="center"
-        justify="center"
-      >
-        <v-col
-          cols="12"
-          md="auto"
-          align="center"
-          class="display-2 mr-4"
-        >
-          <v-row
-            align="center"
-            justify="center"
-            style="border: 1px solid dimgrey; color: dimgrey; border-radius: 100%; width: 72px; height: 72px;"
-          >
-            {{ index + 1 }}
-          </v-row>
-        </v-col>
-        <v-col>
-          <v-row class="justify-center justify-md-start py-3 py-md-0">
-            <h3 class="headline">
-              {{ section.name }}
-            </h3>
-          </v-row>
-          <v-row>
-            <p class="caption text--secondary mb-0">
-              Il provient en fait des sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum"
-              (Des Suprêmes Biens et des Suprêmes Maux) de Cicéron.
-              Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la théorie de l'éthique.
-              Les premières lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet...", proviennent de la section 1.10.32.
-            </p>
-          </v-row>
-        </v-col>
-      </v-row>
-      <!--
-      <v-row class="ma-2">
-        <section class="py-4">
-          Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire.
-          Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C.,
-          le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie,
-          s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum,
-          et en étudiant tous les usages de ce mot dans la littérature classique,
-          découvrit la source incontestable du Lorem Ipsum.
-        </section>
-      </v-row>
-      -->
-      <v-row class="ma-2">
-        <v-col
-          v-for="note in section.notes"
-          :key="note.url"
-          cols="12"
-          md="4"
-          class="pa-3 pa-md-4 pa-lg-8"
-        >
-          <article class="tiles">
-            <span class="image" :style="'--bg-color: ' + note.bgColor">
-              <img
-                :src="note.image"
-                :alt="note.name"
-              >
-            </span>
-            <a :href="note.url" target="_blank">
-              <h2>{{ note.name }}</h2>
-            </a>
-          </article>
-        </v-col>
-      </v-row>
-    </div>
+
+    <v-divider class="py-2" />
+    <h2 id="#quiz" class="headline my-4 pl-4">
+      Questionnaire de souveraineté
+    </h2>
+    <p>
+      Curieux d'estimer la résilience, l'autonomie et la souveraineté de votre organisation ? Ce questionnaire vous permet d'obtenir des indicateurs clairs pour suivre votre souveraineté selon plusieurs dimensions et à travers le temps.
+    </p>
+    <v-row justify="center" align="center" class="my-6">
+      <v-btn to="/quiz">
+        <v-icon left>
+          mdi-crosshairs-question
+        </v-icon>
+        Estimer ma souveraineté
+      </v-btn>
+    </v-row>
+
+    <v-divider class="py-2" />
+    <h2 id="#situation" class="headline my-4 pl-4">
+      Situation de la France
+    </h2>
+    <p>
+      Pour poser le débat et quantifier les enjeux, nous avons regroupé les chiffres marquants des enjeux de souveraineté.
+    </p>
+    <v-row justify="center" align="center" class="my-6">
+      <v-btn to="/situation">
+        <v-icon left>
+          mdi-chart-bar
+        </v-icon>
+        La souveraineté en chiffres
+      </v-btn>
+    </v-row>
+
+    <v-divider class="py-2" />
+    <section id="details">
+      <h2 class="headline my-4 pl-4">
+        Qui sommes-nous ?
+      </h2>
+      <p>
+        <a href="https://www.linkedin.com/in/godefroygalas">Godefroy Galas</a> et <a href="https://linkedin.com/in/romainfouilland">Romain Fouilland</a>,
+        nous sommes en troisième et dernière année de formation du Corps des mines que nous avons décidé de consacrer à l'écriture d'un mémoire sur la souveraineté numérique.
+        Après de nombreuses expériences en start-up, grands groupes et fonds autour du numérique, nous nous destinons à des postes de hauts-fonctionnaires dans l'État.
+        Étant persuadés que les enjeux de souveraineté numérique demandent une collaboration entre services publics, acteurs privés et citoyens et comme la formation du Corps des mines est conçue pour nous placer à cette interface,
+        nous avons eu à cœur d'en profiter pour s'intéresser à ces enjeux et essayer d'y apporter une pierre constructive à travers notre mémoire de fin d'études.
+      </p>
+      <p>
+        Le mémoire de fin d'études du Corps des mines se déroule d'octobre à juillet et est l'occasion de nombreuses rencontres et productions.
+        Nous avons, à ce titre, été rapporteurs de la mission Sportisse sur les "Infrastructures logicielles critiques" pour préparer la présidence française du Conseil de l'Union européenne.
+        Nous avons également répondu à une commande de l'INRIA avec 17 camarades de l'INSP (ex-ENA) sur les cibles et leviers pour politique de rééquilibrage rapide.
+        En parallèle de ces expériences, nous nous sommes également rapprochés d'acteurs privés avec lesquels nous sommes en train de mener diverses actions.
+      </p>
+      <p>
+        Bien que notre mémoire soit encore en construction, nous avons créé ce site pour partager l'expérience déjà acquise et centraliser les ressources et outils qui nous paraissent pertinents.
+        Sont ainsi disponibles, l'<a href="#programs">analyse des programmes des candidats</a> aux élections présidentielles de 2022,
+        un <a href="#quiz">questionnaire de souveraineté</a> permettant aux organisations d'estimer leur niveau de souveraineté selon plusieurs verticales et
+        une sélection de graphs illustrant la <a href="#situation">situation actuelle de la France</a> en matière de souveraineté numérique.
+      </p>
+    </section>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage',
-  data () {
-    return {
-      tribuneUrl: 'https://google.fr',
-      noteChapeauUrl: 'https://google.fr',
-      sections: [{
-        id: 'section1',
-        name: 'Section #1',
-        notes: [{
-          name: 'Note #1',
-          image: require('~/assets/img/blank.png'),
-          bgColor: 'rgba(162,233,0,0.5)',
-          url: 'https://google.fr'
-        }, {
-          name: 'Note #2',
-          image: require('~/assets/img/blank.png'),
-          bgColor: 'rgba(233,99,0,0.5)',
-          url: 'https://google.fr'
-        }, {
-          name: 'Note #3',
-          image: require('~/assets/img/blank.png'),
-          bgColor: '#988675',
-          url: 'https://google.fr'
-        }]
-      }, {
-        id: 'section2',
-        name: 'Section #2',
-        notes: [{
-          name: 'Note #1',
-          image: require('~/assets/img/blank.png'),
-          bgColor: 'rgba(0,233,221,0.5)',
-          url: 'https://google.fr'
-        }, {
-          name: 'Note #2',
-          image: require('~/assets/img/blank.png'),
-          bgColor: '#412734',
-          url: 'https://google.fr'
-        }, {
-          name: 'Note #3',
-          image: require('~/assets/img/blank.png'),
-          bgColor: 'rgba(100,108,109,0.75)',
-          url: 'https://google.fr'
-        }]
-      }, {
-        id: 'section3',
-        name: 'Section #3',
-        notes: [{
-          name: 'Note #1',
-          image: require('~/assets/img/blank.png'),
-          bgColor: 'rgba(0,163,233,0.5)',
-          url: 'https://google.fr'
-        }, {
-          name: 'Note #2',
-          image: require('~/assets/img/blank.png'),
-          bgColor: 'rgba(162,233,0,0.5)',
-          url: 'https://google.fr'
-        }, {
-          name: 'Note #3',
-          image: require('~/assets/img/blank.png'),
-          bgColor: 'rgba(229,106,89,0.15)',
-          url: 'https://google.fr'
-        }]
-      }]
-    }
-  },
   head: {
     title: 'Accueil'
   }
 }
 </script>
 
-<style lang="scss" scoped>
-#title img {
-  height: 1.5em;
-  position: relative;
-  top: .25em;
-}
-
-article.tiles {
-  position: relative;
-  transition: transform 0.5s ease;
-
-  .image {
-    border-radius: 4px;
-    overflow: hidden;
-
-    &::before {
-      background-color: var(--bg-color);
-      pointer-events: none;
-      transition: background-color 0.5s ease, opacity 0.5s ease;
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      opacity: 0.8;
-    }
-
-    img {
-      width: 100%;
-      aspect-ratio: 1;
-      object-fit: cover;
-      display: block;
-    }
-
-    &::after {
-      pointer-events: none;
-      transition: opacity 0.5s ease;
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('./assets/img/cross.svg');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      opacity: 0.25;
-      z-index: 2;
-    }
-  }
-
-  a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.5s ease, transform 0.5s ease;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 1em;
-    color: #ffffff;
-    text-align: center;
-    text-decoration: none;
-    z-index: 3;
-  }
-
-  &:hover {
-    transform: scale(1.1);
-
-    .image {
-      &::before {
-        // Dark filter on top of image
-        background-color: #333333;
-        opacity: 0.35;
-      }
-
-      &::after {
-        // Hiding cross
-        opacity: 0;
-      }
-    }
-  }
+<style scoped>
+#details a {
+  text-decoration: none;
+  font-style: italic;
 }
 </style>

@@ -22,25 +22,10 @@
             Curieux d'estimer la résilience, l'autonomie et la souveraineté de votre entreprise ?
             Ce questionnaire vous permet d'obtenir des indicateurs clairs pour suivre votre souveraineté selon plusieurs dimensions et à travers le temps.
           </p>
-          <p class="font-italic text--secondary">
-            Ce site est développé dans une approche collaborative et de partage de bonnes pratiques.
-            Tout le code est donc disponible sur
-            <a
-              href="https://github.com/romainfd/MaSouveraineteNumerique"
-              target="_blank"
-              class="text-decoration-none"
-            >
-              <v-icon
-                color="blue"
-                small
-                class="pb-1"
-              >
-                mdi-github
-              </v-icon>
-              GitHub</a>.
-            Le modèle de score est subjectif et basé sur nos expériences et impressions personnelles.
-            Les retours et améliorations du système de score sont les bienvenus.
-          </p>
+          <ColabParagraph
+            page-specific-text="Le modèle de score est subjectif et basé sur nos expériences et impressions personnelles.
+                                Les retours et améliorations du système de score sont les bienvenus."
+          />
         </div>
       </v-card>
       <v-card class="pa-4 my-4">
@@ -220,11 +205,11 @@
 <script>
 import colors from 'vuetify/es5/util/colors'
 import questions from '~/assets/questions'
+
 const consola = require('consola')
 const scorerMixin = require('~/mixins/scorer')
 
 export default {
-  name: 'IndexPage',
   mixins: [scorerMixin],
   data () {
     return {
