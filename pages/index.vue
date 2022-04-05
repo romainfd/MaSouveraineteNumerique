@@ -1,265 +1,107 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8">
-      <v-card class="pa-4 my-4">
-        <p class="text-h4 mb-1">Votre entreprise est-elle souveraine ?</p>
-        <p class="text-overline text--secondary">
-          Questionnaire issu d'un travail commun d'élèves INSP - Corps des mines
-          <a
-            href="https://www.amalthea.fr/institutionnel/mines-paris/ena-corps-des-mines/" `
-            target="_blank"
-            class="text-decoration-none"
-          >
-            <v-icon small class="mb-1">
-              mdi-information-outline
-            </v-icon>
-          </a>
-        </p>
-        <div class="text-justify">
-          <p>Curieux d'estimer la résilience, l'autonomie et la souveraineté de votre entreprise ?
-            Ce questionnaire vous permet d'obtenir des indicateurs clairs pour suivre votre souveraineté selon plusieurs dimensions et à travers le temps.</p>
-          <p class="font-italic text--secondary">Ce site est développé dans une approche collaborative et de partage de bonnes pratiques.
-            Tout le code est donc disponible sur
-            <a
-              href="https://github.com/romainfd/MaSouveraineteNumerique"
-              target="_blank"
-              class="text-decoration-none"
-            >
-              <v-icon
-                color="blue"
-                small
-                class="pb-1"
-              >
-                mdi-github
-              </v-icon>
-              GitHub</a>.
-            Le modèle de score est subjectif et basé sur nos expériences et impressions personnelles.
-            Les retours et améliorations du système de score sont les bienvenus.</p>
-        </div>
-      </v-card>
-      <v-card class="pa-4 my-4">
-        <v-expand-transition
-          v-if="!finished"
-        >
-          <v-stepper
-            v-model="step"
-            vertical
-            elevation="0"
-          >
-            <p class="text-h4 pt-4">
-              Questions
-            </p>
-            <v-alert
-              dense
-              outlined
-              text
-              type="info"
-              width="320"
-            >
-              Aucune réponse n'est obligatoire.
-            </v-alert>
-            <div class="text-justify">
-              <p class="mb-0">Lorsqu'un seul choix est possible, veuillez indiquer le choix majoritaire pour votre entité.</p>
-              <p>Pour toutes les réponses sous forme de texte, il vous est possible d'écrire une option supplémentaire si besoin.</p>
-            </div>
-            <div
-              v-for="(question, rank) in questions"
-              :key="question.id"
-            >
-              <v-stepper-step
-                :complete="step > rank + 1"
-                :editable="step > rank + 1"
-                edit-icon="$complete"
-                :step="rank + 1"
-              >
-                {{ question.name }}
-                <small v-if="question.details">{{ question.details }}</small>
-              </v-stepper-step>
+  <div class="text-justify">
+    <section id="intro">
+      <h2 class="headline my-4 pl-4">
+        L'initiative pour des actions numériques informées
+      </h2>
+      <p>
+        Ce site est né du constat que le mot de souveraineté numérique était de plus en plus présent dans le monde numérique mais qu'il cache des définitions, des réalités et des actions différentes.
+        L'objectif de ce site est de centraliser des ressources pertinentes et chiffrées pour permettre de mieux appréhender, comprendre et réagir aux enjeux de la souveraineté numérique.
+        Loin de se vouloir alarmiste et protectionniste, ces informations doivent permettre de poser le débat sur un socle commun et sourcé afin de pouvoir co-construire des réponses efficaces
+        sur le plan de l'autonomie stratégique de la France et de ces acteurs (entreprises et citoyens) tout en maintenant une efficience nécessaire pour évoluer dans le monde numérique.
+      </p>
+      <ColabParagraph />
+    </section>
 
-              <v-stepper-content :step="rank + 1">
-                <v-combobox
-                  v-if="question.type === 'combobox'"
-                  v-model="question.answer"
-                  :items="Object.keys(question.options)"
-                  label="Sélectionnez ou tapez si besoin"
-                  :multiple="question.average"
-                  :chips="question.average"
-                  clearable
-                ></v-combobox>
-                <v-slider
-                  v-else-if="question.type === 'slider'"
-                  v-model="question.answer"
-                  class="pt-7 pr-5"
-                  thumb-label
-                  thumb-size="24"
-                  :min="question.min"
-                  :max="question.max"
-                  :label="question.label"
-                  color="green lighten-1"
-                ></v-slider>
-                <v-switch
-                  v-else-if="question.type === 'switch'"
-                  v-model="question.answer"
-                  :label="question.answer ? 'Oui' : 'Non'"
-                  class="mt-2 ml-3"
-                  inset
-                ></v-switch>
-                <v-rating
-                  v-else-if="question.type === 'score'"
-                  v-model="question.answer"
-                  color="primary"
-                  empty-icon="mdi-star-outline"
-                  full-icon="mdi-star"
-                  half-icon="mdi-star-half-full"
-                  half-increments
-                  hover
-                  length="5"
-                  class=""
-                  :size="$device.isMobile ? 36 : 64"
-                ></v-rating>
-                <v-otp-input
-                  v-else-if="question.type === 'postcode'"
-                  v-model="question.answer"
-                  style="max-width: 400px;"
-                  length="5"
-                ></v-otp-input>
-                <v-text-field
-                  v-else-if="question.type === 'number'"
-                  v-model="question.answer"
-                  min="0"
-                  single-line
-                  type="number"
-                />
-                <v-text-field
-                  v-else-if="question.type === 'text'"
-                  v-model="question.answer"
-                  single-line
-                />
-                <div v-else>
-                  Type de question inconnu
-                </div>
+    <v-divider class="py-2" />
+    <h2 id="programs" class="headline my-4 pl-4">
+      Analyse des programmes des candidats
+    </h2>
+    <p>
+      Les élections présidentielles sont un temps fort de la vie politique et permettent de débattre de nombreux sujets.
+      La souveraineté numérique n'échappe pas à cela et, renforcée par le contexte de la guerre en Ukraine, occupe une place importante dans les différents programmes.
+      Pour permettre des échanges plus clairs et construits, nous avons décidé de regrouper en une page l'ensemble des programmes afin de donner une vision plus claire du débat politique sur le sujet.
+    </p>
+    <v-row justify="center" align="center" class="my-6">
+      <v-btn to="/programs">
+        <v-icon left>
+          mdi-newspaper-variant-multiple-outline
+        </v-icon>
+        Comparer les programmes
+      </v-btn>
+    </v-row>
 
-                <v-btn
-                  class="mb-1"
-                  color="primary"
-                  @click="processAnswer(question.id, question.answer, rank)"
-                >
-                  <v-icon left>
-                    mdi-check
-                  </v-icon>
-                  {{ step === questions.length ? 'Terminer' : 'Valider' }}
-                </v-btn>
-                <v-btn
-                  class="mb-1 ml-1"
-                  text
-                  v-if="rank > 0"
-                  @click="step = rank"
-                >
-                  Retour
-                </v-btn>
-              </v-stepper-content>
-            </div>
-          </v-stepper>
-        </v-expand-transition>
-        <v-expand-transition v-else>
-          <div>
-            <p class="text-h4 pt-4">
-              Résultats
-            </p>
-            <p>Merci pour votre participation.</p>
-            <p>Vous avez obtenu un score global de souveraineté de <span class="text-h4" :style="'color: ' + this.getColor(this.score(this.questions))">{{ score(questions) }}%</span> !</p>
-            <p>Vous trouverez ci-dessous plus de détails sur vos résultats, des ressources pour découvrir les enjeux de la souveraineté numérique et des suggestions d'actions pour améliorer votre score dans le temps.</p>
-            <ChartRadar
-              :data="radarData"
-              :labels="scorerDimensions"
-              title="Résultats"
-            />
-            <div v-for="(score, i) in this.scores(questions)" class="ma-3">
-              <v-divider></v-divider>
-              <v-row class="my-3 align-end">
-                <span class="overline">{{ scorerDimensions[i] }}</span>
-                <v-spacer
-                  v-if="!$device.isMobile"
-                  class="mb-3 mx-1" style="border-bottom: 1px dashed grey"
-                ></v-spacer>
-                <v-col
-                  cols="12"
-                  sm="auto"
-                  class="text-h3 mb-1 pa-0"
-                  :style="'color: ' + getColor(score)"
-                >{{ score }}%</v-col>
-              </v-row>
-              <p>{{ dimensionsDetails[i] }}</p>
-            </div>
-            <v-btn
-              @click="step = questions.length"
-            >
-              <v-icon left>
-                mdi-arrow-left
-              </v-icon>
-              Retour aux questions
-            </v-btn>
-          </div>
-        </v-expand-transition>
-      </v-card>
-    </v-col>
-  </v-row>
+    <v-divider class="py-2" />
+    <h2 id="#quiz" class="headline my-4 pl-4">
+      Questionnaire de souveraineté
+    </h2>
+    <p>
+      Curieux d'estimer la résilience, l'autonomie et la souveraineté de votre organisation ? Ce questionnaire vous permet d'obtenir des indicateurs clairs pour suivre votre souveraineté selon plusieurs dimensions et à travers le temps.
+    </p>
+    <v-row justify="center" align="center" class="my-6">
+      <v-btn to="/quiz">
+        <v-icon left>
+          mdi-crosshairs-question
+        </v-icon>
+        Estimer ma souveraineté
+      </v-btn>
+    </v-row>
+
+    <v-divider class="py-2" />
+    <h2 id="#situation" class="headline my-4 pl-4">
+      Situation de la France
+    </h2>
+    <p>
+      Pour poser le débat et quantifier les enjeux, nous avons regroupé les chiffres marquants des enjeux de souveraineté.
+    </p>
+    <v-row justify="center" align="center" class="my-6">
+      <v-btn to="/situation">
+        <v-icon left>
+          mdi-chart-bar
+        </v-icon>
+        La souveraineté en chiffres
+      </v-btn>
+    </v-row>
+
+    <v-divider class="py-2" />
+    <section id="details">
+      <h2 class="headline my-4 pl-4">
+        Qui sommes-nous ?
+      </h2>
+      <p>
+        <a href="https://www.linkedin.com/in/godefroygalas">Godefroy Galas</a> et <a href="https://linkedin.com/in/romainfouilland">Romain Fouilland</a>,
+        nous sommes en troisième et dernière année de formation du Corps des mines que nous avons décidé de consacrer à l'écriture d'un mémoire sur la souveraineté numérique.
+        Après de nombreuses expériences en start-up, grands groupes et fonds autour du numérique, nous nous destinons à des postes de hauts-fonctionnaires dans l'État.
+        Étant persuadés que les enjeux de souveraineté numérique demandent une collaboration entre services publics, acteurs privés et citoyens et comme la formation du Corps des mines est conçue pour nous placer à cette interface,
+        nous avons eu à cœur d'en profiter pour s'intéresser à ces enjeux et essayer d'y apporter une pierre constructive à travers notre mémoire de fin d'études.
+      </p>
+      <p>
+        Le mémoire de fin d'études du Corps des mines se déroule d'octobre à juillet et est l'occasion de nombreuses rencontres et productions.
+        Nous avons, à ce titre, été rapporteurs de la mission Sportisse sur les "Infrastructures logicielles critiques" pour préparer la présidence française du Conseil de l'Union européenne.
+        Nous avons également répondu à une commande de l'INRIA avec 17 camarades de l'INSP (ex-ENA) sur les cibles et leviers pour politique de rééquilibrage rapide.
+        En parallèle de ces expériences, nous nous sommes également rapprochés d'acteurs privés avec lesquels nous sommes en train de mener diverses actions.
+      </p>
+      <p>
+        Bien que notre mémoire soit encore en construction, nous avons créé ce site pour partager l'expérience déjà acquise et centraliser les ressources et outils qui nous paraissent pertinents.
+        Sont ainsi disponibles, l'<a href="#programs">analyse des programmes des candidats</a> aux élections présidentielles de 2022,
+        un <a href="#quiz">questionnaire de souveraineté</a> permettant aux organisations d'estimer leur niveau de souveraineté selon plusieurs verticales et
+        une sélection de graphs illustrant la <a href="#situation">situation actuelle de la France</a> en matière de souveraineté numérique.
+      </p>
+    </section>
+  </div>
 </template>
 
 <script>
-import questions from '~/assets/questions'
-const scorerMixin = require('~/mixins/scorer')
-import colors from 'vuetify/es5/util/colors'
-
 export default {
-  mixins: [scorerMixin],
-  name: 'IndexPage',
   head: {
-    title: 'Questionnaire entreprise',
-  },
-  data () {
-    return {
-      step: 1,
-      questions,
-    }
-  },
-  computed: {
-    finished () {
-      return this.step > this.questions.length
-    },
-    radarData () {
-      return {
-        labels: this.scorerDimensions,
-        datasets: [{
-            label: 'Score',
-            data: this.scores(this.questions),
-            borderColor: colors.amber.darken1,
-            backgroundColor: colors.amber.darken4 + '50', // adding transparency
-          }
-        ]
-      }
-    }
-  },
-  async mounted () {
-    // Collect session ID to identify session
-    this.session_id = (await this.$axios.$get('/php/session.php')).session_id
-  },
-  methods: {
-    async processAnswer(questionId, answer, rank) {
-      // Move to next question
-      this.step = rank + 2
-      // Store last question results on server
-      console.log(await this.$axios.$post('/php/answer.php?sess=' + this.session_id, { questionId, answer }))
-      // Store scores once quizz is done
-      if (this.finished) {
-        const namedScores = {
-          Global: this.score(this.questions)
-        }
-        const scores = this.scores(this.questions)
-        this.scorerDimensions.forEach((key, i) => namedScores[key] = scores[i]);
-        console.log(await this.$axios.$post('/php/score.php?sess=' + this.session_id, { namedScores }))
-      }
-    }
-  },
+    title: 'Accueil'
+  }
 }
 </script>
+
+<style scoped>
+#details a {
+  text-decoration: none;
+  font-style: italic;
+}
+</style>

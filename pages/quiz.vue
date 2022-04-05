@@ -1,0 +1,262 @@
+<template>
+  <v-row justify="center" align="center">
+    <v-col cols="12" sm="10">
+      <v-card class="pa-4 my-4 pb-1">
+        <p class="text-h4 mb-1">
+          Votre entreprise est-elle souveraine ?
+        </p>
+        <p class="text-overline text--secondary">
+          Questionnaire issu d'un travail commun d'élèves INSP - Corps des mines
+          <a
+            href="https://www.amalthea.fr/institutionnel/mines-paris/ena-corps-des-mines/"
+            target="_blank"
+            class="text-decoration-none"
+          >
+            <v-icon small class="mb-1">
+              mdi-information-outline
+            </v-icon>
+          </a>
+        </p>
+        <div class="text-justify">
+          <p>
+            Curieux d'estimer la résilience, l'autonomie et la souveraineté de votre entreprise ?
+            Ce questionnaire vous permet d'obtenir des indicateurs clairs pour suivre votre souveraineté selon plusieurs dimensions et à travers le temps.
+          </p>
+          <ColabParagraph
+            page-specific-text="Le modèle de score est subjectif et basé sur nos expériences et impressions personnelles.
+                                Les retours et améliorations du système de score sont les bienvenus."
+          />
+        </div>
+      </v-card>
+      <v-card class="pa-4 my-4">
+        <v-expand-transition
+          v-if="!finished"
+        >
+          <v-stepper
+            v-model="step"
+            vertical
+            elevation="0"
+          >
+            <p class="text-h4 pt-4">
+              Questions
+            </p>
+            <v-alert
+              dense
+              outlined
+              text
+              type="info"
+              width="320"
+            >
+              Aucune réponse n'est obligatoire.
+            </v-alert>
+            <div class="text-justify">
+              <p class="mb-0">
+                Lorsqu'un seul choix est possible, veuillez indiquer le choix majoritaire pour votre entité.
+              </p>
+              <p>Pour toutes les réponses sous forme de texte, il vous est possible d'écrire une option supplémentaire si besoin.</p>
+            </div>
+            <div
+              v-for="(question, rank) in questions"
+              :key="question.id"
+            >
+              <v-stepper-step
+                :complete="step > rank + 1"
+                :editable="step > rank + 1"
+                edit-icon="$complete"
+                :step="rank + 1"
+              >
+                {{ question.name }}
+                <small v-if="question.details">{{ question.details }}</small>
+              </v-stepper-step>
+
+              <v-stepper-content :step="rank + 1">
+                <v-combobox
+                  v-if="question.type === 'combobox'"
+                  v-model="question.answer"
+                  :items="Object.keys(question.options)"
+                  label="Sélectionnez ou tapez si besoin"
+                  :multiple="question.average"
+                  :chips="question.average"
+                  clearable
+                />
+                <v-slider
+                  v-else-if="question.type === 'slider'"
+                  v-model="question.answer"
+                  class="pt-7 pr-5"
+                  thumb-label
+                  thumb-size="24"
+                  :min="question.min"
+                  :max="question.max"
+                  :label="question.label"
+                  color="green lighten-1"
+                />
+                <v-switch
+                  v-else-if="question.type === 'switch'"
+                  v-model="question.answer"
+                  :label="question.answer ? 'Oui' : 'Non'"
+                  class="mt-2 ml-3"
+                  inset
+                />
+                <v-rating
+                  v-else-if="question.type === 'score'"
+                  v-model="question.answer"
+                  color="primary"
+                  empty-icon="mdi-star-outline"
+                  full-icon="mdi-star"
+                  half-icon="mdi-star-half-full"
+                  half-increments
+                  hover
+                  length="5"
+                  class=""
+                  :size="$device.isMobile ? 36 : 64"
+                />
+                <v-otp-input
+                  v-else-if="question.type === 'postcode'"
+                  v-model="question.answer"
+                  style="max-width: 400px;"
+                  length="5"
+                />
+                <v-text-field
+                  v-else-if="question.type === 'number'"
+                  v-model="question.answer"
+                  min="0"
+                  single-line
+                  type="number"
+                />
+                <v-text-field
+                  v-else-if="question.type === 'text'"
+                  v-model="question.answer"
+                  single-line
+                />
+                <div v-else>
+                  Type de question inconnu
+                </div>
+
+                <v-btn
+                  class="mb-1"
+                  color="primary"
+                  @click="processAnswer(question.id, question.answer, rank)"
+                >
+                  <v-icon left>
+                    mdi-check
+                  </v-icon>
+                  {{ step === questions.length ? 'Terminer' : 'Valider' }}
+                </v-btn>
+                <v-btn
+                  v-if="rank > 0"
+                  class="mb-1 ml-1"
+                  text
+                  @click="step = rank"
+                >
+                  Retour
+                </v-btn>
+              </v-stepper-content>
+            </div>
+          </v-stepper>
+        </v-expand-transition>
+        <v-expand-transition v-else>
+          <div>
+            <p class="text-h4 pt-4">
+              Résultats
+            </p>
+            <p>Merci pour votre participation.</p>
+            <p>Vous avez obtenu un score global de souveraineté de <span class="text-h4" :style="'color: ' + getColor(score(questions))">{{ score(questions) }}%</span> !</p>
+            <p>Vous trouverez ci-dessous plus de détails sur vos résultats, des ressources pour découvrir les enjeux de la souveraineté numérique et des suggestions d'actions pour améliorer votre score dans le temps.</p>
+            <ChartRadar
+              :data="radarData"
+              :labels="scorerDimensions"
+              title="Résultats"
+            />
+            <div v-for="(score, i) in scores(questions)" :key="i" class="ma-3">
+              <v-divider />
+              <v-row class="my-3 align-end">
+                <span class="overline">{{ scorerDimensions[i] }}</span>
+                <v-spacer
+                  v-if="!$device.isMobile"
+                  class="mb-3 mx-1"
+                  style="border-bottom: 1px dashed grey"
+                />
+                <v-col
+                  cols="12"
+                  sm="auto"
+                  class="text-h3 mb-1 pa-0"
+                  :style="'color: ' + getColor(score)"
+                >
+                  {{ score }}%
+                </v-col>
+              </v-row>
+              <p>{{ dimensionsDetails[i] }}</p>
+            </div>
+            <v-btn
+              @click="step = questions.length"
+            >
+              <v-icon left>
+                mdi-arrow-left
+              </v-icon>
+              Retour aux questions
+            </v-btn>
+          </div>
+        </v-expand-transition>
+      </v-card>
+    </v-col>
+  </v-row>
+</template>
+
+<script>
+import colors from 'vuetify/es5/util/colors'
+import questions from '~/assets/questions'
+
+const consola = require('consola')
+const scorerMixin = require('~/mixins/scorer')
+
+export default {
+  mixins: [scorerMixin],
+  data () {
+    return {
+      step: 1,
+      questions
+    }
+  },
+  head: {
+    title: 'Questionnaire entreprise'
+  },
+  computed: {
+    finished () {
+      return this.step > this.questions.length
+    },
+    radarData () {
+      return {
+        labels: this.scorerDimensions,
+        datasets: [{
+          label: 'Score',
+          data: this.scores(this.questions),
+          borderColor: colors.amber.darken1,
+          backgroundColor: colors.amber.darken4 + '50' // adding transparency
+        }
+        ]
+      }
+    }
+  },
+  async mounted () {
+    // Collect session ID to identify session
+    this.session_id = (await this.$axios.$get('/php/session.php')).session_id
+  },
+  methods: {
+    async processAnswer (questionId, answer, rank) {
+      // Move to next question
+      this.step = rank + 2
+      // Store last question results on server
+      consola.log(await this.$axios.$post('/php/answer.php?sess=' + this.session_id, { questionId, answer }))
+      // Store scores once quizz is done
+      if (this.finished) {
+        const namedScores = {
+          Global: this.score(this.questions)
+        }
+        const scores = this.scores(this.questions)
+        this.scorerDimensions.forEach((key, i) => { namedScores[key] = scores[i] })
+        consola.log(await this.$axios.$post('/php/score.php?sess=' + this.session_id, { namedScores }))
+      }
+    }
+  }
+}
+</script>

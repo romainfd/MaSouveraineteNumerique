@@ -35,15 +35,18 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    // https://go.nuxtjs.dev/eslint
+    '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
-    '@nuxtjs/device',
+    '@nuxtjs/device'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-polyfill'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -53,10 +56,23 @@ export default {
     headers: {
       common: {
         // Preflight blocked by CORS locally otherwise | Ref.: https://stackoverflow.com/a/30554385
-        'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
       }
-    },
+    }
     // credentials: true
+  },
+
+  polyfill: {
+    features: [{
+      require: 'smoothscroll-anchor-polyfill'
+    },
+    {
+      require: 'smoothscroll-polyfill',
+      // Detection found in source: https://github.com/iamdustan/smoothscroll/blob/master/src/smoothscroll.js
+      detect: () => 'scrollBehavior' in document.documentElement.style && window.__forceSmoothScrollPolyfill__ !== true,
+      // Optional install function called client side after the package is required:
+      install: smoothscroll => smoothscroll.polyfill()
+    }]
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
@@ -72,8 +88,8 @@ export default {
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
-          success: colors.green.accent3
           */
+          success: colors.green.accent3
         }
       }
     }

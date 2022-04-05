@@ -6,43 +6,43 @@ const questions = [
     type: 'slider',
     label: 'Pourcentage',
     min: 0,
-    max: 100,
+    max: 100
   }, {
-    name: "Nom de votre entité",
+    name: 'Nom de votre entité',
     id: -4,
     details: "Comme pour toutes les questions, aucun réponse n'est obligatoire",
     type: 'text'
   }, {
-    name: "Email de contact",
+    name: 'Email de contact',
     id: -5,
-    details: "Optionnel, pour partager un suivi du score amélioré et les retours du travail réalisé",
-    type: 'text',
+    details: 'Optionnel, pour partager un suivi du score amélioré et les retours du travail réalisé',
+    type: 'text'
   }, {
-    name: "Catégorie de votre entité",
+    name: 'Catégorie de votre entité',
     id: -6,
     details: "Comme pour toutes les questions, aucun réponse n'est obligatoire",
     type: 'combobox',
     options: {
-      'Administration' : null,
-      'Start-up' : null,
-      'PME' : null,
-      'Grand groupe' : null,
+      Administration: null,
+      'Start-up': null,
+      PME: null,
+      'Grand groupe': null
     }
   }, {
     name: 'Effectif de votre entité',
     id: -3,
     details: "Nombre d'employés",
-    type: 'number',
+    type: 'number'
   }, {
     name: 'Code postal de votre entité',
     id: -2,
     details: "Comme pour toutes les questions, aucun réponse n'est obligatoire",
-    type: 'postcode',
+    type: 'postcode'
   }, {
     name: "Chiffre d'affaires",
     id: -7,
     details: "Comme pour toutes les questions, aucun réponse n'est obligatoire. Si applicable, en €",
-    type: 'number',
+    type: 'number'
   },
   // QUESTIONS À PROPOS DE LA SOUVERAINETÉ
   {
@@ -51,15 +51,15 @@ const questions = [
     details: 'Veuillez sélectionner la réponse majoritaire',
     type: 'combobox',
     options: {
-      'Licence office' : [0, 1, 1, 2],
-      'Office 365 on-premise' : [0, 0, 1, 2],
-      'Office 365' : [0, 0, 0, 2],
-      'Google Workspace' : [0, 0, 0, 2],
-      'LibreOffice' : [0, 2, 2, 0],
-      'OpenOffice' : [0, 2, 2, 0],
-      'OnlyOffice' : [0, 2, 2, 1],
-      'Collabora Online' : [0, 2, 2, 0],
-    },
+      'Licence office': [0, 1, 1, 2],
+      'Office 365 on-premise': [0, 0, 1, 2],
+      'Office 365': [0, 0, 0, 2],
+      'Google Workspace': [0, 0, 0, 2],
+      LibreOffice: [0, 2, 2, 0],
+      OpenOffice: [0, 2, 2, 0],
+      OnlyOffice: [0, 2, 2, 1],
+      'Collabora Online': [0, 2, 2, 0]
+    }
   },
   {
     name: 'Solution Cloud utilisée',
@@ -69,13 +69,13 @@ const questions = [
     options: {
       'AWS (Amazon Web Services)': [0, 0, 0, 2],
       'GCP (Google Cloud Platform)': [0, 0, 0, 2],
-      'Azure': [0, 0, 0, 2],
-      'Heroku': [0, 0, 0, 2],
-      'OVH': [0, 2, 2, 0],
-      'Outscale': [0, 2, 2, 0],
-      'Scaleway': [0, 1, 2, 1],
-      'Rapid.space': [0, 1, 2, 1],
-    },
+      Azure: [0, 0, 0, 2],
+      Heroku: [0, 0, 0, 2],
+      OVH: [0, 2, 2, 0],
+      Outscale: [0, 2, 2, 0],
+      Scaleway: [0, 1, 2, 1],
+      'Rapid.space': [0, 1, 2, 1]
+    }
   },
   {
     name: "Système d'exploitation de vos ordinateurs",
@@ -83,10 +83,10 @@ const questions = [
     details: 'Veuillez sélectionner la réponse majoritaire',
     type: 'combobox',
     options: {
-      'Linux': [0, 2, 2, 0],
-      'MacOS': [0, 1, 1, 2],
-      'Windows': [0, 1, 1, 2],
-    },
+      Linux: [0, 2, 2, 0],
+      MacOS: [0, 1, 1, 2],
+      Windows: [0, 1, 1, 2]
+    }
   },
   {
     name: 'Moteur de recherche utilisé',
@@ -94,12 +94,12 @@ const questions = [
     details: 'Veuillez sélectionner la réponse majoritaire',
     type: 'combobox',
     options: {
-      'Google': [0, 0, 0, 2],
-      'Qwant': [2, 0, 1, 1],
-      'DuckDuckGo': [1, 0, 2, 1],
-      'Bing': [0, 0, 0, 1],
-      'Yahoo': [0, 0, 0, 0],
-    },
+      Google: [0, 0, 0, 2],
+      Qwant: [2, 0, 1, 1],
+      DuckDuckGo: [1, 0, 2, 1],
+      Bing: [0, 0, 0, 1],
+      Yahoo: [0, 0, 0, 0]
+    }
   },
   {
     name: 'Messagerie utilisée',
@@ -107,13 +107,13 @@ const questions = [
     details: 'Veuillez sélectionner la réponse majoritaire',
     type: 'combobox',
     options: {
-      'WhatsApp': [0, 2, 0, 2],
-      'Signal': [0, 2, 2, 1],
-      'Teams': [0, 0, 0, 2],
-      'Slack': [0, 1, 0, 1],
-      'Telegram': [0, 2, 0, 2],
-      'Messenger / Facebook Workspace': [0, 1, 0, 2],
-    },
+      WhatsApp: [0, 2, 0, 2],
+      Signal: [0, 2, 2, 1],
+      Teams: [0, 0, 0, 2],
+      Slack: [0, 1, 0, 1],
+      Telegram: [0, 2, 0, 2],
+      'Messenger / Facebook Workspace': [0, 1, 0, 2]
+    }
   },
   {
     name: 'Solutions métiers utilisées',
@@ -122,15 +122,15 @@ const questions = [
     type: 'combobox',
     average: true,
     options: {
-      'SAP': [2, 1, 2, 2],
-      'Informatica': [0, 0, 0, 2],
-      'Salesforce': [0, 0, 0, 2],
-      'PayFit': [2, 0, 0, 2],
-      'Qonto': [2, 2, 0, 2],
-      'Palantir': [0, 0, 0, 2],
-      'Datadog': [1, 1, 0, 2],
-      'McAfee': [0, 0, 0, 2],
-      'Zscaler': [0, 0, 0, 2],
+      SAP: [2, 1, 2, 2],
+      Informatica: [0, 0, 0, 2],
+      Salesforce: [0, 0, 0, 2],
+      PayFit: [2, 0, 0, 2],
+      Qonto: [2, 2, 0, 2],
+      Palantir: [0, 0, 0, 2],
+      Datadog: [1, 1, 0, 2],
+      McAfee: [0, 0, 0, 2],
+      Zscaler: [0, 0, 0, 2]
     },
     default: [1, 1, 1, 1]
   },
@@ -141,10 +141,10 @@ const questions = [
     type: 'combobox',
     options: {
       'iPhone (iOS)': [0, 0, 0, 2],
-      'Android': [1, 1, 0, 1],
+      Android: [1, 1, 0, 1],
       '/e/': [2, 2, 2, 0],
-      'PinePhone': [2, 2, 2, 0],
-    },
+      PinePhone: [2, 2, 2, 0]
+    }
   },
   {
     name: 'Navigateur web utilisé',
@@ -153,11 +153,11 @@ const questions = [
     type: 'combobox',
     options: {
       'Internet Explorer': [0, 0, 0, 0],
-      'Edge': [0, 0, 0, 1],
+      Edge: [0, 0, 0, 1],
       'Google Chrome': [0, 0, 0, 2],
       'Mozilla Firefox': [2, 0, 2, 1],
-      'Opera': [1, 0, 1, 0],
-    },
+      Opera: [1, 0, 1, 0]
+    }
   },
   {
     name: 'Quelle est la part de vos dépenses dans des services & projets numériques ?',
@@ -166,19 +166,19 @@ const questions = [
     min: 0,
     max: 100,
     label: 'Pourcentage',
-    weight(v) {
+    weight (v) {
       return [0, 0, 0, 0]
     }
   },
   {
     name: 'Quelle part de vos projets numériques est menée en interne ?',
     id: 10,
-    details: "Par opposition à de la sous-traitance",
+    details: 'Par opposition à de la sous-traitance',
     type: 'slider',
     min: 0,
     max: 100,
     label: 'Pourcentage',
-    weight(v) {
+    weight (v) {
       v = v / 100
       return [2 * v, 2 * v, 2 * v, null]
     }
@@ -191,7 +191,7 @@ const questions = [
     min: 0,
     max: 100,
     label: 'Pourcentage',
-    weight(v) {
+    weight (v) {
       v = v / 100
       return [
         Math.min(2, 2 * v / 0.05),
@@ -208,7 +208,7 @@ const questions = [
     min: 0,
     max: 500,
     label: "Nombre d'employés",
-    weight(v) {
+    weight (v) {
       return [
         v < 10 ? 2 : (v < 20 ? 1.6 : (v < 50 ? 1.2 : (v < 100 ? 0.8 : (v < 200 ? 0.4 : 0)))),
         v < 10 ? 2 : (v < 20 ? 1.6 : (v < 50 ? 1.2 : (v < 100 ? 0.8 : (v < 200 ? 0.4 : 0)))),
@@ -224,20 +224,20 @@ const questions = [
     min: 0,
     max: 100,
     label: 'Pourcentage',
-    weight(v) {
+    weight (v) {
       v = v / 100
       return [2 * v, null, null, null]
     }
   },
   {
-    name: "Quelle part de R&D consacrez-vous au numérique ?",
+    name: 'Quelle part de R&D consacrez-vous au numérique ?',
     id: 14,
     details: "Pourcentage de votre chiffre d'affaire",
     type: 'slider',
     min: 0,
     max: 100,
     label: 'Pourcentage',
-    weight(v) {
+    weight (v) {
       v = v / 100
       return [
         Math.min(2, 2 * v / 0.05),
@@ -248,32 +248,32 @@ const questions = [
     }
   },
   {
-    name: "Comment jugez-vous votre implication face à la menace cyber ?",
+    name: 'Comment jugez-vous votre implication face à la menace cyber ?',
     id: 15,
     type: 'score',
     min: 0,
     max: 5,
-    weight(v) {
+    weight (v) {
       return [null, null, 2 * v / 5, null]
     }
   },
   {
-    name: "Comment jugez-vous la sensibilisation de vos employés au numérique ?",
+    name: 'Comment jugez-vous la sensibilisation de vos employés au numérique ?',
     id: 16,
     type: 'score',
     min: 0,
     max: 5,
-    weight(v) {
+    weight (v) {
       return [null, null, 2 * v / 5, null]
     }
   },
   {
-    name: "Quelle est la maturité de votre système de sauvegarde ?",
+    name: 'Quelle est la maturité de votre système de sauvegarde ?',
     id: 17,
     type: 'score',
     min: 0,
     max: 5,
-    weight(v) {
+    weight (v) {
       return [null, null, 2 * v / 5, null]
     }
   },
@@ -282,11 +282,10 @@ const questions = [
     id: 18,
     type: 'switch',
     label: 'Oui',
-    weight(v) {
+    weight (v) {
       return [null, null, 2 * v, null]
     }
   }
 ]
-
 
 export default questions
