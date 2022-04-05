@@ -16,7 +16,7 @@ Toutes les contributions et retours sont les bienvenus.
 ## Build Setup
 ### Back-end
 ```bash
-# Launch php server locally on the porrt 9000
+# Launch php server locally on the port 9000
 npm run php
 ```
 
@@ -25,7 +25,7 @@ npm run php
 # install dependencies
 $ npm install
 
-# serve with hot reload at localhost:3000
+# serve client with hot reload at localhost:3000
 $ npm run dev
 
 # build for production and launch server
