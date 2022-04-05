@@ -1,265 +1,300 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8">
-      <v-card class="pa-4 my-4">
-        <p class="text-h4 mb-1">Votre entreprise est-elle souveraine ?</p>
-        <p class="text-overline text--secondary">
-          Questionnaire issu d'un travail commun d'élèves INSP - Corps des mines
-          <a
-            href="https://www.amalthea.fr/institutionnel/mines-paris/ena-corps-des-mines/" `
-            target="_blank"
-            class="text-decoration-none"
+  <div>
+    <h1 id="title" class="display-2 my-8 text-center">
+      <img src="/logo.png" alt="Logo Ma Souveraineté Numérique" class="mr-n2 mr-md-0">
+      Ma Souveraineté Numérique
+    </h1>
+    <h2 class="headline my-4 pl-4">
+      L'initiative pour des actions numériques informées
+    </h2>
+    <section>
+      Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.
+      Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500,
+      quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.
+      Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique,
+      sans que son contenu n'en soit modifié.
+      Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum,
+      et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+    </section>
+    <v-row justify="center" align="center" class="my-6">
+      <v-btn :href="tribuneUrl" target="_blank">
+        <v-icon left>
+          mdi-bullhorn-outline
+        </v-icon>
+        Lire notre tribune
+      </v-btn>
+    </v-row>
+    <v-divider class="py-2" />
+    <h2 class="headline my-4 pl-4">
+      Nos notes
+    </h2>
+    <p>
+      Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire.
+      Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C.,
+      le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie,
+      s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum,
+      et en étudiant tous les usages de ce mot dans la littérature classique,
+      découvrit la source incontestable du Lorem Ipsum.
+    </p>
+    <v-row justify="center" align="center" class="my-6">
+      <v-spacer />
+      <v-col cols="12" md="8" class="px-6">
+        <v-row>
+          <v-btn block :href="noteChapeauUrl" target="_blank">
+            Note chapeau
+          </v-btn>
+        </v-row>
+        <v-row>
+          <v-col
+            v-for="section in sections"
+            :key="section.name"
+            class="px-1 px-md-4"
+            cols="4"
           >
-            <v-icon small class="mb-1">
-              mdi-information-outline
-            </v-icon>
-          </a>
-        </p>
-        <div class="text-justify">
-          <p>Curieux d'estimer la résilience, l'autonomie et la souveraineté de votre entreprise ?
-            Ce questionnaire vous permet d'obtenir des indicateurs clairs pour suivre votre souveraineté selon plusieurs dimensions et à travers le temps.</p>
-          <p class="font-italic text--secondary">Ce site est développé dans une approche collaborative et de partage de bonnes pratiques.
-            Tout le code est donc disponible sur
-            <a
-              href="https://github.com/romainfd/MaSouveraineteNumerique"
-              target="_blank"
-              class="text-decoration-none"
-            >
-              <v-icon
-                color="blue"
-                small
-                class="pb-1"
-              >
-                mdi-github
-              </v-icon>
-              GitHub</a>.
-            Le modèle de score est subjectif et basé sur nos expériences et impressions personnelles.
-            Les retours et améliorations du système de score sont les bienvenus.</p>
-        </div>
-      </v-card>
-      <v-card class="pa-4 my-4">
-        <v-expand-transition
-          v-if="!finished"
-        >
-          <v-stepper
-            v-model="step"
-            vertical
-            elevation="0"
-          >
-            <p class="text-h4 pt-4">
-              Questions
-            </p>
-            <v-alert
-              dense
-              outlined
-              text
-              type="info"
-              width="320"
-            >
-              Aucune réponse n'est obligatoire.
-            </v-alert>
-            <div class="text-justify">
-              <p class="mb-0">Lorsqu'un seul choix est possible, veuillez indiquer le choix majoritaire pour votre entité.</p>
-              <p>Pour toutes les réponses sous forme de texte, il vous est possible d'écrire une option supplémentaire si besoin.</p>
-            </div>
-            <div
-              v-for="(question, rank) in questions"
-              :key="question.id"
-            >
-              <v-stepper-step
-                :complete="step > rank + 1"
-                :editable="step > rank + 1"
-                edit-icon="$complete"
-                :step="rank + 1"
-              >
-                {{ question.name }}
-                <small v-if="question.details">{{ question.details }}</small>
-              </v-stepper-step>
-
-              <v-stepper-content :step="rank + 1">
-                <v-combobox
-                  v-if="question.type === 'combobox'"
-                  v-model="question.answer"
-                  :items="Object.keys(question.options)"
-                  label="Sélectionnez ou tapez si besoin"
-                  :multiple="question.average"
-                  :chips="question.average"
-                  clearable
-                ></v-combobox>
-                <v-slider
-                  v-else-if="question.type === 'slider'"
-                  v-model="question.answer"
-                  class="pt-7 pr-5"
-                  thumb-label
-                  thumb-size="24"
-                  :min="question.min"
-                  :max="question.max"
-                  :label="question.label"
-                  color="green lighten-1"
-                ></v-slider>
-                <v-switch
-                  v-else-if="question.type === 'switch'"
-                  v-model="question.answer"
-                  :label="question.answer ? 'Oui' : 'Non'"
-                  class="mt-2 ml-3"
-                  inset
-                ></v-switch>
-                <v-rating
-                  v-else-if="question.type === 'score'"
-                  v-model="question.answer"
-                  color="primary"
-                  empty-icon="mdi-star-outline"
-                  full-icon="mdi-star"
-                  half-icon="mdi-star-half-full"
-                  half-increments
-                  hover
-                  length="5"
-                  class=""
-                  :size="$device.isMobile ? 36 : 64"
-                ></v-rating>
-                <v-otp-input
-                  v-else-if="question.type === 'postcode'"
-                  v-model="question.answer"
-                  style="max-width: 400px;"
-                  length="5"
-                ></v-otp-input>
-                <v-text-field
-                  v-else-if="question.type === 'number'"
-                  v-model="question.answer"
-                  min="0"
-                  single-line
-                  type="number"
-                />
-                <v-text-field
-                  v-else-if="question.type === 'text'"
-                  v-model="question.answer"
-                  single-line
-                />
-                <div v-else>
-                  Type de question inconnu
-                </div>
-
-                <v-btn
-                  class="mb-1"
-                  color="primary"
-                  @click="processAnswer(question.id, question.answer, rank)"
-                >
-                  <v-icon left>
-                    mdi-check
-                  </v-icon>
-                  {{ step === questions.length ? 'Terminer' : 'Valider' }}
-                </v-btn>
-                <v-btn
-                  class="mb-1 ml-1"
-                  text
-                  v-if="rank > 0"
-                  @click="step = rank"
-                >
-                  Retour
-                </v-btn>
-              </v-stepper-content>
-            </div>
-          </v-stepper>
-        </v-expand-transition>
-        <v-expand-transition v-else>
-          <div>
-            <p class="text-h4 pt-4">
-              Résultats
-            </p>
-            <p>Merci pour votre participation.</p>
-            <p>Vous avez obtenu un score global de souveraineté de <span class="text-h4" :style="'color: ' + this.getColor(this.score(this.questions))">{{ score(questions) }}%</span> !</p>
-            <p>Vous trouverez ci-dessous plus de détails sur vos résultats, des ressources pour découvrir les enjeux de la souveraineté numérique et des suggestions d'actions pour améliorer votre score dans le temps.</p>
-            <ChartRadar
-              :data="radarData"
-              :labels="scorerDimensions"
-              title="Résultats"
-            />
-            <div v-for="(score, i) in this.scores(questions)" class="ma-3">
-              <v-divider></v-divider>
-              <v-row class="my-3 align-end">
-                <span class="overline">{{ scorerDimensions[i] }}</span>
-                <v-spacer
-                  v-if="!$device.isMobile"
-                  class="mb-3 mx-1" style="border-bottom: 1px dashed grey"
-                ></v-spacer>
-                <v-col
-                  cols="12"
-                  sm="auto"
-                  class="text-h3 mb-1 pa-0"
-                  :style="'color: ' + getColor(score)"
-                >{{ score }}%</v-col>
-              </v-row>
-              <p>{{ dimensionsDetails[i] }}</p>
-            </div>
-            <v-btn
-              @click="step = questions.length"
-            >
-              <v-icon left>
-                mdi-arrow-left
-              </v-icon>
-              Retour aux questions
+            <v-btn block :href="'#' + section.id">
+              {{ section.name }}
             </v-btn>
-          </div>
-        </v-expand-transition>
-      </v-card>
-    </v-col>
-  </v-row>
+          </v-col>
+        </v-row>
+      </v-col>
+      <v-spacer />
+    </v-row>
+    <div v-for="(section, index) in sections" :id="section.id" :key="section.name">
+      <v-divider class="py-2" />
+      <v-row
+        class="ma-2"
+        align="center"
+        justify="center"
+      >
+        <v-col
+          cols="12"
+          md="auto"
+          align="center"
+          class="display-2 mr-4"
+        >
+          <v-row
+            align="center"
+            justify="center"
+            style="border: 1px solid dimgrey; color: dimgrey; border-radius: 100%; width: 72px; height: 72px;"
+          >
+            {{ index + 1 }}
+          </v-row>
+        </v-col>
+        <v-col>
+          <v-row class="justify-center justify-md-start py-3 py-md-0">
+            <h3 class="headline">
+              {{ section.name }}
+            </h3>
+          </v-row>
+          <v-row>
+            <p class="caption text--secondary mb-0">
+              Il provient en fait des sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum"
+              (Des Suprêmes Biens et des Suprêmes Maux) de Cicéron.
+              Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la théorie de l'éthique.
+              Les premières lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet...", proviennent de la section 1.10.32.
+            </p>
+          </v-row>
+        </v-col>
+      </v-row>
+      <!--
+      <v-row class="ma-2">
+        <section class="py-4">
+          Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire.
+          Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C.,
+          le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie,
+          s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum,
+          et en étudiant tous les usages de ce mot dans la littérature classique,
+          découvrit la source incontestable du Lorem Ipsum.
+        </section>
+      </v-row>
+      -->
+      <v-row class="ma-2">
+        <v-col
+          v-for="note in section.notes"
+          :key="note.url"
+          cols="12"
+          md="4"
+          class="pa-3 pa-md-4 pa-lg-8"
+        >
+          <article class="tiles">
+            <span class="image" :style="'--bg-color: ' + note.bgColor">
+              <img
+                :src="note.image"
+                :alt="note.name"
+              >
+            </span>
+            <a :href="note.url" target="_blank">
+              <h2>{{ note.name }}</h2>
+            </a>
+          </article>
+        </v-col>
+      </v-row>
+    </div>
+  </div>
 </template>
 
 <script>
-import questions from '~/assets/questions'
-const scorerMixin = require('~/mixins/scorer')
-import colors from 'vuetify/es5/util/colors'
-
 export default {
-  mixins: [scorerMixin],
   name: 'IndexPage',
-  head: {
-    title: 'Questionnaire entreprise',
-  },
   data () {
     return {
-      step: 1,
-      questions,
+      tribuneUrl: 'https://google.fr',
+      noteChapeauUrl: 'https://google.fr',
+      sections: [{
+        id: 'section1',
+        name: 'Section #1',
+        notes: [{
+          name: 'Note #1',
+          image: require('~/assets/img/blank.png'),
+          bgColor: 'rgba(162,233,0,0.5)',
+          url: 'https://google.fr'
+        }, {
+          name: 'Note #2',
+          image: require('~/assets/img/blank.png'),
+          bgColor: 'rgba(233,99,0,0.5)',
+          url: 'https://google.fr'
+        }, {
+          name: 'Note #3',
+          image: require('~/assets/img/blank.png'),
+          bgColor: '#988675',
+          url: 'https://google.fr'
+        }]
+      }, {
+        id: 'section2',
+        name: 'Section #2',
+        notes: [{
+          name: 'Note #1',
+          image: require('~/assets/img/blank.png'),
+          bgColor: 'rgba(0,233,221,0.5)',
+          url: 'https://google.fr'
+        }, {
+          name: 'Note #2',
+          image: require('~/assets/img/blank.png'),
+          bgColor: '#412734',
+          url: 'https://google.fr'
+        }, {
+          name: 'Note #3',
+          image: require('~/assets/img/blank.png'),
+          bgColor: 'rgba(100,108,109,0.75)',
+          url: 'https://google.fr'
+        }]
+      }, {
+        id: 'section3',
+        name: 'Section #3',
+        notes: [{
+          name: 'Note #1',
+          image: require('~/assets/img/blank.png'),
+          bgColor: 'rgba(0,163,233,0.5)',
+          url: 'https://google.fr'
+        }, {
+          name: 'Note #2',
+          image: require('~/assets/img/blank.png'),
+          bgColor: 'rgba(162,233,0,0.5)',
+          url: 'https://google.fr'
+        }, {
+          name: 'Note #3',
+          image: require('~/assets/img/blank.png'),
+          bgColor: 'rgba(229,106,89,0.15)',
+          url: 'https://google.fr'
+        }]
+      }]
     }
   },
-  computed: {
-    finished () {
-      return this.step > this.questions.length
-    },
-    radarData () {
-      return {
-        labels: this.scorerDimensions,
-        datasets: [{
-            label: 'Score',
-            data: this.scores(this.questions),
-            borderColor: colors.amber.darken1,
-            backgroundColor: colors.amber.darken4 + '50', // adding transparency
-          }
-        ]
-      }
-    }
-  },
-  async mounted () {
-    // Collect session ID to identify session
-    this.session_id = (await this.$axios.$get('/php/session.php')).session_id
-  },
-  methods: {
-    async processAnswer(questionId, answer, rank) {
-      // Move to next question
-      this.step = rank + 2
-      // Store last question results on server
-      console.log(await this.$axios.$post('/php/answer.php?sess=' + this.session_id, { questionId, answer }))
-      // Store scores once quizz is done
-      if (this.finished) {
-        const namedScores = {
-          Global: this.score(this.questions)
-        }
-        const scores = this.scores(this.questions)
-        this.scorerDimensions.forEach((key, i) => namedScores[key] = scores[i]);
-        console.log(await this.$axios.$post('/php/score.php?sess=' + this.session_id, { namedScores }))
-      }
-    }
-  },
+  head: {
+    title: 'Accueil'
+  }
 }
 </script>
+
+<style lang="scss" scoped>
+#title img {
+  height: 1.5em;
+  position: relative;
+  top: .25em;
+}
+
+article.tiles {
+  position: relative;
+  transition: transform 0.5s ease;
+
+  .image {
+    border-radius: 4px;
+    overflow: hidden;
+
+    &::before {
+      background-color: var(--bg-color);
+      pointer-events: none;
+      transition: background-color 0.5s ease, opacity 0.5s ease;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0.8;
+    }
+
+    img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      display: block;
+    }
+
+    &::after {
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('./assets/img/cross.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      opacity: 0.25;
+      z-index: 2;
+    }
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    z-index: 3;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+
+    .image {
+      &::before {
+        // Dark filter on top of image
+        background-color: #333333;
+        opacity: 0.35;
+      }
+
+      &::after {
+        // Hiding cross
+        opacity: 0;
+      }
+    }
+  }
+}
+</style>
