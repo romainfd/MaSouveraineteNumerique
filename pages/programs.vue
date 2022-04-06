@@ -26,8 +26,8 @@
             page-specific-text="Malgré nos efforts d'objectivité, certaines remarques peuvent être jugées subjectives : les retours sont les bienvenus."
           />
           <p>
-            Globalement, le constat est bon puisque les candidats adoptent tous une vision maximaliste de la souveraineté numérique.
-            englobant protection des données et volet industriel / économique.
+            Globalement, le constat est bon puisque les candidats adoptent tous une vision maximaliste de la souveraineté numérique
+            en englobant protection des données et volet industriel / économique.
             Il y a également un consensus sur le fait que les acteurs chinois doivent, comme les autres, se soumettre au droit européen.
           </p>
           <p>
