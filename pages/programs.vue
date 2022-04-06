@@ -32,7 +32,6 @@
             <v-avatar
               v-for="(program, i) in programs"
               :key="i"
-              style="background-color: black;"
               size="84"
               class="mr-4"
               @click="select(i)"
@@ -112,7 +111,7 @@
                     </v-btn>
                   </p>
                   <v-divider class="pb-2" />
-                  <p class="body-2 text--secondary mb-0">
+                  <p class="body-2 text--secondary mb-0 text-justify">
                     {{ measure.details }}
                   </p>
                 </v-alert>
@@ -183,17 +182,65 @@ export default {
         party: 'Rassemblement National',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Le_Pen%2C_Marine-9586_%28cropped%29.jpg/440px-Le_Pen%2C_Marine-9586_%28cropped%29.jpg',
         link: '/programs/le-pen.pdf',
-        mentions: 14,
+        mentions: 25,
+        infos: "Bien qu'aucune mention ne soit faite du numérique dans son <a href='/programs/le-pen.pdf'>programme principal</a>, Marine Le Pen propose un programme spécifique sur le numérique d'une dizaine de pages. " +
+          "\"<em>Parvenir à la souveraineté numérique</em>\" est d'ailleurs le premier des 5 propositions présentées dans le document." +
+          '<br/><br/>Le constat de la remise en cause de notyre souveraineté numérique y est fait selon 4 axes : ' +
+          'exploitation de nos données par des acteurs étrangers, dépendance aux étrangers dans le domaine de la sécurité, ' +
+          'concurrence numérique déséquilibrée et risques cybers',
         measures: [{
-          proposition: 'Nom',
-          details: 'details',
-          page: 10,
+          proposition: 'Parvenir à la souveraineté numérique',
+          details: 'Favoriser l’émergence d’acteurs français ou européens dans tous les domaines du numérique. ' +
+            'Cela passe par davantage de recherche scientifique, par des aides ciblées en faveur des entreprises du numérique, ' +
+            'mais aussi par la priorité à donner aux fournisseurs français ou européens. Cela se traduira par : ' +
+            'un recours exclusif à des fournisseurs français pour la commande publique dans les domaines militaires et de sécurité nationale, e' +
+            'et pour le reste de la commande publique, une priorité accordée à des fournisseurs européens [...], ' +
+            'le contrôle strict [...] [du rachat] des entreprises françaises de pointe du secteur du numérique stratégique [...], ' +
+            "la mise en place d’une fiscalité juste, au niveau de l’Union européenne ou de l'O.C.D.E. [...] et " +
+            'le contrôle accru du respect intégral, par les entreprises étrangères, du droit français et européen [...]. ' +
+            "[Ces mesures s'appuieront sur des collaborations européennes (cloud & telecom notamment) et sur un Fonds souverain français.]",
+          page: 6,
           tier: 1
         }, {
-          proposition: 'Nom',
-          details: 'details',
+          proposition: 'Imposer le respect de la loi française aux acteurs du numérique',
+          details: ' Collaborer avec les services de police, de justice et de gendarmerie dans le cadre d’enquêtes ayant trait au harcèlement en ligne, à la diffamation, à la contrefaçon [...], ' +
+            'respecter strictement le droit européen et français en matière de protection des données personnelles, ' +
+            'ne plus imposer leur censure sur les contenus qu’ils diffusent en fonction de leurs propres règles [...], ' +
+            'mettre un terme à toutes leurs pratiques anticoncurrentielles, ' +
+            'accorder le statut de salariés aux chauffeurs et livreurs des plateformes numériques [...], ' +
+            'payer en France des impôts correspondant à l’activité qu’ils y ont et aux profits qu’ils y font [...] et ' +
+            'imposer, lorsque c’est nécessaire, par impératif stratégique ou en sanction de la violation de nos règles, aux entreprises étrangères exerçant en France une ouverture de capital, une cession partielle de leurs activités [...].',
+          page: 9,
+          tier: 1
+        }, {
+          proposition: 'Rendre obligatoire l’hébergement des données [françaises] [...] en France ou dans l’[UE], par des opérateurs français ou européens',
+          details: 'Les principes régissant la collecte de ces données personnelles seront renforcés' +
+            ' en facilitant l’intelligibilité et le paramétrage du consentement à leur prélèvement ainsi qu’à la publicité ciblée, ' +
+            'la règle étant leur désactivation par défaut, et leur interdiction totale lorsque l’usager est mineur. ' +
+            'Les prestataires européens ayant besoin de données pour nourrir leurs algorithmes, ' +
+            'je propose que leur nationalité leur permette un droit de traitement des données par défaut ' +
+            'là où des prestataires étrangers devront apporter des garanties supplémentaires pour exercer ce droit.',
           page: 10,
-          tier: 3
+          ue: true,
+          tier: 1
+        }, {
+          proposition: 'Renforcer la cybersécurité et maîtriser le cyberespace',
+          details: 'Pour garantir un haut niveau de sécurité dans le cyberespace aux Français et aux entreprises, ' +
+            'je renforcerai la cybersécurité nationale dans toutes ses dimensions : infrastructures, matériels, logiciels, capacités de détection d’attaques, formations spécialisées et sensibilisation du public. [...] ' +
+            'Je renforcerai les capacités de l’Agence nationale de la sécurité des systèmes d’information (A.N.S.S.I.), ' +
+            'ceux de la Direction générale de la sécurité extérieure (D.G.S.E.) et les capacités militaires dans ce domaine, ' +
+            'et je créerai des « commandos numériques » chargés à la fois de réagir à des attaques contre des services informatiques (neutralisation et contre-attaque) ' +
+            'et de mener des simulations d’offensives numériques pour éprouver la sécurité de nos services.',
+          page: 12,
+          tier: 2
+        }, {
+          proposition: 'Réduire la fracture numérique',
+          details: 'Une meilleure couverture du territoire [...], ' +
+            'un accroissement de nos capacités de formation au numérique, tant dans les filières de pointe que dans l’initiation, ' +
+            'une politique volontariste de lutte contre l’illectronisme [...] et ' +
+            'maintenir des présences physiques de fonctionnaires ou agents des services publics [...].',
+          page: 7,
+          tier: 2
         }],
         limits: [
           'limit',
