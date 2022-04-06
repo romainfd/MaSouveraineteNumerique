@@ -23,7 +23,7 @@
       Pour permettre des échanges plus clairs et construits, nous avons décidé de regrouper en une page l'ensemble des programmes afin de donner une vision plus claire du débat politique sur le sujet.
     </p>
     <v-row justify="center" align="center" class="my-6">
-      <v-btn to="/programs">
+      <v-btn to="/programs" elevation="4">
         <v-icon left>
           mdi-newspaper-variant-multiple-outline
         </v-icon>
@@ -39,7 +39,7 @@
       Curieux d'estimer la résilience, l'autonomie et la souveraineté de votre organisation ? Ce questionnaire vous permet d'obtenir des indicateurs clairs pour suivre votre souveraineté selon plusieurs dimensions et à travers le temps.
     </p>
     <v-row justify="center" align="center" class="my-6">
-      <v-btn to="/quiz">
+      <v-btn to="/quiz" elevation="4">
         <v-icon left>
           mdi-crosshairs-question
         </v-icon>
@@ -55,7 +55,7 @@
       Pour poser le débat et quantifier les enjeux, nous avons regroupé les chiffres marquants des enjeux de souveraineté.
     </p>
     <v-row justify="center" align="center" class="my-6">
-      <v-btn to="/situation">
+      <v-btn to="/situation" elevation="4">
         <v-icon left>
           mdi-chart-bar
         </v-icon>

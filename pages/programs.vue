@@ -5,7 +5,7 @@
         <p class="text-h4 mb-1">
           Analyse des programmes des candidats
         </p>
-        <p class="text-overline text--secondary">
+        <p class="overline pt-2 pb-1 text--secondary">
           Analyse basée sur les programmes des candidats et un briefing de l'IFRI
           <a
             href="https://www.ifri.org/fr/publications/briefings-de-lifri/souverainete-numerique-bilan-quinquennat-propositions-candidats"
@@ -115,7 +115,7 @@
                   text
                   dense
                 >
-                  <p class="overline mb-1 font-weight-bold" style="line-height: 20px;">
+                  <p class="overline mb-1 font-weight-bold">
                     • {{ measure.proposition }}
                     <EuropeFlagIcon v-if="measure.eu" class="mb-1 ml-1" />
                     <v-btn

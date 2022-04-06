@@ -46,4 +46,8 @@ html {
   /* Normal CSS property for browsers with native support */
   scroll-behavior: smooth;
 }
+
+p.overline {
+  line-height: 20px !important;
+}
 </style>
