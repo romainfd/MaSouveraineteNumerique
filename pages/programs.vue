@@ -253,6 +253,69 @@ export default {
           'limit',
           'limit2'
         ]
+      }, {
+        name: 'Jean-Luc Mélenchon',
+        party: 'L\'Union populaire',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Jean_Luc_MELENCHON_in_the_European_Parliament_in_Strasbourg%2C_2016_%28cropped%29.jpg/220px-Jean_Luc_MELENCHON_in_the_European_Parliament_in_Strasbourg%2C_2016_%28cropped%29.jpg',
+        link: '/programs/melenchon.pdf',
+        mentions: 5,
+        measures: [{
+          proposition: 'Nom',
+          details: 'details',
+          page: 10,
+          tier: 1
+        }, {
+          proposition: 'Nom',
+          details: 'details',
+          page: 10,
+          tier: 2
+        }],
+        limits: [
+          'limit',
+          'limit2'
+        ]
+      }, {
+        name: 'Éric Zemmour',
+        party: 'Reconquête',
+        image: 'https://media.ouest-france.fr/v1/pictures/eb3571f71fd10440dbd3868a237b9964-zemour.jpg?client_id=cmsfront&sign=e2500686c72d48627f11d43cb7ea9a8042bc12263263fee922f0de2fd216065e',
+        link: '/programs/zemmour.pdf',
+        mentions: 16,
+        measures: [{
+          proposition: 'Nom',
+          details: 'details',
+          page: 10,
+          tier: 1
+        }, {
+          proposition: 'Nom',
+          details: 'details',
+          page: 10,
+          tier: 2
+        }],
+        limits: [
+          'limit',
+          'limit2'
+        ]
+      }, {
+        name: 'Emmanuel Macron',
+        party: 'La République en marche',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Emmanuel_Macron_in_2019.jpg/220px-Emmanuel_Macron_in_2019.jpg',
+        link: '/programs/macron.pdf',
+        mentions: 9,
+        measures: [{
+          proposition: 'Nom',
+          details: 'details',
+          page: 10,
+          tier: 1
+        }, {
+          proposition: 'Nom',
+          details: 'details',
+          page: 10,
+          tier: 2
+        }],
+        limits: [
+          'limit',
+          'limit2'
+        ]
       }]
     }
   },
