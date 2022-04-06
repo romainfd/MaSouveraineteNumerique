@@ -67,15 +67,15 @@
                   <v-card-title>{{ p.name }}</v-card-title>
                   <v-card-subtitle>{{ p.party }}</v-card-subtitle>
                 </v-col>
-                <v-col cols="auto" order-md="last">
+                <v-col cols="auto" order-md="last" class="ml-auto">
                   <v-btn elevation="4" fab :href="p.link" target="_blank" class="mr-2">
                     <v-icon>
                       mdi-newspaper-variant-multiple-outline
                     </v-icon>
                   </v-btn>
                 </v-col>
-                <v-col align="center" justify="center" style="text-align: center;">
-                  <v-card-title align="center" justify="center" style="text-align: center;">
+                <v-col style="text-align: center;">
+                  <v-card-title class="justify-center">
                     {{ p.mentions }} mentions
                   </v-card-title>
                   <v-card-subtitle>du mot "numérique" dans le programme</v-card-subtitle>
