@@ -27,7 +27,8 @@
           />
           <p>
             Globalement, le constat est bon puisque les candidats adoptent tous une vision maximaliste de la souveraineté numérique.
-            englobant protection des données et volet industriel / économique. Il y a également un consensus sur le fait que les acteurs chinois doivent, comme les autres, se soumettre au droit européen
+            englobant protection des données et volet industriel / économique.
+            Il y a également un consensus sur le fait que les acteurs chinois doivent, comme les autres, se soumettre au droit européen.
           </p>
           <p>
             Pour apporter un regard critique sur ces positions enthousiastes, il convient de réellement penser la faisabilité des propositions en termes de lois (notamment européennes) et d'efficacité pour les acteurs et citoyens.
