@@ -40,7 +40,7 @@
               <v-img
                 :src="program.image"
                 :alt="program.name"
-                contain
+                position="center top"
               />
             </v-avatar>
           </div>
@@ -61,7 +61,7 @@
             >
               <v-row align="center" class="spacer" no-gutters>
                 <v-avatar class="ml-3" size="56">
-                  <v-img :src="p.image" :alt="p.name" />
+                  <v-img :src="p.image" :alt="p.name" position="center top" />
                 </v-avatar>
                 <v-col cols="auto">
                   <v-card-title>{{ p.name }}</v-card-title>
@@ -81,14 +81,15 @@
                   <v-card-subtitle>du mot "numérique" dans le programme</v-card-subtitle>
                 </v-col>
               </v-row>
-              <v-divider />
+              <v-divider :class="{ 'pb-2': p.infos }" />
               <div>
+                <div class="text-justify" v-html="p.infos" />
                 <v-card-title>
                   Propositions
                 </v-card-title>
                 <v-alert
                   v-for="measure in p.measures"
-                  :key="measure"
+                  :key="measure.proposition"
                   border="left"
                   :color="measureColor(measure.tier)"
                   text
@@ -144,6 +145,7 @@ export default {
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Anne_Hidalgo%2C_f%C3%A9vrier_2014.jpg/440px-Anne_Hidalgo%2C_f%C3%A9vrier_2014.jpg',
         link: '/programs/hidalgo.pdf',
         mentions: 14,
+        infos: 'Anne Hidalgo ne fournit pas de programme spécifique pour le numérique mais égrène son programme principal de propositions liées au numérique. Nous avons ci-dessous repris les 5 propositions principales les plus liées à la souveraineté numérique.',
         measures: [{
           proposition: 'Déployer les pédagogies ouvertes et inclusives',
           details: 'Pour préparer nos enfants au monde dans lequel ils vivront, l’école doit être au rendez-vous par de nouvelles pédagogies : [...], apprendre les nouveaux langages du numérique, apprendre à s’informer, etc.',
@@ -201,18 +203,51 @@ export default {
         name: 'Valérie Pécresse',
         party: 'Les Républicains',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Val%C3%A9rie_P%C3%A9cresse_%282022%29_%28cropped_2%29.jpg/220px-Val%C3%A9rie_P%C3%A9cresse_%282022%29_%28cropped_2%29.jpg',
-        link: '/programs/le-pen.pdf',
-        mentions: 14,
+        link: '/programs/pecresse-num.pdf',
+        mentions: 33,
+        infos: "Valérie Pécresse <a href='/programs/pecresse.pdf#page=12' target='_blank'>mentionne directement la souveraineté numérique</a> dans son programme principal. Présenté comme l'un des 4 axes permettant de \"<em>garantir notre souveraineté</em>\", " +
+          "la souveraineté numérique passe principalement par la formation de talents (1 millions d'ici 2030 dont 50 000 fonctionnaires), la commande publique et un cloud français." +
+          '<br/><br/>En plus de cette courte mention dans son programme principal, son programme numérique détaillé a également été analysé. Dès son introduction, le lien entre numérique et souveraineté est fortement mis en avant : ' +
+          '"<em>Valérie Pécresse souhaite construire un modèle numérique français, basé sur nos valeurs fondamentales : responsable, moteur d’une souveraineté retrouvée et condition de la fierté française du 21ème siècle. Nous affirmerons le numérique comme un sujet régalien et de souveraineté.</em>"',
         measures: [{
-          proposition: 'Nom',
-          details: 'details',
-          page: 10,
+          proposition: 'Protéger les données stratégiques des Français et de l’Etat grâce à une loi relative à la souveraineté et à la responsabilité numérique',
+          details: 'Se donner les moyens de disposer d’un cloud souverain [...], ' +
+            'instaurer une préférence française et européenne dans la commande publique grâce à des quotas progressifs [...], avec objectif de 50% en 2027, ' +
+            'permettre aux acteurs français du numérique d’investir au même niveau que leurs concurrents étrangers en utilisant la précommande publique [...] et ' +
+            'créer un Parquet National Cyber pour lutter contre les cyberattaques',
+          page: 2,
           tier: 1
         }, {
-          proposition: 'Nom',
-          details: 'details',
-          page: 10,
+          proposition: 'Former les talents et libérer l’écosystème numérique sur tout le territoire',
+          details: 'Former un million de talents au numérique d’ici 2030 : ' +
+            'organiser un test national annuel sur le « potentiel numérique » de tous les élèves de seconde [...], ' +
+            'développer des parcours de formations initiales [...] et  ' +
+            'créer une Ecole Nationale du Numérique [...]. ' +
+            'Accélérer et amplifier l’émergence de 200 usines dans les nouvelles filières et consolider 20 licornes industrielles d’ici 2027.',
+          page: 3,
+          tier: 1
+        }, {
+          proposition: 'Mettre le numérique au service des territoires et garantir l’égalité d’accès pour tous les Français',
+          details: 'Accélérer le déploiement du Très Haut Débit (THD) fixe et mobile [...], ' +
+            'mettre fin aux zones blanches [...].',
+          page: 3,
           tier: 2
+        }, {
+          proposition: 'Intégrer le numérique dans l’éducation de nos enfants en les protégeant des risques associés',
+          details: 'Intégrer le codage dans les programmes scolaires dès la 6ème et ' +
+            'adopter une loi « Protection de l’enfance face aux menaces du numériques » : ' +
+            'créer l’équivalent du « Children’s code » britannique [...] et ' +
+            'ouvrir la réflexion sur la fin de l’anonymat [...].',
+          page: 4,
+          tier: 2
+        }, {
+          proposition: 'Accélérer la transition écologique grâce au numérique',
+          details: 'Créer un Green Data Hub pour faciliter le croisement des données environnementales [...] et ' +
+            'soutenir une grande filière de la réparation et du reconditionnement des équipements informatiques [...] : ' +
+            'Instaurer un Chèque Récupération [...] et ' +
+            'Imposer l’ouverture du marché des pièces détachées aux constructeurs et des manuels techniques.',
+          page: 3,
+          tier: 3
         }],
         limits: [
           'limit',
