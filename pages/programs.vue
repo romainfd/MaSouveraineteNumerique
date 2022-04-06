@@ -66,7 +66,7 @@
         </div>
       </v-card>
       <v-card class="px-4 pb-4 my-4">
-        <div v-if="selected === null">
+        <div v-if="selected === null" class="pt-4">
           Veuillez cliquer sur l'image du candidat dont vous voulez connaître le programme autour de la souveraineté numérique
         </div>
         <div v-else>
@@ -201,7 +201,7 @@ export default {
         name: 'Marine Le Pen',
         party: 'Rassemblement National',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Le_Pen%2C_Marine-9586_%28cropped%29.jpg/440px-Le_Pen%2C_Marine-9586_%28cropped%29.jpg',
-        link: '/programs/le-pen.pdf',
+        link: '/programs/le-pen-num.pdf',
         mentions: 25,
         infos: "Bien qu'aucune mention ne soit faite du numérique dans son <a href='/programs/le-pen.pdf'>programme principal</a>, Marine Le Pen propose un programme spécifique sur le numérique d'une dizaine de pages. " +
           "\"<em>Parvenir à la souveraineté numérique</em>\" est d'ailleurs le premier des 5 propositions présentées dans le document." +
