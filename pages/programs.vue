@@ -94,13 +94,13 @@
                   text
                   dense
                 >
-                  <p class="overline mb-1 font-weight-bold">
+                  <p class="overline mb-1 font-weight-bold" style="line-height: 20px;">
                     • {{ measure.proposition }}
                     <EuropeFlagIcon v-if="measure.eu" class="mb-1 ml-1" />
                     <v-btn
                       text
                       icon
-                      small
+                      x-small
                       class="mb-1"
                       :href="p.link + '#page=' + measure.page"
                       target="_blank"
