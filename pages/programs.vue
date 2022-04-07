@@ -414,17 +414,63 @@ export default {
         party: 'La République en marche',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Emmanuel_Macron_in_2019.jpg/220px-Emmanuel_Macron_in_2019.jpg',
         link: '/programs/macron.pdf',
+        infos: '',
         mentions: 9,
         measures: [{
-          proposition: '',
-          details: 'details',
-          page: 10,
+          proposition: 'Assurer la puissance de l’Europe',
+          details: 'Assurer son autonomie\n' +
+            'technologique, en investissant pour\n' +
+            'développer ses champions,\n' +
+            'en se protégeant dans les domaines\n' +
+            'les plus stratégiques, en se dotant\n' +
+            'des infrastructures essentielles,\n' +
+            'comme un « cloud » et une constellation de satellites.',
+          page: 12,
+          eu: true,
           tier: 1
         }, {
-          proposition: 'Nom',
-          details: 'details',
-          page: 10,
+          proposition: 'Rendre notre société plus résiliente',
+          details: 'Une augmentation des moyens\n' +
+            'de l’Agence nationale de la sécurité\n' +
+            'des systèmes d’information pour\n' +
+            'renforcer la capacité de lutte\n' +
+            'et de soutien cyber aux entreprises\n' +
+            'françaises.',
+          page: 12,
           tier: 2
+        }, {
+          proposition: 'Une France créative et productive (volet numérique)',
+          details: 'Généraliser l’enseignement\n' +
+            'du code informatique et des usages\n' +
+            'numériques à partir de la 5e.\n' +
+            ' Transformer l’État par le numérique\n' +
+            ' : «TousAntiCovid» a montré\n' +
+            'comment les procédures pouvaient\n' +
+            'ainsi être simplifiées.\n' +
+            ' 20000 accompagnateurs\n' +
+            'pour aider les Français qui en ont\n' +
+            'besoin dans la maîtrise des outils\n' +
+            'numériques et leurs démarches\n' +
+            'quotidiennes.',
+          page: 9,
+          tier: 2
+        }, {
+          proposition: 'Une France créative et productive (volet culture)',
+          details: 'Un investissement pour construire\n' +
+            'des métavers européens et proposer\n' +
+            'des expériences en réalité virtuelle,\n' +
+            'autour de nos musées, de notre\n' +
+            'patrimoine et de nouvelles créations,\n' +
+            'en protégeant les droits d’auteur\n' +
+            'et droits voisins.',
+          page: 9,
+          eu: true,
+          tier: 2
+        }, {
+          proposition: 'Simplifier la vie',
+          details: 'Achever la couverture numérique du territoire par la fibre d\'ici 2025.',
+          page: 6,
+          tier: 3
         }],
         limits: [
           'limit',
