@@ -327,7 +327,9 @@ export default {
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Jean_Luc_MELENCHON_in_the_European_Parliament_in_Strasbourg%2C_2016_%28cropped%29.jpg/220px-Jean_Luc_MELENCHON_in_the_European_Parliament_in_Strasbourg%2C_2016_%28cropped%29.jpg',
         link: '/programs/melenchon.pdf',
         mentions: 5,
-        infos: '',
+        infos: 'La synthèse du programme de Jean-Luc Mélenchon n\'accorde que peu de place à la question du numérique et ne mentionne pas le sujet de la souveraineté numérique.' +
+          'En revanche, le <a href=\'https://laec.fr/\'>programme complet</a> mentionne (à la toute fin cependant) la question de la souveraineté numérique. Dans la section correspondante,' +
+          ' les logiciels libres apparaissent comme un moyen clé pour réduire notre dépendance vis-à-vis des GAFAM.',
         measures: [{
           proposition: 'Garantir la souveraineté numérique de la France',
           details: 'Créer une agence publique des logiciels libres chargée de planifier leur développement stratégique domaine par domaine en identifiant les manques et en finançant les projets-clés.' +
@@ -370,7 +372,11 @@ export default {
         party: 'Reconquête',
         image: 'https://media.ouest-france.fr/v1/pictures/eb3571f71fd10440dbd3868a237b9964-zemour.jpg?client_id=cmsfront&sign=e2500686c72d48627f11d43cb7ea9a8042bc12263263fee922f0de2fd216065e',
         link: '/programs/zemmour.pdf',
-        infos: '',
+        infos: 'Dans le programme principal d\'Eric Zemmour, deux pages sont consacrées au sujet de la souveraineté numérique qui est présentée comme le ' +
+          'moyen de "<em>Faire du numérique un outil de prospérité et de rayonnement pour la France</em>". Dénonçant une vassalisation numérique, notamment à l\'égard' +
+          'des « fleurons technologiques » américains et chinois, le candidat prône un recours à la commande publique pour "<em>faire émerger des solutions françaises ' +
+          'souveraines dans le cloud et la cybersécurité</em>". Pour tendre vers cet objectif, le candidat mentionne les sujets de la formation et de l\'attractivité des talents' +
+          '"<em>que ces sociétés étrangères nous arrachent</em>".',
         mentions: 16,
         measures: [{
           proposition: 'Créer les conditions de notre souveraineté numérique',
@@ -385,7 +391,8 @@ export default {
           details: 'Permettre aux Français d’investir sans aucune fiscalité dans les start-ups et entreprises innovantes en créant un Livret Innovation.\n' +
             'Permettre aux créateurs de start-ups de se financer sans perdre le contrôle de leur entreprise et attirer\n' +
             'les introductions en bourse sur la place de Paris en autorisant deux classes d’actions en bourse à droits de\n' +
-            'vote différents.',
+            'vote différents. Permettre aux jeunes entreprises du numérique d’impliquer et de retenir les talents en élargissant les\n' +
+            'conditions de l’actionnariat salarié.',
           page: 37,
           tier: 2
         }, {
