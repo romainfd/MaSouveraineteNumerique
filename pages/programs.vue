@@ -327,6 +327,7 @@ export default {
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Jean_Luc_MELENCHON_in_the_European_Parliament_in_Strasbourg%2C_2016_%28cropped%29.jpg/220px-Jean_Luc_MELENCHON_in_the_European_Parliament_in_Strasbourg%2C_2016_%28cropped%29.jpg',
         link: '/programs/melenchon.pdf',
         mentions: 5,
+        infos: '',
         measures: [{
           proposition: 'Garantir la neutralité du Net, c’est à dire l’accès égal de chacun et l’égalité de traitement',
           details: 'details',
@@ -362,17 +363,47 @@ export default {
         party: 'Reconquête',
         image: 'https://media.ouest-france.fr/v1/pictures/eb3571f71fd10440dbd3868a237b9964-zemour.jpg?client_id=cmsfront&sign=e2500686c72d48627f11d43cb7ea9a8042bc12263263fee922f0de2fd216065e',
         link: '/programs/zemmour.pdf',
+        infos: '',
         mentions: 16,
         measures: [{
-          proposition: 'Nom',
-          details: 'details',
-          page: 10,
+          proposition: 'Créer les conditions de notre souveraineté numérique',
+          details: 'Faire émerger des solutions françaises souveraines dans le cloud et la cybersécurité et investir dans les\n' +
+            'technologies de rupture (en particulier intelligence artificielle, ordinateur quantique et semi-conducteurs).' +
+            ' Imposer par la loi que les données sensibles des Français ainsi que les données stratégiques de l’État et\n' +
+            'du secteur privé soient hébergées et sécurisées en France sur des solutions souveraines.',
+          page: 37,
           tier: 1
         }, {
-          proposition: 'Nom',
-          details: 'details',
-          page: 10,
+          proposition: 'Soutenir les champions français du numérique à tous les stades de leur développement',
+          details: 'Permettre aux Français d’investir sans aucune fiscalité dans les start-ups et entreprises innovantes en créant un Livret Innovation.\n' +
+            'Permettre aux créateurs de start-ups de se financer sans perdre le contrôle de leur entreprise et attirer\n' +
+            'les introductions en bourse sur la place de Paris en autorisant deux classes d’actions en bourse à droits de\n' +
+            'vote différents.',
+          page: 37,
           tier: 2
+        }, {
+          proposition: 'Doter la France des moyens de son ambition numérique',
+          details: 'Garantir une connexion haut débit à chaque Français et chaque entreprise sur tout le territoire. Permettre à tout citoyen de faire toutes ses démarches administratives sur Internet en accélérant la\n' +
+            'numérisation des services de l’État et la mise à disposition des données. Pourvoir à la demande croissante d’emplois dans le numérique en donnant une place de choix à\n' +
+            'l’enseignement de la programmation informatique dès le secondaire. ',
+          page: 38,
+          tier: 2
+        }, {
+          proposition: 'Accélérer les investissements dans la blockchainet le Web3 tout en créant un environnement favorable à la détention et la création de crypto-actifs',
+          details: 'Exonérer d’impôts sur la plus-value les cessions de crypto-actifs dès lors qu’au moins 50% de cette plus-\n' +
+            'value est réinvestie dans le capital d’une entreprise de l’économie réelle. Ne pas laisser le monopole des stablecoins à des entités extra-européennes en favorisant l’émergence de\n' +
+            '« stablecoins » euro par le secteur privé européen sans attendre le projet d’euro numérique porté par la Banque\n' +
+            'centrale européenne',
+          page: 38,
+          tier: 2
+        }, {
+          proposition: 'Protéger les enfants et les adolescents des effets néfastes d’Internet',
+          details: 'Mieux protéger les enfants et les adolescents contre le harcèlement, la pédophilie et l’incitation à la\n' +
+            'violence en organisant des « États généraux des réseaux sociaux et numériques ».\n' +
+            ' Lutter contre l’exposition des enfants et des mineurs aux sites violents et pornographiques en instaurant\n' +
+            'par la loi l’activation par défaut du contenu protégé et du contrôle parental sur les appareils numériques.',
+          page: 46,
+          tier: 3
         }],
         limits: [
           'limit',
@@ -385,7 +416,7 @@ export default {
         link: '/programs/macron.pdf',
         mentions: 9,
         measures: [{
-          proposition: 'Nom',
+          proposition: '',
           details: 'details',
           page: 10,
           tier: 1
