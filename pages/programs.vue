@@ -31,15 +31,15 @@
             Il y a également un consensus sur le fait que les acteurs chinois doivent, comme les autres, se soumettre au droit européen.
           </p>
           <p>
-            Pour apporter un regard critique sur ces positions enthousiastes, il convient de réellement penser la faisabilité des propositions en termes de lois (notamment européennes) et d'efficacité pour les acteurs et citoyens.
-            D'autre part, et alors qu'il est toujours fait mention du blocage nécessaire des géants numériques chinois et américains,
-            la souveraineté numérique n'apparait pas dans les programmes comme un enjeu stratégique structurant pour la politique étrangère et de défense (enjeux de sécurité, gouvernance internationale, relations US/Chine).
-            Enfin, il est rarement fait notion de la montée en puissance de la Chine dans le domaine malgré le fait que son modèle de valeur soit encore plus éloigné du notre que peut l'être celui américain.
+            Pour apporter un regard critique sur ces positions enthousiastes, il convient de réellement penser la faisabilité des propositions en termes de lois et règlements (notamment européennes) et d'efficacité pour les acteurs et citoyens.
+            En outre, en dépit d'une mention systématique de la nécessité de limiter la puissance des géants du Net américains et chinois,
+            la souveraineté numérique n'apparait pas dans les programmes comme un enjeu stratégique structurant pour la politique étrangère et de défense (enjeux de sécurité, gouvernance internationale, relations États-Unis/Chine, etc.).
+            Enfin, il est rarement fait notion de la montée en puissance de la Chine dans le domaine malgré le fait que son modèle de valeur soit encore plus éloigné du nôtre que le modèle américain.
           </p>
           <p>
-            Afin de rentrer plus en détails dans les propositions de chacun, nous avons parcouru leurs programmes et regroupés 5 propositions saillantes pour chacun des candidats.
-            En cliquant sur la photo d'un candidat, vous trouverez le lien vers son programme ainsi que ces 5 propositions avec le lien vers la page du programme la détaillant
-            ainsi qu'une couleur indiquant le niveau de lien avec la souveraineté numérique (vert = très lié, bleu = lié, gris = non lié mais dans le domaine numérique).
+            Afin de rentrer plus en détails dans les propositions des différents candidats, nous avons parcouru leurs programmes et regroupé cinq propositions saillantes pour chacun d'entre eux.
+            En cliquant sur la photo d'un candidat, vous trouverez le lien vers son programme ainsi que ses cinq propositions clées avec le lien vers la page du programme la détaillant. Pour chacune des propositions,
+            une couleur indique l'intensité du lien avec la question de la souveraineté numérique (vert = très lié, bleu = lié, gris = non lié mais dans le domaine numérique).
             Les titres et les détails des propositions sont directement extraits des programmes et toute modification est indiquée entre crochets.
           </p>
           <div class="my-4 d-flex justify-space-between">
