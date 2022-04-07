@@ -329,34 +329,41 @@ export default {
         mentions: 5,
         infos: '',
         measures: [{
-          proposition: 'Garantir la neutralité du Net, c’est à dire l’accès égal de chacun et l’égalité de traitement',
-          details: 'details',
+          proposition: 'Garantir la souveraineté numérique de la France',
+          details: 'Créer une agence publique des logiciels libres chargée de planifier leur développement stratégique domaine par domaine en identifiant les manques et en finançant les projets-clés.' +
+            ' Permettre à tous les citoyens et à toutes les entreprises l\'accès à des services et logiciels en ligne hébergés sur des serveurs français de droit français.' +
+            ' Garantir l’hébergement des données des services publics français et des entreprises essentielles sur des serveurs de droit français situés en France.' +
+            ' Rétablir la propriété française publique sur Alcatel Submarine Networks. ' +
+            ' Garantir la neutralité du Net, c’est à dire l’accès égal de chacun et l’égalité de traitement.',
           page: 10,
           tier: 1
         }, {
-          proposition: 'Permettre à tous les citoyens et à toutes les entreprises l\'accès à des services et logiciels en ligne hébergés sur des serveurs français de droit français',
-          details: 'details',
+          proposition: 'Affirmer le caractère d\'intérêt général de la révolution numérique',
+          details: 'Constitutionnaliser le droit au chiffrement des données et des communications.' +
+            ' Aller plus loin que le règlement européen de protection des données pour agir contre les discriminations entraînées par le traitement algorithmique des données personnelles, en dotant la Commission nationale de l’informatique et des libertés (CNIL) de moyens de contrôle efficaces.' +
+            ' Garantir le droit à un accès minimal gratuit à Internet.',
           page: 10,
-          tier: 1
+          tier: 2
         }, {
-          proposition: 'Garantir l’hébergement des données des services publics français et des entreprises essentielles sur des serveurs de droit français situés en France',
-          details: 'details',
+          proposition: 'Construire une défense indépendante, républicaine et populaire',
+          details: 'Mobiliser l’espace numérique et la réalité spatiale pour installer des systèmes défensifs et non létaux contre les agressions et pour la paix.',
           page: 10,
-          tier: 1
+          tier: 3
         }, {
-          proposition: 'Créer une agence publique des logiciels libres chargée de planifier leur développement stratégique domaine par domaine en identifiant les manques et en finançant les projets-clés',
+          proposition: 'proposition',
           details: 'details',
           page: 10,
           tier: 2
         }, {
-          proposition: 'Rétablir la propriété française publique sur Alcatel Submarine Networks',
+          proposition: 'proposition',
           details: 'details',
           page: 10,
           tier: 3
         }],
         limits: [
-          'limit',
-          'limit2'
+          'Inutile d\'héberger les données en France si la pile logicielle n\'est pas maîtrisée',
+          'Question du lien entre logiciel libre et souveraineté (taille de communauté, etc.)',
+          'Question de l\'attractivité vis-à-vis des talents pour l\'agence de développement'
         ]
       }, {
         name: 'Éric Zemmour',
