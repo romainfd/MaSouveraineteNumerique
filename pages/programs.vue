@@ -372,7 +372,7 @@ export default {
         party: 'Reconquête',
         image: 'https://media.ouest-france.fr/v1/pictures/eb3571f71fd10440dbd3868a237b9964-zemour.jpg?client_id=cmsfront&sign=e2500686c72d48627f11d43cb7ea9a8042bc12263263fee922f0de2fd216065e',
         link: '/programs/zemmour.pdf',
-        infos: 'Si Eric Zemmour ne propose pas de programme spécifique pour le numérique, deux pages de son programme principales sont consacrées au sujet de la souveraineté numérique qui est présentée comme le' +
+        infos: 'Si Éric Zemmour ne propose pas de programme spécifique pour le numérique, deux pages de son programme principales sont consacrées au sujet de la souveraineté numérique qui est présentée comme le' +
           ' moyen de "<em>Faire du numérique un outil de prospérité et de rayonnement pour la France</em>". Dénonçant une vassalisation numérique, notamment à l\'égard' +
           ' des « fleurons technologiques » américains et chinois, le candidat prône un recours à la commande publique pour "<em>faire émerger des solutions françaises ' +
           ' souveraines dans le cloud et la cybersécurité</em>". Pour tendre vers cet objectif, le candidat mentionne les sujets de la formation et de l\'attractivité des talents' +
@@ -428,7 +428,11 @@ export default {
         party: 'La République en marche',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Emmanuel_Macron_in_2019.jpg/220px-Emmanuel_Macron_in_2019.jpg',
         link: '/programs/macron.pdf',
-        infos: '',
+        infos: 'La question de la souveraineté numérique n\'apparaît ni dans le programme principal d\'Emmanuel Macron, ni dans son' +
+          ' <a href=\'https://avecvous.fr/notre-action/numerique\'> bilan thématique relatif au numérique</a>. Si le sujet ne semble pas directement porté par le candidat, le ministère' +
+          ' de l\'Économie, dans le cadre de la présidence française du Conseil de l\'Union européenne, a organisé les 7 et 8 février' +
+          ' derniers une conférence intitulée "Construire la souveraineté numérique de l’Europe". Néanmoins, il convient de noter qu\'aucun' +
+          ' industriel européen du cloud n\'a été invité à participer à ce colloque.',
         mentions: 9,
         measures: [{
           proposition: 'Assurer la puissance de l’Europe',
