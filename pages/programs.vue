@@ -328,15 +328,30 @@ export default {
         link: '/programs/melenchon.pdf',
         mentions: 5,
         measures: [{
-          proposition: 'Nom',
+          proposition: 'Garantir la neutralité du Net, c’est à dire l’accès égal de chacun et l’égalité de traitement',
           details: 'details',
           page: 10,
           tier: 1
         }, {
-          proposition: 'Nom',
+          proposition: 'Permettre à tous les citoyens et à toutes les entreprises l\'accès à des services et logiciels en ligne hébergés sur des serveurs français de droit français',
+          details: 'details',
+          page: 10,
+          tier: 1
+        }, {
+          proposition: 'Garantir l’hébergement des données des services publics français et des entreprises essentielles sur des serveurs de droit français situés en France',
+          details: 'details',
+          page: 10,
+          tier: 1
+        }, {
+          proposition: 'Créer une agence publique des logiciels libres chargée de planifier leur développement stratégique domaine par domaine en identifiant les manques et en finançant les projets-clés',
           details: 'details',
           page: 10,
           tier: 2
+        }, {
+          proposition: 'Rétablir la propriété française publique sur Alcatel Submarine Networks',
+          details: 'details',
+          page: 10,
+          tier: 3
         }],
         limits: [
           'limit',
