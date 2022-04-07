@@ -328,7 +328,7 @@ export default {
         link: '/programs/melenchon.pdf',
         mentions: 5,
         infos: 'La synthèse du programme de Jean-Luc Mélenchon n\'accorde que peu de place à la question du numérique et ne mentionne pas le sujet de la souveraineté numérique.' +
-          'En revanche, le <a href=\'https://laec.fr/\'>programme complet</a> mentionne (à la toute fin cependant) la question de la souveraineté numérique. Dans la section correspondante,' +
+          ' En revanche, le <a href=\'https://laec.fr/\'>programme complet</a> mentionne (à la toute fin cependant) la question de la souveraineté numérique. Dans la section correspondante,' +
           ' les logiciels libres apparaissent comme un moyen clé pour réduire notre dépendance vis-à-vis des GAFAM.',
         measures: [{
           proposition: 'Garantir la souveraineté numérique de la France',
@@ -372,11 +372,11 @@ export default {
         party: 'Reconquête',
         image: 'https://media.ouest-france.fr/v1/pictures/eb3571f71fd10440dbd3868a237b9964-zemour.jpg?client_id=cmsfront&sign=e2500686c72d48627f11d43cb7ea9a8042bc12263263fee922f0de2fd216065e',
         link: '/programs/zemmour.pdf',
-        infos: 'Dans le programme principal d\'Eric Zemmour, deux pages sont consacrées au sujet de la souveraineté numérique qui est présentée comme le ' +
-          'moyen de "<em>Faire du numérique un outil de prospérité et de rayonnement pour la France</em>". Dénonçant une vassalisation numérique, notamment à l\'égard' +
-          'des « fleurons technologiques » américains et chinois, le candidat prône un recours à la commande publique pour "<em>faire émerger des solutions françaises ' +
-          'souveraines dans le cloud et la cybersécurité</em>". Pour tendre vers cet objectif, le candidat mentionne les sujets de la formation et de l\'attractivité des talents' +
-          '"<em>que ces sociétés étrangères nous arrachent</em>".',
+        infos: 'Si Eric Zemmour ne propose pas de programme spécifique pour le numérique, deux pages de son programme principales sont consacrées au sujet de la souveraineté numérique qui est présentée comme le' +
+          ' moyen de "<em>Faire du numérique un outil de prospérité et de rayonnement pour la France</em>". Dénonçant une vassalisation numérique, notamment à l\'égard' +
+          ' des « fleurons technologiques » américains et chinois, le candidat prône un recours à la commande publique pour "<em>faire émerger des solutions françaises ' +
+          ' souveraines dans le cloud et la cybersécurité</em>". Pour tendre vers cet objectif, le candidat mentionne les sujets de la formation et de l\'attractivité des talents' +
+          ' "<em>que ces sociétés étrangères nous arrachent</em>".',
         mentions: 16,
         measures: [{
           proposition: 'Créer les conditions de notre souveraineté numérique',
