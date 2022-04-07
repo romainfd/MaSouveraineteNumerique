@@ -476,6 +476,43 @@ export default {
           'limit',
           'limit2'
         ]
+      }, {
+        name: 'Yannick Jadot',
+        party: 'Europe Écologie Les Verts',
+        image: 'https://www.europarl.europa.eu/mepphoto/96740.jpg',
+        link: '/programs/jadot.pdf',
+        infos: '',
+        mentions: 8,
+        measures: [{
+          proposition: '',
+          details: '',
+          page: 37,
+          tier: 1
+        }, {
+          proposition: '',
+          details: '',
+          page: 37,
+          tier: 2
+        }, {
+          proposition: '',
+          details: '',
+          page: 38,
+          tier: 2
+        }, {
+          proposition: '',
+          details: '',
+          page: 38,
+          tier: 2
+        }, {
+          proposition: '',
+          details: '',
+          page: 46,
+          tier: 3
+        }],
+        limits: [
+          'limit',
+          'limit2'
+        ]
       }]
     }
   },
