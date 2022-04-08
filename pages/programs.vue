@@ -42,17 +42,15 @@
             une couleur indique l'intensité du lien avec la question de la souveraineté numérique (vert = très lié, bleu = lié, gris = non lié mais dans le domaine numérique).
             Les titres et les détails des propositions sont directement extraits des programmes et toute modification est indiquée entre crochets.
           </p>
-          <div class="my-4 d-flex justify-space-between">
-            <v-row>
+          <div>
+            <v-row class="my-4 d-flex justify-space-between">
               <v-col
                 v-for="(program, i) in programs"
                 :key="i"
-                cols="4"
-                sm="2"
+                cols="auto"
               >
                 <v-avatar
                   size="84"
-                  class="mr-4"
                   @click="select(i)"
                 >
                   <v-img
