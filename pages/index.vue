@@ -88,8 +88,8 @@
       </p>
       <p>
         Bien que notre mémoire soit encore en cours d'élaboration, nous avons construit ce site afin de partager l'expérience déjà acquise et centraliser
-        les ressources et outils qui nous paraissaient pertinents. Sont ainsi disponibles, l'<a href="/programs">analyse des programmes des candidats</a> aux élections présidentielles
-        de 2022 et un <a href="/quiz">questionnaire de souveraineté</a> permettant aux organisations d'estimer leur niveau de souveraineté selon plusieurs verticales. Nous projetons
+        les ressources et outils qui nous paraissaient pertinents. Sont ainsi disponibles, l'<a href="#programs">analyse des programmes des candidats</a> aux élections présidentielles
+        de 2022 et un <a href="#quiz">questionnaire de souveraineté</a> permettant aux organisations d'estimer leur niveau de souveraineté selon plusieurs verticales. Nous projetons
         également d'ajouter sous peu une sélection de graphs illustrant la situation actuelle de la France en matière de souveraineté numérique.
       </p>
     </section>
