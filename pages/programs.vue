@@ -158,6 +158,7 @@ export default {
     return {
       selected: null,
       programs: [{
+      /*
         name: 'Anne Hidalgo',
         party: 'Parti Socialiste',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Anne_Hidalgo%2C_f%C3%A9vrier_2014.jpg/440px-Anne_Hidalgo%2C_f%C3%A9vrier_2014.jpg',
@@ -197,6 +198,7 @@ export default {
           'limit2'
         ]
       }, {
+      */
         name: 'Marine Le Pen',
         party: 'Rassemblement National',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Le_Pen%2C_Marine-9586_%28cropped%29.jpg/440px-Le_Pen%2C_Marine-9586_%28cropped%29.jpg',
@@ -486,43 +488,6 @@ export default {
           proposition: 'Simplifier la vie',
           details: 'Achever la couverture numérique du territoire par la fibre d\'ici 2025.',
           page: 6,
-          tier: 3
-        }],
-        limits: [
-          'limit',
-          'limit2'
-        ]
-      }, {
-        name: 'Yannick Jadot',
-        party: 'Europe Écologie Les Verts',
-        image: 'https://www.europarl.europa.eu/mepphoto/96740.jpg',
-        link: '/programs/jadot.pdf',
-        infos: '',
-        mentions: 8,
-        measures: [{
-          proposition: '',
-          details: '',
-          page: 37,
-          tier: 1
-        }, {
-          proposition: '',
-          details: '',
-          page: 37,
-          tier: 2
-        }, {
-          proposition: '',
-          details: '',
-          page: 38,
-          tier: 2
-        }, {
-          proposition: '',
-          details: '',
-          page: 38,
-          tier: 2
-        }, {
-          proposition: '',
-          details: '',
-          page: 46,
           tier: 3
         }],
         limits: [
