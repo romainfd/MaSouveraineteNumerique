@@ -85,7 +85,7 @@
                   <v-card-title>{{ p.name }}</v-card-title>
                   <v-card-subtitle>{{ p.party }}</v-card-subtitle>
                 </v-col>
-                <v-col cols="auto" order-md="last" class="ml-auto">
+                <v-col cols="auto" order-sm="last" class="ml-auto">
                   <v-btn elevation="4" fab :href="p.link" target="_blank" class="mr-2">
                     <v-icon>
                       mdi-newspaper-variant-multiple-outline
@@ -281,7 +281,7 @@ export default {
           details: 'Se donner les moyens de disposer d’un cloud souverain [...], ' +
             'instaurer une préférence française et européenne dans la commande publique grâce à des quotas progressifs [...], avec objectif de 50% en 2027, ' +
             'permettre aux acteurs français du numérique d’investir au même niveau que leurs concurrents étrangers en utilisant la précommande publique [...] et ' +
-            'créer un Parquet National Cyber pour lutter contre les cyberattaques',
+            'créer un Parquet National Cyber pour lutter contre les cyberattaques.',
           page: 2,
           tier: 1
         }, {
@@ -356,7 +356,7 @@ export default {
           page: 10,
           tier: 2
         }, {
-          proposition: 'proposition',
+          proposition: 'proposition2',
           details: 'details',
           page: 10,
           tier: 3
@@ -406,7 +406,7 @@ export default {
           details: 'Exonérer d’impôts sur la plus-value les cessions de crypto-actifs dès lors qu’au moins 50% de cette plus-\n' +
             'value est réinvestie dans le capital d’une entreprise de l’économie réelle. Ne pas laisser le monopole des stablecoins à des entités extra-européennes en favorisant l’émergence de\n' +
             '« stablecoins » euro par le secteur privé européen sans attendre le projet d’euro numérique porté par la Banque\n' +
-            'centrale européenne',
+            'centrale européenne.',
           page: 38,
           tier: 2
         }, {
