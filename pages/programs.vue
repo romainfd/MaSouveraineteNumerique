@@ -121,7 +121,7 @@
                       icon
                       x-small
                       class="mb-1"
-                      :href="p.link + '#page=' + measure.page"
+                      :href="getLink(p, measure)"
                       target="_blank"
                     >
                       <v-icon small>
@@ -505,6 +505,9 @@ export default {
     },
     measureColor (tier) {
       return tier === 1 ? 'green' : (tier === 2 ? 'blue' : 'grey')
+    },
+    getLink (program, measure) {
+      return measure.link ?? program.link + '#page=' + measure.page
     }
   }
 }
