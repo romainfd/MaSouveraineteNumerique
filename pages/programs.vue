@@ -31,15 +31,15 @@
             Il y a également un consensus sur le fait que les acteurs chinois doivent, comme les autres, se soumettre au droit européen.
           </p>
           <p>
-            Pour apporter un regard critique sur ces positions enthousiastes, il convient de réellement penser la faisabilité des propositions en termes de lois (notamment européennes) et d'efficacité pour les acteurs et citoyens.
-            D'autre part, et alors qu'il est toujours fait mention du blocage nécessaire des géants numériques chinois et américains,
-            la souveraineté numérique n'apparait pas dans les programmes comme un enjeu stratégique structurant pour la politique étrangère et de défense (enjeux de sécurité, gouvernance internationale, relations US/Chine).
-            Enfin, il est rarement fait notion de la montée en puissance de la Chine dans le domaine malgré le fait que son modèle de valeur soit encore plus éloigné du notre que peut l'être celui américain.
+            Pour apporter un regard critique sur ces positions enthousiastes, il convient de réellement penser la faisabilité des propositions en termes de lois et règlements (notamment européennes) et d'efficacité pour les acteurs et citoyens.
+            En outre, en dépit d'une mention systématique de la nécessité de limiter la puissance des géants du Net américains et chinois,
+            la souveraineté numérique n'apparait pas dans les programmes comme un enjeu stratégique structurant pour la politique étrangère et de défense (enjeux de sécurité, gouvernance internationale, relations États-Unis/Chine, etc.).
+            Enfin, il est rarement fait notion de la montée en puissance de la Chine dans le domaine malgré le fait que son modèle de valeur soit encore plus éloigné du nôtre que le modèle américain.
           </p>
           <p>
-            Afin de rentrer plus en détails dans les propositions de chacun, nous avons parcouru leurs programmes et regroupés 5 propositions saillantes pour chacun des candidats.
-            En cliquant sur la photo d'un candidat, vous trouverez le lien vers son programme ainsi que ces 5 propositions avec le lien vers la page du programme la détaillant
-            ainsi qu'une couleur indiquant le niveau de lien avec la souveraineté numérique (vert = très lié, bleu = lié, gris = non lié mais dans le domaine numérique).
+            Afin de rentrer plus en détails dans les propositions des différents candidats, nous avons parcouru leurs programmes et regroupé cinq propositions saillantes pour chacun d'entre eux.
+            En cliquant sur la photo d'un candidat, vous trouverez le lien vers son programme ainsi que ses cinq propositions clées avec le lien vers la page du programme la détaillant. Pour chacune des propositions,
+            une couleur indique l'intensité du lien avec la question de la souveraineté numérique (vert = très lié, bleu = lié, gris = non lié mais dans le domaine numérique).
             Les titres et les détails des propositions sont directement extraits des programmes et toute modification est indiquée entre crochets.
           </p>
           <div class="my-4 d-flex justify-space-between">
@@ -327,37 +327,97 @@ export default {
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Jean_Luc_MELENCHON_in_the_European_Parliament_in_Strasbourg%2C_2016_%28cropped%29.jpg/220px-Jean_Luc_MELENCHON_in_the_European_Parliament_in_Strasbourg%2C_2016_%28cropped%29.jpg',
         link: '/programs/melenchon.pdf',
         mentions: 5,
+        infos: 'La synthèse du programme de Jean-Luc Mélenchon n\'accorde que peu de place à la question du numérique et ne mentionne pas le sujet de la souveraineté numérique.' +
+          ' En revanche, le <a href=\'https://laec.fr/\'>programme complet</a> mentionne (à la toute fin cependant) la question de la souveraineté numérique. Dans la section correspondante,' +
+          ' les logiciels libres apparaissent comme un moyen clé pour réduire notre dépendance vis-à-vis des GAFAM.',
         measures: [{
-          proposition: 'Nom',
-          details: 'details',
+          proposition: 'Garantir la souveraineté numérique de la France',
+          details: 'Créer une agence publique des logiciels libres chargée de planifier leur développement stratégique domaine par domaine en identifiant les manques et en finançant les projets-clés.' +
+            ' Permettre à tous les citoyens et à toutes les entreprises l\'accès à des services et logiciels en ligne hébergés sur des serveurs français de droit français.' +
+            ' Garantir l’hébergement des données des services publics français et des entreprises essentielles sur des serveurs de droit français situés en France.' +
+            ' Rétablir la propriété française publique sur Alcatel Submarine Networks. ' +
+            ' Garantir la neutralité du Net, c’est à dire l’accès égal de chacun et l’égalité de traitement.',
           page: 10,
           tier: 1
         }, {
-          proposition: 'Nom',
+          proposition: 'Affirmer le caractère d\'intérêt général de la révolution numérique',
+          details: 'Constitutionnaliser le droit au chiffrement des données et des communications.' +
+            ' Aller plus loin que le règlement européen de protection des données pour agir contre les discriminations entraînées par le traitement algorithmique des données personnelles, en dotant la Commission nationale de l’informatique et des libertés (CNIL) de moyens de contrôle efficaces.' +
+            ' Garantir le droit à un accès minimal gratuit à Internet.',
+          page: 10,
+          tier: 2
+        }, {
+          proposition: 'Construire une défense indépendante, républicaine et populaire',
+          details: 'Mobiliser l’espace numérique et la réalité spatiale pour installer des systèmes défensifs et non létaux contre les agressions et pour la paix.',
+          page: 10,
+          tier: 3
+        }, {
+          proposition: 'proposition',
           details: 'details',
           page: 10,
           tier: 2
+        }, {
+          proposition: 'proposition',
+          details: 'details',
+          page: 10,
+          tier: 3
         }],
         limits: [
-          'limit',
-          'limit2'
+          'Inutile d\'héberger les données en France si la pile logicielle n\'est pas maîtrisée',
+          'Question du lien entre logiciel libre et souveraineté (taille de communauté, etc.)',
+          'Question de l\'attractivité vis-à-vis des talents pour l\'agence de développement'
         ]
       }, {
         name: 'Éric Zemmour',
         party: 'Reconquête',
         image: 'https://media.ouest-france.fr/v1/pictures/eb3571f71fd10440dbd3868a237b9964-zemour.jpg?client_id=cmsfront&sign=e2500686c72d48627f11d43cb7ea9a8042bc12263263fee922f0de2fd216065e',
         link: '/programs/zemmour.pdf',
+        infos: 'Si Éric Zemmour ne propose pas de programme spécifique pour le numérique, deux pages de son programme principales sont consacrées au sujet de la souveraineté numérique qui est présentée comme le' +
+          ' moyen de "<em>Faire du numérique un outil de prospérité et de rayonnement pour la France</em>". Dénonçant une vassalisation numérique, notamment à l\'égard' +
+          ' des « fleurons technologiques » américains et chinois, le candidat prône un recours à la commande publique pour "<em>faire émerger des solutions françaises ' +
+          ' souveraines dans le cloud et la cybersécurité</em>". Pour tendre vers cet objectif, le candidat mentionne les sujets de la formation et de l\'attractivité des talents' +
+          ' "<em>que ces sociétés étrangères nous arrachent</em>".',
         mentions: 16,
         measures: [{
-          proposition: 'Nom',
-          details: 'details',
-          page: 10,
+          proposition: 'Créer les conditions de notre souveraineté numérique',
+          details: 'Faire émerger des solutions françaises souveraines dans le cloud et la cybersécurité et investir dans les\n' +
+            'technologies de rupture (en particulier intelligence artificielle, ordinateur quantique et semi-conducteurs).' +
+            ' Imposer par la loi que les données sensibles des Français ainsi que les données stratégiques de l’État et\n' +
+            'du secteur privé soient hébergées et sécurisées en France sur des solutions souveraines.',
+          page: 37,
           tier: 1
         }, {
-          proposition: 'Nom',
-          details: 'details',
-          page: 10,
+          proposition: 'Soutenir les champions français du numérique à tous les stades de leur développement',
+          details: 'Permettre aux Français d’investir sans aucune fiscalité dans les start-ups et entreprises innovantes en créant un Livret Innovation.\n' +
+            'Permettre aux créateurs de start-ups de se financer sans perdre le contrôle de leur entreprise et attirer\n' +
+            'les introductions en bourse sur la place de Paris en autorisant deux classes d’actions en bourse à droits de\n' +
+            'vote différents. Permettre aux jeunes entreprises du numérique d’impliquer et de retenir les talents en élargissant les\n' +
+            'conditions de l’actionnariat salarié.',
+          page: 37,
           tier: 2
+        }, {
+          proposition: 'Doter la France des moyens de son ambition numérique',
+          details: 'Garantir une connexion haut débit à chaque Français et chaque entreprise sur tout le territoire. Permettre à tout citoyen de faire toutes ses démarches administratives sur Internet en accélérant la\n' +
+            'numérisation des services de l’État et la mise à disposition des données. Pourvoir à la demande croissante d’emplois dans le numérique en donnant une place de choix à\n' +
+            'l’enseignement de la programmation informatique dès le secondaire. ',
+          page: 38,
+          tier: 2
+        }, {
+          proposition: 'Accélérer les investissements dans la blockchainet le Web3 tout en créant un environnement favorable à la détention et la création de crypto-actifs',
+          details: 'Exonérer d’impôts sur la plus-value les cessions de crypto-actifs dès lors qu’au moins 50% de cette plus-\n' +
+            'value est réinvestie dans le capital d’une entreprise de l’économie réelle. Ne pas laisser le monopole des stablecoins à des entités extra-européennes en favorisant l’émergence de\n' +
+            '« stablecoins » euro par le secteur privé européen sans attendre le projet d’euro numérique porté par la Banque\n' +
+            'centrale européenne',
+          page: 38,
+          tier: 2
+        }, {
+          proposition: 'Protéger les enfants et les adolescents des effets néfastes d’Internet',
+          details: 'Mieux protéger les enfants et les adolescents contre le harcèlement, la pédophilie et l’incitation à la\n' +
+            'violence en organisant des « États généraux des réseaux sociaux et numériques ».\n' +
+            ' Lutter contre l’exposition des enfants et des mineurs aux sites violents et pornographiques en instaurant\n' +
+            'par la loi l’activation par défaut du contenu protégé et du contrôle parental sur les appareils numériques.',
+          page: 46,
+          tier: 3
         }],
         limits: [
           'limit',
@@ -368,17 +428,104 @@ export default {
         party: 'La République en marche',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Emmanuel_Macron_in_2019.jpg/220px-Emmanuel_Macron_in_2019.jpg',
         link: '/programs/macron.pdf',
+        infos: 'La question de la souveraineté numérique n\'apparaît ni dans le programme principal d\'Emmanuel Macron, ni dans son' +
+          ' <a href=\'https://avecvous.fr/notre-action/numerique\'> bilan thématique relatif au numérique</a>. Si le sujet ne semble pas directement porté par le candidat, le ministère' +
+          ' de l\'Économie, dans le cadre de la présidence française du Conseil de l\'Union européenne, a organisé les 7 et 8 février' +
+          ' derniers une conférence intitulée "Construire la souveraineté numérique de l’Europe". Néanmoins, il convient de noter qu\'aucun' +
+          ' industriel européen du cloud n\'a été invité à participer à ce colloque.',
         mentions: 9,
         measures: [{
-          proposition: 'Nom',
-          details: 'details',
-          page: 10,
+          proposition: 'Assurer la puissance de l’Europe',
+          details: 'Assurer son autonomie\n' +
+            'technologique, en investissant pour\n' +
+            'développer ses champions,\n' +
+            'en se protégeant dans les domaines\n' +
+            'les plus stratégiques, en se dotant\n' +
+            'des infrastructures essentielles,\n' +
+            'comme un « cloud » et une constellation de satellites.',
+          page: 12,
+          eu: true,
           tier: 1
         }, {
-          proposition: 'Nom',
-          details: 'details',
-          page: 10,
+          proposition: 'Rendre notre société plus résiliente',
+          details: 'Une augmentation des moyens\n' +
+            'de l’Agence nationale de la sécurité\n' +
+            'des systèmes d’information pour\n' +
+            'renforcer la capacité de lutte\n' +
+            'et de soutien cyber aux entreprises\n' +
+            'françaises.',
+          page: 12,
           tier: 2
+        }, {
+          proposition: 'Une France créative et productive (volet numérique)',
+          details: 'Généraliser l’enseignement\n' +
+            'du code informatique et des usages\n' +
+            'numériques à partir de la 5e.\n' +
+            ' Transformer l’État par le numérique\n' +
+            ' : «TousAntiCovid» a montré\n' +
+            'comment les procédures pouvaient\n' +
+            'ainsi être simplifiées.\n' +
+            ' 20000 accompagnateurs\n' +
+            'pour aider les Français qui en ont\n' +
+            'besoin dans la maîtrise des outils\n' +
+            'numériques et leurs démarches\n' +
+            'quotidiennes.',
+          page: 9,
+          tier: 2
+        }, {
+          proposition: 'Une France créative et productive (volet culture)',
+          details: 'Un investissement pour construire\n' +
+            'des métavers européens et proposer\n' +
+            'des expériences en réalité virtuelle,\n' +
+            'autour de nos musées, de notre\n' +
+            'patrimoine et de nouvelles créations,\n' +
+            'en protégeant les droits d’auteur\n' +
+            'et droits voisins.',
+          page: 9,
+          eu: true,
+          tier: 2
+        }, {
+          proposition: 'Simplifier la vie',
+          details: 'Achever la couverture numérique du territoire par la fibre d\'ici 2025.',
+          page: 6,
+          tier: 3
+        }],
+        limits: [
+          'limit',
+          'limit2'
+        ]
+      }, {
+        name: 'Yannick Jadot',
+        party: 'Europe Écologie Les Verts',
+        image: 'https://www.europarl.europa.eu/mepphoto/96740.jpg',
+        link: '/programs/jadot.pdf',
+        infos: '',
+        mentions: 8,
+        measures: [{
+          proposition: '',
+          details: '',
+          page: 37,
+          tier: 1
+        }, {
+          proposition: '',
+          details: '',
+          page: 37,
+          tier: 2
+        }, {
+          proposition: '',
+          details: '',
+          page: 38,
+          tier: 2
+        }, {
+          proposition: '',
+          details: '',
+          page: 38,
+          tier: 2
+        }, {
+          proposition: '',
+          details: '',
+          page: 46,
+          tier: 3
         }],
         limits: [
           'limit',
