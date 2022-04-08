@@ -331,19 +331,19 @@ export default {
           ' les logiciels libres apparaissent comme un moyen clé pour réduire notre dépendance vis-à-vis des GAFAM.',
         measures: [{
           proposition: 'Garantir la souveraineté numérique de la France',
+          link: 'https://laec.fr/section/86/garantir-la-souverainete-numerique-de-la-france',
           details: 'Créer une agence publique des logiciels libres chargée de planifier leur développement stratégique domaine par domaine en identifiant les manques et en finançant les projets-clés.' +
             ' Permettre à tous les citoyens et à toutes les entreprises l\'accès à des services et logiciels en ligne hébergés sur des serveurs français de droit français.' +
             ' Garantir l’hébergement des données des services publics français et des entreprises essentielles sur des serveurs de droit français situés en France.' +
             ' Rétablir la propriété française publique sur Alcatel Submarine Networks. ' +
             ' Garantir la neutralité du Net, c’est à dire l’accès égal de chacun et l’égalité de traitement.',
-          page: 10,
           tier: 1
         }, {
           proposition: 'Affirmer le caractère d\'intérêt général de la révolution numérique',
+          link: 'https://laec.fr/section/85/affirmer-le-caractere-dinteret-general-de-la-revolution-numerique',
           details: 'Constitutionnaliser le droit au chiffrement des données et des communications.' +
             ' Aller plus loin que le règlement européen de protection des données pour agir contre les discriminations entraînées par le traitement algorithmique des données personnelles, en dotant la Commission nationale de l’informatique et des libertés (CNIL) de moyens de contrôle efficaces.' +
             ' Garantir le droit à un accès minimal gratuit à Internet.',
-          page: 10,
           tier: 2
         }, {
           proposition: 'Construire une défense indépendante, républicaine et populaire',
