@@ -366,8 +366,8 @@ export default {
           tier: 2
         }, {
           proposition: 'Construire une défense indépendante, républicaine et populaire',
+          link: 'https://laec.fr/section/72/construire-une-defense-independante-republicaine-et-populaire',
           details: 'Mobiliser l’espace numérique et la réalité spatiale pour installer des systèmes défensifs et non létaux contre les agressions et pour la paix.',
-          page: 10,
           tier: 2
         }],
         limits: [
