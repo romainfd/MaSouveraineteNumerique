@@ -135,8 +135,7 @@
                   </p>
                 </v-alert>
               </div>
-              <v-divider />
-              <div>
+              <div hidden>
                 <v-card-title>
                   Regards critiques
                 </v-card-title>
@@ -208,7 +207,7 @@ export default {
           "\"<em>Parvenir à la souveraineté numérique</em>\" est d'ailleurs le premier des 5 propositions présentées dans le document." +
           '<br/><br/>Le constat de la remise en cause de notyre souveraineté numérique y est fait selon 4 axes : ' +
           'exploitation de nos données par des acteurs étrangers, dépendance aux étrangers dans le domaine de la sécurité, ' +
-          'concurrence numérique déséquilibrée et risques cybers',
+          'concurrence numérique déséquilibrée et risques cybers.',
         measures: [{
           proposition: 'Parvenir à la souveraineté numérique',
           details: 'Favoriser l’émergence d’acteurs français ou européens dans tous les domaines du numérique. ' +
