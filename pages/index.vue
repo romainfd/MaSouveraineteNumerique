@@ -72,22 +72,25 @@
       </h2>
       <p>
         <a href="https://www.linkedin.com/in/godefroygalas">Godefroy Galas</a> et <a href="https://linkedin.com/in/romainfouilland">Romain Fouilland</a>,
-        nous sommes en troisième et dernière année de formation du Corps des mines que nous avons décidé de consacrer à l'écriture d'un mémoire sur la souveraineté numérique.
-        Après de nombreuses expériences en start-up, grands groupes et fonds autour du numérique, nous nous destinons à des postes de hauts-fonctionnaires dans l'État.
-        Étant persuadés que les enjeux de souveraineté numérique demandent une collaboration entre services publics, acteurs privés et citoyens et comme la formation du Corps des mines est conçue pour nous placer à cette interface,
-        nous avons eu à cœur d'en profiter pour s'intéresser à ces enjeux et essayer d'y apporter une pierre constructive à travers notre mémoire de fin d'études.
+        nous sommes en troisième et dernière année de formation du Corps des mines que nous avons décidé de consacrer à l'écriture d'un mémoire sur la
+        souveraineté numérique. Après de nombreuses expériences en start-up, grands groupes et fonds autour du numérique, nous nous destinons à des postes
+        de hauts-fonctionnaires dans l'État. Étant persuadés que les enjeux sous-jacents à la souveraineté numérique requièrent une collaboration entre
+        services publics, acteurs privés et citoyens, et bénéficiant d'un cadre de formation positionné à l'interface entre ces différents acteurs, nous avons
+        eu à cœur d'analyser ces enjeux et d'en tirer une réflexion constructive à travers notre mémoire de fin d'études pour essayer d'apporter
+        notre pierre à l'édifice.
       </p>
       <p>
-        Le mémoire de fin d'études du Corps des mines se déroule d'octobre à juillet et est l'occasion de nombreuses rencontres et productions.
-        Nous avons, à ce titre, été rapporteurs de la mission Sportisse sur les "Infrastructures logicielles critiques" pour préparer la présidence française du Conseil de l'Union européenne.
-        Nous avons également répondu à une commande de l'INRIA avec 17 camarades de l'INSP (ex-ENA) sur les cibles et leviers pour politique de rééquilibrage rapide.
+        Le mémoire de fin d'études du Corps des mines se déroule d'octobre à juillet et donne l'occasion de nombreuses rencontres et productions. Nous avons,
+        à ce titre, été rapporteurs de la mission Sportisse (du nom du PDG de l'INRIA) sur les "Infrastructures logicielles critiques" visant à préparer la présidence française du
+        Conseil de l'Union européenne sur les sujets numériques. Nous avons également répondu à une commande de l'INRIA avec 17 camarades de l'INSP (ex-ENA) sur les cibles et leviers (technologiques,
+        juridiques, socio-culturels, etc.) qui pourraient sous-tendre une politique de rééquilibrage rapide des rapports de force en matière de souveraineté numérique.
         En parallèle de ces expériences, nous nous sommes également rapprochés d'acteurs privés avec lesquels nous sommes en train de mener diverses actions.
       </p>
       <p>
-        Bien que notre mémoire soit encore en construction, nous avons créé ce site pour partager l'expérience déjà acquise et centraliser les ressources et outils qui nous paraissent pertinents.
-        Sont ainsi disponibles, l'<a href="#programs">analyse des programmes des candidats</a> aux élections présidentielles de 2022,
-        un <a href="#quiz">questionnaire de souveraineté</a> permettant aux organisations d'estimer leur niveau de souveraineté selon plusieurs verticales et
-        une sélection de graphs illustrant la <a href="#situation">situation actuelle de la France</a> en matière de souveraineté numérique.
+        Bien que notre mémoire soit encore en cours d'élaboration, nous avons construit ce site afin de partager l'expérience déjà acquise et centraliser
+        les ressources et outils qui nous paraissaient pertinents. Sont ainsi disponibles, l'<a href="/programs">analyse des programmes des candidats</a> aux élections présidentielles
+        de 2022 et un <a href="/quiz">questionnaire de souveraineté</a> permettant aux organisations d'estimer leur niveau de souveraineté selon plusieurs verticales. Nous projetons
+        également d'ajouter sous peu une sélection de graphs illustrant la situation actuelle de la France en matière de souveraineté numérique.
       </p>
     </section>
   </div>
