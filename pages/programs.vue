@@ -220,6 +220,7 @@ export default {
             'le contrôle accru du respect intégral, par les entreprises étrangères, du droit français et européen [...]. ' +
             "[Ces mesures s'appuieront sur des collaborations européennes (cloud & telecom notamment) et sur un Fonds souverain français.]",
           page: 6,
+          eu: true,
           tier: 1
         }, {
           proposition: 'Imposer le respect de la loi française aux acteurs du numérique',
@@ -241,7 +242,7 @@ export default {
             'je propose que leur nationalité leur permette un droit de traitement des données par défaut ' +
             'là où des prestataires étrangers devront apporter des garanties supplémentaires pour exercer ce droit.',
           page: 10,
-          ue: true,
+          eu: true,
           tier: 1
         }, {
           proposition: 'Renforcer la cybersécurité et maîtriser le cyberespace',
