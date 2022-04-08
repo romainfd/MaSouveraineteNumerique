@@ -205,7 +205,7 @@ export default {
         mentions: 25,
         infos: "Bien qu'aucune mention ne soit faite du numérique dans son <a href='/programs/le-pen.pdf'>programme principal</a>, Marine Le Pen propose un programme spécifique sur le numérique d'une dizaine de pages. " +
           "\"<em>Parvenir à la souveraineté numérique</em>\" est d'ailleurs le premier des 5 propositions présentées dans le document." +
-          '<br/><br/>Le constat de la remise en cause de notyre souveraineté numérique y est fait selon 4 axes : ' +
+          '<br/><br/>Le constat de la remise en cause de notre souveraineté numérique y est fait selon 4 axes : ' +
           'exploitation de nos données par des acteurs étrangers, dépendance aux étrangers dans le domaine de la sécurité, ' +
           'concurrence numérique déséquilibrée et risques cybers.',
         measures: [{
@@ -213,7 +213,7 @@ export default {
           details: 'Favoriser l’émergence d’acteurs français ou européens dans tous les domaines du numérique. ' +
             'Cela passe par davantage de recherche scientifique, par des aides ciblées en faveur des entreprises du numérique, ' +
             'mais aussi par la priorité à donner aux fournisseurs français ou européens. Cela se traduira par : ' +
-            'un recours exclusif à des fournisseurs français pour la commande publique dans les domaines militaires et de sécurité nationale, e' +
+            'un recours exclusif à des fournisseurs français pour la commande publique dans les domaines militaires et de sécurité nationale, ' +
             'et pour le reste de la commande publique, une priorité accordée à des fournisseurs européens [...], ' +
             'le contrôle strict [...] [du rachat] des entreprises françaises de pointe du secteur du numérique stratégique [...], ' +
             "la mise en place d’une fiscalité juste, au niveau de l’Union européenne ou de l'O.C.D.E. [...] et " +
@@ -267,171 +267,17 @@ export default {
           'limit2'
         ]
       }, {
-        name: 'Valérie Pécresse',
-        party: 'Les Républicains',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Val%C3%A9rie_P%C3%A9cresse_%282022%29_%28cropped_2%29.jpg/220px-Val%C3%A9rie_P%C3%A9cresse_%282022%29_%28cropped_2%29.jpg',
-        link: '/programs/pecresse-num.pdf',
-        mentions: 33,
-        infos: "Valérie Pécresse <a href='/programs/pecresse.pdf#page=12' target='_blank'>mentionne directement la souveraineté numérique</a> dans son programme principal. Présenté comme l'un des 4 axes permettant de \"<em>garantir notre souveraineté</em>\", " +
-          "la souveraineté numérique passe principalement par la formation de talents (1 millions d'ici 2030 dont 50 000 fonctionnaires), la commande publique et un cloud français." +
-          '<br/><br/>En plus de cette courte mention dans son programme principal, son programme numérique détaillé a également été analysé. Dès son introduction, le lien entre numérique et souveraineté est fortement mis en avant : ' +
-          '"<em>Valérie Pécresse souhaite construire un modèle numérique français, basé sur nos valeurs fondamentales : responsable, moteur d’une souveraineté retrouvée et condition de la fierté française du 21ème siècle. Nous affirmerons le numérique comme un sujet régalien et de souveraineté.</em>"',
-        measures: [{
-          proposition: 'Protéger les données stratégiques des Français et de l’Etat grâce à une loi relative à la souveraineté et à la responsabilité numérique',
-          details: 'Se donner les moyens de disposer d’un cloud souverain [...], ' +
-            'instaurer une préférence française et européenne dans la commande publique grâce à des quotas progressifs [...], avec objectif de 50% en 2027, ' +
-            'permettre aux acteurs français du numérique d’investir au même niveau que leurs concurrents étrangers en utilisant la précommande publique [...] et ' +
-            'créer un Parquet National Cyber pour lutter contre les cyberattaques.',
-          page: 2,
-          tier: 1
-        }, {
-          proposition: 'Former les talents et libérer l’écosystème numérique sur tout le territoire',
-          details: 'Former un million de talents au numérique d’ici 2030 : ' +
-            'organiser un test national annuel sur le « potentiel numérique » de tous les élèves de seconde [...], ' +
-            'développer des parcours de formations initiales [...] et  ' +
-            'créer une Ecole Nationale du Numérique [...]. ' +
-            'Accélérer et amplifier l’émergence de 200 usines dans les nouvelles filières et consolider 20 licornes industrielles d’ici 2027.',
-          page: 3,
-          tier: 1
-        }, {
-          proposition: 'Mettre le numérique au service des territoires et garantir l’égalité d’accès pour tous les Français',
-          details: 'Accélérer le déploiement du Très Haut Débit (THD) fixe et mobile [...], ' +
-            'mettre fin aux zones blanches [...].',
-          page: 3,
-          tier: 2
-        }, {
-          proposition: 'Intégrer le numérique dans l’éducation de nos enfants en les protégeant des risques associés',
-          details: 'Intégrer le codage dans les programmes scolaires dès la 6ème et ' +
-            'adopter une loi « Protection de l’enfance face aux menaces du numériques » : ' +
-            'créer l’équivalent du « Children’s code » britannique [...] et ' +
-            'ouvrir la réflexion sur la fin de l’anonymat [...].',
-          page: 4,
-          tier: 2
-        }, {
-          proposition: 'Accélérer la transition écologique grâce au numérique',
-          details: 'Créer un Green Data Hub pour faciliter le croisement des données environnementales [...] et ' +
-            'soutenir une grande filière de la réparation et du reconditionnement des équipements informatiques [...] : ' +
-            'Instaurer un Chèque Récupération [...] et ' +
-            'Imposer l’ouverture du marché des pièces détachées aux constructeurs et des manuels techniques.',
-          page: 3,
-          tier: 3
-        }],
-        limits: [
-          'limit',
-          'limit2'
-        ]
-      }, {
-        name: 'Jean-Luc Mélenchon',
-        party: 'L\'Union populaire',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Jean_Luc_MELENCHON_in_the_European_Parliament_in_Strasbourg%2C_2016_%28cropped%29.jpg/220px-Jean_Luc_MELENCHON_in_the_European_Parliament_in_Strasbourg%2C_2016_%28cropped%29.jpg',
-        link: '/programs/melenchon.pdf',
-        mentions: 5,
-        infos: 'La synthèse du programme de Jean-Luc Mélenchon n\'accorde que peu de place à la question du numérique et ne mentionne pas le sujet de la souveraineté numérique.' +
-          ' En revanche, le <a href=\'https://laec.fr/\'>programme complet</a> mentionne (à la toute fin cependant) la question de la souveraineté numérique. Dans la section correspondante,' +
-          ' les logiciels libres apparaissent comme un moyen clé pour réduire notre dépendance vis-à-vis des GAFAM.',
-        measures: [{
-          proposition: 'Garantir la souveraineté numérique de la France',
-          details: 'Créer une agence publique des logiciels libres chargée de planifier leur développement stratégique domaine par domaine en identifiant les manques et en finançant les projets-clés.' +
-            ' Permettre à tous les citoyens et à toutes les entreprises l\'accès à des services et logiciels en ligne hébergés sur des serveurs français de droit français.' +
-            ' Garantir l’hébergement des données des services publics français et des entreprises essentielles sur des serveurs de droit français situés en France.' +
-            ' Rétablir la propriété française publique sur Alcatel Submarine Networks. ' +
-            ' Garantir la neutralité du Net, c’est à dire l’accès égal de chacun et l’égalité de traitement.',
-          page: 10,
-          tier: 1
-        }, {
-          proposition: 'Affirmer le caractère d\'intérêt général de la révolution numérique',
-          details: 'Constitutionnaliser le droit au chiffrement des données et des communications.' +
-            ' Aller plus loin que le règlement européen de protection des données pour agir contre les discriminations entraînées par le traitement algorithmique des données personnelles, en dotant la Commission nationale de l’informatique et des libertés (CNIL) de moyens de contrôle efficaces.' +
-            ' Garantir le droit à un accès minimal gratuit à Internet.',
-          page: 10,
-          tier: 2
-        }, {
-          proposition: 'Construire une défense indépendante, républicaine et populaire',
-          details: 'Mobiliser l’espace numérique et la réalité spatiale pour installer des systèmes défensifs et non létaux contre les agressions et pour la paix.',
-          page: 10,
-          tier: 3
-        }, {
-          proposition: 'proposition',
-          details: 'details',
-          page: 10,
-          tier: 2
-        }, {
-          proposition: 'proposition2',
-          details: 'details',
-          page: 10,
-          tier: 3
-        }],
-        limits: [
-          'Inutile d\'héberger les données en France si la pile logicielle n\'est pas maîtrisée',
-          'Question du lien entre logiciel libre et souveraineté (taille de communauté, etc.)',
-          'Question de l\'attractivité vis-à-vis des talents pour l\'agence de développement'
-        ]
-      }, {
-        name: 'Éric Zemmour',
-        party: 'Reconquête',
-        image: 'https://media.ouest-france.fr/v1/pictures/eb3571f71fd10440dbd3868a237b9964-zemour.jpg?client_id=cmsfront&sign=e2500686c72d48627f11d43cb7ea9a8042bc12263263fee922f0de2fd216065e',
-        link: '/programs/zemmour.pdf',
-        infos: 'Si Éric Zemmour ne propose pas de programme spécifique pour le numérique, deux pages de son programme principales sont consacrées au sujet de la souveraineté numérique qui est présentée comme le' +
-          ' moyen de "<em>Faire du numérique un outil de prospérité et de rayonnement pour la France</em>". Dénonçant une vassalisation numérique, notamment à l\'égard' +
-          ' des « fleurons technologiques » américains et chinois, le candidat prône un recours à la commande publique pour "<em>faire émerger des solutions françaises ' +
-          ' souveraines dans le cloud et la cybersécurité</em>". Pour tendre vers cet objectif, le candidat mentionne les sujets de la formation et de l\'attractivité des talents' +
-          ' "<em>que ces sociétés étrangères nous arrachent</em>".',
-        mentions: 16,
-        measures: [{
-          proposition: 'Créer les conditions de notre souveraineté numérique',
-          details: 'Faire émerger des solutions françaises souveraines dans le cloud et la cybersécurité et investir dans les\n' +
-            'technologies de rupture (en particulier intelligence artificielle, ordinateur quantique et semi-conducteurs).' +
-            ' Imposer par la loi que les données sensibles des Français ainsi que les données stratégiques de l’État et\n' +
-            'du secteur privé soient hébergées et sécurisées en France sur des solutions souveraines.',
-          page: 37,
-          tier: 1
-        }, {
-          proposition: 'Soutenir les champions français du numérique à tous les stades de leur développement',
-          details: 'Permettre aux Français d’investir sans aucune fiscalité dans les start-ups et entreprises innovantes en créant un Livret Innovation.\n' +
-            'Permettre aux créateurs de start-ups de se financer sans perdre le contrôle de leur entreprise et attirer\n' +
-            'les introductions en bourse sur la place de Paris en autorisant deux classes d’actions en bourse à droits de\n' +
-            'vote différents. Permettre aux jeunes entreprises du numérique d’impliquer et de retenir les talents en élargissant les\n' +
-            'conditions de l’actionnariat salarié.',
-          page: 37,
-          tier: 2
-        }, {
-          proposition: 'Doter la France des moyens de son ambition numérique',
-          details: 'Garantir une connexion haut débit à chaque Français et chaque entreprise sur tout le territoire. Permettre à tout citoyen de faire toutes ses démarches administratives sur Internet en accélérant la\n' +
-            'numérisation des services de l’État et la mise à disposition des données. Pourvoir à la demande croissante d’emplois dans le numérique en donnant une place de choix à\n' +
-            'l’enseignement de la programmation informatique dès le secondaire. ',
-          page: 38,
-          tier: 2
-        }, {
-          proposition: 'Accélérer les investissements dans la blockchainet le Web3 tout en créant un environnement favorable à la détention et la création de crypto-actifs',
-          details: 'Exonérer d’impôts sur la plus-value les cessions de crypto-actifs dès lors qu’au moins 50% de cette plus-\n' +
-            'value est réinvestie dans le capital d’une entreprise de l’économie réelle. Ne pas laisser le monopole des stablecoins à des entités extra-européennes en favorisant l’émergence de\n' +
-            '« stablecoins » euro par le secteur privé européen sans attendre le projet d’euro numérique porté par la Banque\n' +
-            'centrale européenne.',
-          page: 38,
-          tier: 2
-        }, {
-          proposition: 'Protéger les enfants et les adolescents des effets néfastes d’Internet',
-          details: 'Mieux protéger les enfants et les adolescents contre le harcèlement, la pédophilie et l’incitation à la\n' +
-            'violence en organisant des « États généraux des réseaux sociaux et numériques ».\n' +
-            ' Lutter contre l’exposition des enfants et des mineurs aux sites violents et pornographiques en instaurant\n' +
-            'par la loi l’activation par défaut du contenu protégé et du contrôle parental sur les appareils numériques.',
-          page: 46,
-          tier: 3
-        }],
-        limits: [
-          'limit',
-          'limit2'
-        ]
-      }, {
         name: 'Emmanuel Macron',
         party: 'La République en marche',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Emmanuel_Macron_in_2019.jpg/220px-Emmanuel_Macron_in_2019.jpg',
         link: '/programs/macron.pdf',
-        infos: 'La question de la souveraineté numérique n\'apparaît ni dans le programme principal d\'Emmanuel Macron, ni dans son' +
-          ' <a href=\'https://avecvous.fr/notre-action/numerique\'> bilan thématique relatif au numérique</a>. Si le sujet ne semble pas directement porté par le candidat, le ministère' +
+        infos: 'La question de la souveraineté numérique n\'apparaît pas dans le programme principal d\'Emmanuel Macron. ' +
+          "Néanmoins, dans son <a href='https://avecvous.fr/notre-action/numerique' target='_blank'> bilan thématique relatif au numérique</a>, " +
+          'des actions visant à "mieux réguler les grandes entreprises du numérique" ont été mises en avant (DSA / DMA, accord OCDE en matière de fiscalité, ...).' +
+          ' En outre, si le sujet ne semble pas directement porté par le candidat, le ministère' +
           ' de l\'Économie, dans le cadre de la présidence française du Conseil de l\'Union européenne, a organisé les 7 et 8 février' +
-          ' derniers une conférence intitulée "Construire la souveraineté numérique de l’Europe". Néanmoins, il convient de noter qu\'aucun' +
-          ' industriel européen du cloud n\'a été invité à participer à ce colloque.',
+          ' derniers une conférence intitulée "Construire la souveraineté numérique de l’Europe". Cependant, il convient de noter que peu' +
+          ' d\'industriels européens du cloud ont été invités à participer à ce colloque.',
         mentions: 9,
         measures: [{
           proposition: 'Assurer la puissance de l’Europe',
@@ -482,11 +328,158 @@ export default {
             'et droits voisins.',
           page: 9,
           eu: true,
-          tier: 2
+          tier: 3
         }, {
           proposition: 'Simplifier la vie',
           details: 'Achever la couverture numérique du territoire par la fibre d\'ici 2025.',
           page: 6,
+          tier: 3
+        }],
+        limits: [
+          'limit',
+          'limit2'
+        ]
+      }, {
+        name: 'Jean-Luc Mélenchon',
+        party: 'L\'Union populaire',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Jean_Luc_MELENCHON_in_the_European_Parliament_in_Strasbourg%2C_2016_%28cropped%29.jpg/220px-Jean_Luc_MELENCHON_in_the_European_Parliament_in_Strasbourg%2C_2016_%28cropped%29.jpg',
+        link: '/programs/melenchon.pdf',
+        mentions: 22,
+        infos: 'La synthèse du programme de Jean-Luc Mélenchon n\'accorde que peu de place à la question du numérique (5 mentions) et ne mentionne pas le sujet de la souveraineté numérique.' +
+          ' En revanche, le <a href=\'https://laec.fr/\'>programme complet</a> mentionne (à la toute fin cependant) la question de la souveraineté numérique. Dans la section correspondante,' +
+          ' les logiciels libres apparaissent comme un moyen clé pour réduire notre dépendance vis-à-vis des GAFAM. Nous n\'avons cependant pu repérer que 3 propositions en lien avec la souveraineté numérique.',
+        measures: [{
+          proposition: 'Garantir la souveraineté numérique de la France',
+          details: 'Créer une agence publique des logiciels libres chargée de planifier leur développement stratégique domaine par domaine en identifiant les manques et en finançant les projets-clés.' +
+            ' Permettre à tous les citoyens et à toutes les entreprises l\'accès à des services et logiciels en ligne hébergés sur des serveurs français de droit français.' +
+            ' Garantir l’hébergement des données des services publics français et des entreprises essentielles sur des serveurs de droit français situés en France.' +
+            ' Rétablir la propriété française publique sur Alcatel Submarine Networks. ' +
+            ' Garantir la neutralité du Net, c’est à dire l’accès égal de chacun et l’égalité de traitement.',
+          page: 10,
+          tier: 1
+        }, {
+          proposition: 'Affirmer le caractère d\'intérêt général de la révolution numérique',
+          details: 'Constitutionnaliser le droit au chiffrement des données et des communications.' +
+            ' Aller plus loin que le règlement européen de protection des données pour agir contre les discriminations entraînées par le traitement algorithmique des données personnelles, en dotant la Commission nationale de l’informatique et des libertés (CNIL) de moyens de contrôle efficaces.' +
+            ' Garantir le droit à un accès minimal gratuit à Internet.',
+          page: 10,
+          tier: 2
+        }, {
+          proposition: 'Construire une défense indépendante, républicaine et populaire',
+          details: 'Mobiliser l’espace numérique et la réalité spatiale pour installer des systèmes défensifs et non létaux contre les agressions et pour la paix.',
+          page: 10,
+          tier: 2
+        }],
+        limits: [
+          'Inutile d\'héberger les données en France si la pile logicielle n\'est pas maîtrisée',
+          'Question du lien entre logiciel libre et souveraineté (taille de communauté, etc.)',
+          'Question de l\'attractivité vis-à-vis des talents pour l\'agence de développement'
+        ]
+      }, {
+        name: 'Valérie Pécresse',
+        party: 'Les Républicains',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Val%C3%A9rie_P%C3%A9cresse_%282022%29_%28cropped_2%29.jpg/220px-Val%C3%A9rie_P%C3%A9cresse_%282022%29_%28cropped_2%29.jpg',
+        link: '/programs/pecresse-num.pdf',
+        mentions: 33,
+        infos: "Valérie Pécresse <a href='/programs/pecresse.pdf#page=12' target='_blank'>mentionne directement la souveraineté numérique</a> dans son programme principal. Présenté comme l'un des 4 axes permettant de \"<em>garantir notre souveraineté</em>\", " +
+          "la souveraineté numérique passe principalement par la formation de talents (1 millions d'ici 2030 dont 50 000 fonctionnaires), la commande publique et un cloud français." +
+          '<br/><br/>En plus de cette courte mention dans son programme principal, son programme numérique détaillé a également été analysé. Dès son introduction, le lien entre numérique et souveraineté est fortement mis en avant : ' +
+          '"<em>Valérie Pécresse souhaite construire un modèle numérique français, basé sur nos valeurs fondamentales : responsable, moteur d’une souveraineté retrouvée et condition de la fierté française du 21ème siècle. Nous affirmerons le numérique comme un sujet régalien et de souveraineté.</em>"',
+        measures: [{
+          proposition: 'Protéger les données stratégiques des Français et de l’Etat grâce à une loi relative à la souveraineté et à la responsabilité numérique',
+          details: 'Se donner les moyens de disposer d’un cloud souverain [...], ' +
+            'instaurer une préférence française et européenne dans la commande publique grâce à des quotas progressifs [...], avec objectif de 50% en 2027, ' +
+            'permettre aux acteurs français du numérique d’investir au même niveau que leurs concurrents étrangers en utilisant la précommande publique [...] et ' +
+            'créer un Parquet National Cyber pour lutter contre les cyberattaques.',
+          page: 2,
+          tier: 1
+        }, {
+          proposition: 'Former les talents et libérer l’écosystème numérique sur tout le territoire',
+          details: 'Former un million de talents au numérique d’ici 2030 : ' +
+            'organiser un test national annuel sur le « potentiel numérique » de tous les élèves de seconde [...], ' +
+            'développer des parcours de formations initiales [...] et  ' +
+            'créer une Ecole Nationale du Numérique [...]. ' +
+            'Accélérer et amplifier l’émergence de 200 usines dans les nouvelles filières et consolider 20 licornes industrielles d’ici 2027.',
+          page: 3,
+          tier: 1
+        }, {
+          proposition: 'Intégrer le numérique dans l’éducation de nos enfants en les protégeant des risques associés',
+          details: 'Intégrer le codage dans les programmes scolaires dès la 6ème et ' +
+            'adopter une loi « Protection de l’enfance face aux menaces du numériques » : ' +
+            'créer l’équivalent du « Children’s code » britannique [...] et ' +
+            'ouvrir la réflexion sur la fin de l’anonymat [...].',
+          page: 4,
+          tier: 2
+        }, {
+          proposition: 'Mettre le numérique au service des territoires et garantir l’égalité d’accès pour tous les Français',
+          details: 'Accélérer le déploiement du Très Haut Débit (THD) fixe et mobile [...], ' +
+            'mettre fin aux zones blanches [...].',
+          page: 3,
+          tier: 3
+        }, {
+          proposition: 'Accélérer la transition écologique grâce au numérique',
+          details: 'Créer un Green Data Hub pour faciliter le croisement des données environnementales [...] et ' +
+            'soutenir une grande filière de la réparation et du reconditionnement des équipements informatiques [...] : ' +
+            'Instaurer un Chèque Récupération [...] et ' +
+            'Imposer l’ouverture du marché des pièces détachées aux constructeurs et des manuels techniques.',
+          page: 3,
+          tier: 3
+        }],
+        limits: [
+          'limit',
+          'limit2'
+        ]
+      }, {
+        name: 'Éric Zemmour',
+        party: 'Reconquête',
+        image: 'https://media.ouest-france.fr/v1/pictures/eb3571f71fd10440dbd3868a237b9964-zemour.jpg?client_id=cmsfront&sign=e2500686c72d48627f11d43cb7ea9a8042bc12263263fee922f0de2fd216065e',
+        link: '/programs/zemmour.pdf#page=37',
+        infos: 'Si Éric Zemmour ne propose pas de programme spécifique pour le numérique, deux pages de son programme principal sont consacrées au sujet de la souveraineté numérique qui est présenté comme le' +
+          ' moyen de "<em>Faire du numérique un outil de prospérité et de rayonnement pour la France</em>".' +
+          '<br/><br/>Dénonçant une vassalisation numérique, notamment à l\'égard' +
+          ' des « fleurons technologiques » américains et chinois, le candidat prône un recours à la commande publique pour "<em>faire émerger des solutions françaises ' +
+          ' souveraines dans le cloud et la cybersécurité</em>". Pour tendre vers cet objectif, le candidat mentionne également les sujets de la formation et de l\'attractivité des talents' +
+          ' "<em>que ces sociétés étrangères nous arrachent</em>".',
+        mentions: 16,
+        measures: [{
+          proposition: 'Créer les conditions de notre souveraineté numérique',
+          details: 'Faire émerger des solutions françaises souveraines dans le cloud et la cybersécurité et investir dans les\n' +
+            'technologies de rupture (en particulier intelligence artificielle, ordinateur quantique et semi-conducteurs).' +
+            ' Imposer par la loi que les données sensibles des Français ainsi que les données stratégiques de l’État et\n' +
+            'du secteur privé soient hébergées et sécurisées en France sur des solutions souveraines.',
+          page: 37,
+          tier: 1
+        }, {
+          proposition: 'Soutenir les champions français du numérique à tous les stades de leur développement',
+          details: 'Permettre aux Français d’investir sans aucune fiscalité dans les start-ups et entreprises innovantes en créant un Livret Innovation.\n' +
+            'Permettre aux créateurs de start-ups de se financer sans perdre le contrôle de leur entreprise et attirer\n' +
+            'les introductions en bourse sur la place de Paris en autorisant deux classes d’actions en bourse à droits de\n' +
+            'vote différents. Permettre aux jeunes entreprises du numérique d’impliquer et de retenir les talents en élargissant les\n' +
+            'conditions de l’actionnariat salarié.',
+          page: 37,
+          tier: 2
+        }, {
+          proposition: 'Doter la France des moyens de son ambition numérique',
+          details: 'Garantir une connexion haut débit à chaque Français et chaque entreprise sur tout le territoire. Permettre à tout citoyen de faire toutes ses démarches administratives sur Internet en accélérant la\n' +
+            'numérisation des services de l’État et la mise à disposition des données. Pourvoir à la demande croissante d’emplois dans le numérique en donnant une place de choix à\n' +
+            'l’enseignement de la programmation informatique dès le secondaire. ',
+          page: 38,
+          tier: 2
+        }, {
+          proposition: 'Accélérer les investissements dans la blockchain et le Web3 tout en créant un environnement favorable à la détention et la création de crypto-actifs',
+          details: 'Exonérer d’impôts sur la plus-value les cessions de crypto-actifs dès lors qu’au moins 50% de cette plus-value' +
+            ' est réinvestie dans le capital d’une entreprise de l’économie réelle. Ne pas laisser le monopole des stablecoins à des entités extra-européennes en favorisant l’émergence de\n' +
+            '« stablecoins » euro par le secteur privé européen sans attendre le projet d’euro numérique porté par la Banque\n' +
+            'centrale européenne.',
+          page: 38,
+          tier: 2
+        }, {
+          proposition: 'Protéger les enfants et les adolescents des effets néfastes d’Internet',
+          details: 'Mieux protéger les enfants et les adolescents contre le harcèlement, la pédophilie et l’incitation à la\n' +
+            'violence en organisant des « États généraux des réseaux sociaux et numériques ».\n' +
+            ' Lutter contre l’exposition des enfants et des mineurs aux sites violents et pornographiques en instaurant\n' +
+            'par la loi l’activation par défaut du contenu protégé et du contrôle parental sur les appareils numériques.',
+          page: 46,
           tier: 3
         }],
         limits: [

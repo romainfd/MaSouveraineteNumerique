@@ -47,6 +47,7 @@
       </v-btn>
     </v-row>
 
+    <!--
     <v-divider class="py-2" />
     <h2 id="#situation" class="headline my-4 pl-4">
       Situation de la France
@@ -62,6 +63,7 @@
         La souveraineté en chiffres
       </v-btn>
     </v-row>
+    -->
 
     <v-divider class="py-2" />
     <section id="details">
