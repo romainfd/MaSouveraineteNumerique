@@ -1,6 +1,8 @@
 # Souveraineté numérique
 Un guide digital pour mieux comprendre les enjeux de souveraineté numérique.
 
+**--> accessible en ligne à [https://ma-souverainete-numerique.fr](https://ma-souverainete-numerique.fr) <--**
+
 ## Contexte
 
 Ce site a été développé dans le cadre d'un travail commun entre des élèves de l'INSP et du corps des mines sur la souveraineté numérique.
