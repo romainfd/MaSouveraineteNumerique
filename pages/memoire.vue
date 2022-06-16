@@ -14,6 +14,39 @@
     </section>
 
     <v-divider class="py-2" />
+    <h2 id="#quiz" class="headline my-4 pl-4">
+      Questionnaire de souveraineté
+    </h2>
+    <p>
+      Curieux d'estimer la résilience, l'autonomie et la souveraineté de votre organisation ? Ce questionnaire vous permet d'obtenir des indicateurs clairs pour suivre votre souveraineté selon plusieurs dimensions et à travers le temps.
+    </p>
+    <v-row justify="center" align="center" class="my-6">
+      <v-btn to="/quiz" elevation="4">
+        <v-icon left>
+          mdi-crosshairs-question
+        </v-icon>
+        Estimer ma souveraineté
+      </v-btn>
+    </v-row>
+
+    <v-divider class="py-2" />
+    <h2 id="soutenance" class="headline my-4 pl-4">
+      Supports de présentation
+    </h2>
+    <p>
+      À la suite de notre soutenance du 16 juin 2022, nous avons publiées le support de slides utilisé pour la présentation.
+      Un poster A0 regroupant 6 idées clés issue de notre livre en écriture y est joint.
+    </p>
+    <v-row justify="center" align="center" class="my-6">
+      <v-btn to="/soutenance" elevation="4">
+        <v-icon left>
+          mdi-presentation-play
+        </v-icon>
+        Accéder aux supports
+      </v-btn>
+    </v-row>
+
+    <v-divider class="py-2" />
     <h2 id="programs" class="headline my-4 pl-4">
       Analyse des programmes des candidats
     </h2>
@@ -28,22 +61,6 @@
           mdi-newspaper-variant-multiple-outline
         </v-icon>
         Comparer les programmes
-      </v-btn>
-    </v-row>
-
-    <v-divider class="py-2" />
-    <h2 id="#quiz" class="headline my-4 pl-4">
-      Questionnaire de souveraineté
-    </h2>
-    <p>
-      Curieux d'estimer la résilience, l'autonomie et la souveraineté de votre organisation ? Ce questionnaire vous permet d'obtenir des indicateurs clairs pour suivre votre souveraineté selon plusieurs dimensions et à travers le temps.
-    </p>
-    <v-row justify="center" align="center" class="my-6">
-      <v-btn to="/quiz" elevation="4">
-        <v-icon left>
-          mdi-crosshairs-question
-        </v-icon>
-        Estimer ma souveraineté
       </v-btn>
     </v-row>
 
