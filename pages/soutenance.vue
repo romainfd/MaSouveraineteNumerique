@@ -10,8 +10,52 @@
         </p>
         <div class="text-justify">
           <p>
-            Curieux de mieux comprendre les promesses des candidats aux élections présidentielles de 2022 ?
-            Cette page regroupe les éléments clés des programmes des différents candidats ainsi que des pistes de regard critique sur les propositions.
+            Après neufs mois passionnants consacrés à notre mémoire sur la souveraineté numérique - mémoire ponctué de deux missions commandos (l’une avec l’Inria, l’autre avec des élèves de l’INSP), d’une centaine d’entretiens, du développement de ce site internet de sensibilisation et d’une réponse à un appel à commentaire public en collaboration avec des industriels européens du cloud, nous eu l'honneur de soutenir les résultats de nos travaux à l'École des mines de Paris le 16 juin 2022.
+          </p>
+          <p>
+            Ayant fait le choix de traiter ce sujet à travers le prisme de la technologie du cloud, notre affiche d’invitation laissait entendre que “la guerre du cloud n’aura pas lieu”. Néanmoins, comme dans la célèbre pièce de Jean Giraudoux, la guerre du cloud aura bien lieu et, plus encore, elle doit avoir lieu !
+          </p>
+          <p>
+            Cette guerre a un objectif : montrer, qu'en matière de cloud, il est désormais nécessaire de se faire confiance et de cesser d’acheter le marketing des hyperscalers américains”. Pour démontrer cette thèse, notre présentation s'est attachée à proposer 3 leviers :
+          </p>
+          <ol>
+            <li>
+              Accroître la demande en faveur des fournisseurs européens, en particulier grâce à la commande publique ;
+            </li>
+            <li>
+              Valoriser l’offre européenne existante et de montrer qu’elle est déjà mature et compétitive sur les commodités du cloud ;
+            </li>
+            <li>
+              Identifier des leviers visant à faciliter la rencontre entre offre et demande.
+            </li>
+          </ol>
+          <br>
+          <p>
+            Au travers de ces 3 leviers, nous avons détaillé six idées essentielles dans notre raisonnement :
+          </p>
+          <ol>
+            <li>
+              Un soutien public national à adapter
+            </li>
+            <li>
+              Aligner les acteurs micros et les intérêts macros
+            </li>
+            <li>
+              Fournisseurs européens matures et compétitifs
+            </li>
+            <li>
+              L'open-source, terreau des offres matures
+            </li>
+            <li>
+              La concurrence comme vecteur de souveraineté
+            </li>
+            <li>
+              Un potentiel cartel des hyperscalers ?
+            </li>
+          </ol>
+          <br>
+          <p>
+            Vous pouvez retrouver l'ensemble des diapositives de cette présentation ci-dessous.
           </p>
           <v-row justify="center" align="center" class="my-6">
             <v-btn :href="slidesUrl" target="_blank" color="primary" elevation="4">
