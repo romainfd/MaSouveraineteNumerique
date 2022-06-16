@@ -14,7 +14,7 @@
             :key="i"
             :src="img.url"
             :alt="img.alt"
-            style="max-height: 120px; cursor: pointer"
+            :style="'cursor: pointer; max-height: ' + ($device.isMobile ? '65px' : '120px')"
             class="px-2"
             @click="slideshowIndex = i"
           >
