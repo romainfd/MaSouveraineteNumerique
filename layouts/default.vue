@@ -2,7 +2,7 @@
   <v-app>
     <v-main>
       <v-container>
-        <NuxtLink to="/memoire" class="text-decoration-none black--text">
+        <NuxtLink to="/" class="text-decoration-none black--text">
           <h1 id="title" class="display-2 my-8 text-center">
             <img src="/logo.png" alt="Logo Ma Souveraineté Numérique" class="mr-n2 mr-md-0">
             Ma Souveraineté Numérique
