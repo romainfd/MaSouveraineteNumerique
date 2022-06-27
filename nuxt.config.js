@@ -46,7 +46,8 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    'nuxt-polyfill'
+    'nuxt-polyfill',
+    '@nuxtjs/sitemap'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -93,6 +94,14 @@ export default {
         }
       }
     }
+  },
+
+  sitemap: {
+    hostname: 'https://ma-souverainete-numerique.fr',
+    gzip: true,
+    exclude: [
+      '/propositions'
+    ]
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
