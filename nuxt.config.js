@@ -101,7 +101,14 @@ export default {
     gzip: true,
     exclude: [
       '/propositions'
-    ]
+    ],
+    // Ref.: https://dev.to/mornir/nuxt-netlify-and-the-trailing-slash-3gge
+    trailingSlash: true
+  },
+
+  router: {
+    // Ref.: https://dev.to/mornir/nuxt-netlify-and-the-trailing-slash-3gge
+    trailingSlash: true
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
